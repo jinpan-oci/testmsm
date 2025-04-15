@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sale_order_form_mr_store_inherit" model="ir.ui.view">
+        <field name="name">sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="mr_store_installation_page.sale_order_form_mr_store"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='validity_date']" position="before">
+                <field name="commercial_note"/>
+                <xpath expr="//field[@name='payment_term_id']" position="move"/>
+                <field name="work_deadline"/>
+                <xpath expr="//field[@name='client_order_ref']" position="move"/>
+            </xpath>
+            <xpath expr="//field[@name='product_template_id']" position="before">
+                <field name="image_1920" widget="image"/>
+            </xpath>
+            <xpath expr="//page[@name='installation_mrstore']/group" position="before">
+                <label for="installation_note" string="Installation Note"/>
+                <field name="installation_note"/>
+            </xpath>
+            <xpath expr="//page[@name='installation_mrstore']/group" position="inside">
+                <group string="Additionnal Informations">
+                    <field name="is_disassembly_required"/>
+                    <field name="installation_height"/>
+                    <field name="line_drawing_selection"/>
+                </group>
+                <group string="Manufractured Material">
+                    <field name="locker_canvas"/>
+                    <field name="locker_frame"/>
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='installation_mrstore']" position="after">
+                <page name="installation_photos" string="Installation Photos">
+                    <button name="action_create_attachment" string="Add Photo" type="object" class="btn-primary"/>
+                    <field name="attachment_ids" readonly="True">
+                        <tree>
+                            <field name="name"/>
+                            <field name="datas" widget="image"/>
+                            <field name="photo_use_type"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

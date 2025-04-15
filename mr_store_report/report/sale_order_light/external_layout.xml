@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="external_layout_standard_sol">
+
+        <div t-attf-class="header o_company_#{company.id}_layout" style="width: 100%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6" style="margin-top: 50px;">
+                        <img t-if="company.header" t-att-src="image_data_uri(company.header)" style="background-repeat: no-repeat; background-position: center; width:100%;" alt="Logo"/>
+                    </div>
+                    <div class="col-6" name="company_address" style=" font-size: 16px !important; background-color:#78af72; margin-top: 50px; margin-left:20px; width: 410px">
+                        <div class="row" style="padding: 10px;">
+                            <div class="col-12" t-attf-style="color: white">
+                                <ul class="list-unstyled" t-attf-style="padding-left: 5px;">
+                                    <b>
+                                        <li t-if="company.name">
+                                            <span t-esc="company.name"/>
+                                        </li>
+                                        <li t-if="company.street">
+                                            <span t-esc="company.street"/>
+                                        </li>
+                                        <li t-if="company.zip">
+                                            <span t-esc="company.zip"/> <span t-if="company.city" t-esc="company.city"/>
+                                        </li>
+                                    </b>
+                                    <!--
+                                    <li t-if="forced_vat">
+                                        <span t-esc="company.country_id.vat_label or 'Tax ID'"/>:
+                                        <span t-esc="forced_vat"/>
+                                    </li>
+                                    <li t-if="company.phone">
+                                        <span t-esc="company.phone"/>
+                                    </li>
+                                    <li t-if="company.mobile">
+                                        <span t-esc="company.mobile"/>
+                                    </li>
+                                    <li t-if="company.email">
+                                        <t t-esc="company.email"/>
+                                    </li>
+                                    <li t-if="company.website">
+                                        <t t-esc="company.website"/>
+                                    </t> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div t-attf-class="article o_report_layout_standard o_company_#{company.id}_layout {{  'o_report_layout_background' if company.layout_background in ['Geometric', 'Custom']  else  '' }}" t-attf-style="background-image: url({{ 'data:image/png;base64,%s' % company.layout_background_image.decode('utf-8') if company.layout_background_image and company.layout_background == 'Custom' else '/base/static/img/bg_background_template.jpg' if company.layout_background == 'Geometric' else ''}});" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+            <div class="pt-5">
+                <!-- This div ensures that the address is not cropped by the header. Body du rapport -->
+            </div>
+            <t t-out="0"/>
+        </div>
+
+        <div t-attf-class="footer o_standard_footer o_company_#{company.id}_layout">
+            <div style="border-top: 1px solid black; text-align: center;">
+                <span style="font-size: 12px;">
+                    <t t-esc="company.report_footer"/>
+                </span>
+                <div t-if="report_type == 'pdf' and display_name_in_footer" class="text-muted">
+                    <span t-out="o.name">(document name)</span>
+                </div>
+            </div>
+        </div>
+
+    </template>
+
+    <template id="external_layout_sol">
+        <t t-if="not company">
+            <!-- Multicompany -->
+            <t t-if="company_id">
+                <t t-set="company" t-value="company_id"/>
+            </t>
+            <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                <t t-set="company" t-value="o.company_id.sudo()"/>
+            </t>
+            <t t-else="else">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+        </t>
+        <t t-call="mr_store_report.external_layout_standard_sol">
+            <t t-out="0"/>
+        </t>
+    </template>
+</odoo>

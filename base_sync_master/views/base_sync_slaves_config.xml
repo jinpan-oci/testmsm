@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_base_sync_slaves_tree" model="ir.ui.view">
+        <field name="name">base.sync.slaves.tree</field>
+        <field name="model">base.sync.slaves</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="slave_url"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_base_sync_slaves_form" model="ir.ui.view">
+        <field name="name">base.sync.slaves.form</field>
+        <field name="model">base.sync.slaves</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="slave_url"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_base_sync_slaves_config" model="ir.actions.act_window">
+        <field name="name">Base Sync Slaves</field>
+        <field name="res_model">base.sync.slaves</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_base_sync_slaves_tree"/>
+    </record>
+
+    <menuitem id="menu_base_sync_slaves"
+        name="Base Sync Slaves"
+        parent="stock.menu_stock_config_settings"
+        action="action_base_sync_slaves_config"
+        sequence="101"/>
+</odoo>

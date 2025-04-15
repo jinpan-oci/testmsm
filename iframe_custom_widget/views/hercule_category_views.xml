@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_hercule_category_matrix_form" model="ir.ui.view">
+        <field name="name">hercule.category.form</field>
+        <field name="model">hercule.category</field>
+        <field name="arch" type="xml">
+            <form string="Category Matrix">
+                <sheet>
+                    <group string="Info">
+                        <field name="full_code"/>
+                        <field name="categ_id"/>
+                    </group>
+                    <group string="Temporary for fix purpose">
+                        <button name="action_repare_mes_betises" string="Repare mes betises" type="object" class="btn-primary"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hercule_category_matrix_tree" model="ir.ui.view">
+        <field name="name">hercule.category.tree</field>
+        <field name="model">hercule.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="full_code"/>
+                <field name="categ_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hercule_category" model="ir.actions.act_window">
+        <field name="name">Category Matrix</field>
+        <field name="res_model">hercule.category</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_hercule_category_matrix_tree"/>
+    </record>
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.iframe</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="5"/>
+        <field name="inherit_id" ref="sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/app[@name='sale_management']" position="inside">
+                <block title="Iframe / Hercule settings">
+                    <group string="Connection IDs">
+                        <field name="iframe_host" placeholder="Iframe Host"/>
+                        <field name="iframe_sub_url" placeholder="Iframe Sub URL"/>
+                        <field name="iframe_api_tool_id" placeholder="Iframe API Tool ID"/>
+                        <field name="iframe_usr" placeholder="Iframe User"/>
+                        <field name="iframe_change_pwd"/>
+                        <field name="iframe_pwd" placeholder="Iframe Password" invisible="not iframe_change_pwd" readonly="False"/>
+                        <field name="iframe_md5_pwd" placeholder="Iframe MD5 Password" readonly="True" invisible="not iframe_change_pwd"/>
+                        <field name="iframe_external_tool_id" placeholder="Iframe External Tool ID"/>
+                        <field name="hp5_default_route_id"/>
+                    </group>
+                    <group string="Show HP5. Full Code on sale order lines">
+                        <field name="show_catalog_fart_code" readonly="False"/>
+                    </group>
+                    <group string="Auto Complete Description Matrix">
+                        <field name="autocomplete_desc_matrix"/>
+                    </group>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

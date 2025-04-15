@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="base_sync_form" model="ir.ui.view">
+        <field name="name">base.sync.form</field>
+        <field name="model">base.sync</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="got_error" invisible="False"/>
+                <button name="notify_slaves" string="Notify Slaves Again" type="object" invisible="not got_error"/>
+                <group>
+                    <field name="name"/>
+                    <field name="base_sync_template_id"/>
+                </group>
+                <group>
+                    <field name="base_sync_line_ids" default_order="sequence">
+                        <tree>
+                            <field name="sequence" column_invisible="True"/>
+                            <field name="name"/>
+                            <field name="file_number"/>
+                            <field name="file_data" filename="file_name" readonly="True" widget="binary"/>
+                        </tree>
+                    </field>
+                </group>
+            </form>
+        </field>
+    </record>
+</odoo>

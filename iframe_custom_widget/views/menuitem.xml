@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem
+        id="menu_hp5_categ_matrix"
+        name="Hercule"
+        parent="sale.menu_sale_config"
+        sequence="100">
+        <menuitem
+            id="top_menu_hercule_category"
+            name="Category Matrix"
+            action="iframe_custom_widget.action_hercule_category"
+            sequence="0"/>
+        <menuitem
+            id="top_menu_hercule_product"
+            name="Product Matrix"
+            action="iframe_custom_widget.action_hercule_product"
+            sequence="1"/>
+        <menuitem
+            id="top_menu_hercule_title"
+            name="Titles Matrix"
+            action="iframe_custom_widget.action_hercule_title"
+            sequence="2"/>
+        <menuitem
+            id="top_menu_hercule_label"
+            name="Descriptions Matrix"
+            action="iframe_custom_widget.action_hercule_label"
+            sequence="3"/>
+    </menuitem>
+</odoo>

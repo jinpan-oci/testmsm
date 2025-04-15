@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_product_attribute_value_tree" model="ir.ui.view">
+        <field name="name">product.template.attribute.line.tree</field>
+        <field name="model">product.template.attribute.line</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="attribute_id"/>
+                <field name="value_ids"/>
+                <field name="product_tmpl_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_product_template_attribute_line" model="ir.actions.act_window">
+        <field name="name">Product Template Attribute Lines</field>
+        <field name="res_model">product.template.attribute.line</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_product_template_attribute_line"
+        name="Product Template Attribute Line"
+        parent="stock.menu_product_in_config_stock"
+        sequence="15"
+        action="action_product_template_attribute_line"/>
+</odoo>

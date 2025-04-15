@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_base_sync_master_config_tree" model="ir.ui.view">
+        <field name="name">base.sync.master.config.tree</field>
+        <field name="model">base.sync.master</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" readonly="True"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_base_sync_master_config_form" model="ir.ui.view">
+        <field name="name">base.sync.master.config.form</field>
+        <field name="model">base.sync.master</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="master_url"/>
+                        <field name="master_db"/>
+                        <field name="master_user"/>
+                        <field name="master_api_key"/>
+                        <field name="notification_follower_ids" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_base_sync_master_config" model="ir.actions.act_window">
+        <field name="name">Base Sync Master</field>
+        <field name="res_model">base.sync.master</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_base_sync_master_config_tree"/>
+    </record>
+
+    <menuitem
+        id="menu_base_sync_master_config"
+        name="Base Sync Master"
+        parent="stock.menu_stock_config_settings"
+        action="action_base_sync_master_config"
+        sequence="101"/>
+</odoo>

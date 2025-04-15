@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="crm_lead_view_form" model="ir.ui.view">
+        <field name="name">crm.lead.form</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_schedule_meeting" class="btn-secondary" string="New Home Meeting" type="object"/>
+                <button name="action_create_meet_at_store" class="btn-secondary" string="New Store Meeting" type="object"/>
+                <button name="action_create_phone_meet" class="btn-secondary" string="New Phone Meeting" type="object"/>
+            </xpath>
+            <xpath expr="//group[@name='lead_priority']/field[@name='tag_ids']" position="before">
+                <xpath expr="//field[@name='source_id']" position="move"/>
+            </xpath>
+            <xpath expr="//group[@name='lead_priority']/field[@name='tag_ids']" position="after">
+                <xpath expr="//field[@name='user_id']" position="move"/>
+                <xpath expr="//field[@name='team_id']" position="move"/>
+            </xpath>
+            <xpath expr="//field[@name='tag_ids']" position="before">
+                <xpath expr="//field[@name='source_id']" position="move"/>
+            </xpath>
+            <xpath expr="//field[@name='tag_ids']" position="after">
+                <xpath expr="//field[@name='user_id']" position="move"/>
+                <xpath expr="//field[@name='team_id']" position="move"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="quick_create_opportunity_form_inherit" model="ir.ui.view">
+        <field name="name">quick.create.opportunity.form</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.quick_create_opportunity_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_currency']" position="before">
+                <xpath expr="//field[@name='partner_id']" position="move"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

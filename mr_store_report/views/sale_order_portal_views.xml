@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="sale_order_portal_content" inherit_id="sale.sale_order_portal_content">
+        <xpath expr="//section[@id='details']/div/table/thead/tr/th[3]" position="attributes">
+            <attribute name="t-if">sale_order.pu_position_selection != 'without_pu'</attribute>
+        </xpath>
+
+        <xpath expr="//section[@id='details']/div/table/thead/tr/th[6]" position="attributes">
+            <attribute name="t-if">sale_order.pu_position_selection != 'without_pu'</attribute>
+        </xpath>
+
+        <xpath expr="//section[@id='details']/div/table/tbody//tr/t/td[3]" position="attributes">
+            <attribute name="t-if">sale_order.pu_position_selection != 'without_pu'</attribute>
+        </xpath>
+
+        <xpath expr="//section[@id='details']/div/table/tbody//tr/t/td[6]" position="attributes">
+            <attribute name="t-if">sale_order.pu_position_selection != 'without_pu'</attribute>
+        </xpath>
+
+        <xpath expr="//td[@id='product_name']" position="replace">
+            <td>
+                <span t-if="line.description_html" t-field="line.description_html"/>
+                <span t-elif="line.description_text" t-field="line.description_text"/>
+                <span t-else="" t-field="line.name"/>
+            </td>
+        </xpath>
+
+        <xpath expr="//section[@id='signature']" position="before">
+            <section id="additional infos" name="Additional Infos">
+                <div t-if="sale_order.commercial_note" class="row">
+                    <strong>Commentaire Commertial:</strong>
+                    <br/>
+                    <span t-field="sale_order.commercial_note"/>
+                </div>
+                <div t-if="sale_order.work_deadline" class="row">
+                    <strong>Délais Travaux:</strong>
+                    <br/>
+                    <span t-field="sale_order.work_deadline"/>
+                </div>
+            </section>
+        </xpath>
+    </template>
+</odoo>

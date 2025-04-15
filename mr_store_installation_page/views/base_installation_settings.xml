@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_base_installation_form" model="ir.ui.view">
+        <field name="name">base.installation.form</field>
+        <field name="model">base.installation</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="id" invisible="1"/>
+                        <field name="name"/>
+                        <field name="base_installation_line_ids" widget="many2many_tags" domain="[('base_installation_id', '=', False)]"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_base_installation_tree" model="ir.ui.view">
+        <field name="name">base.installation.tree</field>
+        <field name="model">base.installation</field>
+        <field name="arch" type="xml">
+            <tree>
+                <header>
+                    <button name="data_migration" string="Migrate Previous Data" type="object" class="oe_highlight"/>
+                    <button name="apply_to_old_orders" string="Apply to Old Orders" type="object" class="oe_highlight"/>
+                </header>
+                <field name="name"/>
+                <field name="base_installation_line_ids" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_installation_page_settings" model="ir.actions.act_window">
+        <field name="name">Installation Page Settings</field>
+        <field name="res_model">base.installation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="mr_store_installation_page.view_base_installation_tree"/>
+    </record>
+
+    <menuitem id="menu_installation_page_root"
+        name="Installation Page"
+        parent="sale.menu_sale_config"
+        sequence="100">
+        <menuitem id="menu_installation_settings"
+            name="Settings"
+            action="action_installation_page_settings"
+            sequence="1"/>
+    </menuitem>
+</odoo>

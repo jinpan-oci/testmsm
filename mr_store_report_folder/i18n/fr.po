@@ -1,0 +1,1911 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mr_store_report_folder
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e-20240904\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-10 12:50+0000\n"
+"PO-Revision-Date: 2024-12-10 12:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "% : 69,75"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.actions.report,print_report_name:mr_store_report_folder.action_report_folder_raw
+msgid ""
+"'Folder ' + str((object.state in ('draft', 'sent') and 'Quotation - %s' % "
+"(object.name)) or 'Order - %s' % (object.name))"
+msgstr ""
+"'Dossier ' + str((object.state in ('draft', 'sent') and 'Devis - %s' % "
+"(object.name)) or 'Commande - %s' % (object.name))"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__lifting_tool_1_elevator_38m
+msgid "1 Elevator 3.8M"
+msgstr "1 Monte charge 3,8M"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__lifting_tool_1_elevator_3m
+msgid "1 Elevator 3M"
+msgstr "1 Monte charge 3M"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__lifting_tool_1_manual_elevator_3m
+msgid "1 Manual Elevator 3M"
+msgstr "1 Monte charge manuel 3M"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__stool_10_steps
+msgid "10 Steps - 4.20m"
+msgstr "10 Marches - 4.20m"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__lifting_tool_2_elevator_38m
+msgid "2 Elevator 3.8M"
+msgstr "2 Monte charge 3,8M"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__lifting_tool_2_elevator_3m
+msgid "2 Elevator 3M"
+msgstr "2 Monte charge 3M"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__ladder_2_sections
+msgid "2 Sections - 4.20m"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__ladder_3_sections
+msgid "3 Sections - 6.30m"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__stool_3_steps
+msgid "3 Steps - 2.66m"
+msgstr "3 Marches - 2.66m"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__stool_4_steps
+msgid "4 Steps - 2.88m"
+msgstr "4 Marches - 2.88m"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__stool_5_steps
+msgid "5 Steps - 3.10m"
+msgstr "5 Marches - 3.10m"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__stool_6_steps
+msgid "6 Steps - 3.32m"
+msgstr "6 Marches - 3.32m"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__stool_7_steps
+msgid "7 Steps - 3.54m"
+msgstr "7 Marches - 3.54m"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__stool_8_steps
+msgid "8 Steps - 3.76m"
+msgstr "8 Marches - 3.76m"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__stool_9_steps
+msgid "9 Steps - 3.98m"
+msgstr "9 Marches - 3.98m"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"<b>\n"
+"                                Délai des travaux:\n"
+"                            </b>"
+msgstr ""
+"<b>\n"
+"                            Délai des travaux: \n"
+"                        </b>"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"<b>\n"
+"                                Montant déjà facturé TTC:\n"
+"                            </b>"
+msgstr ""
+"<b>\n"
+"                            Montant déjà facturé TTC:\n"
+"                        </b>"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"<b>\n"
+"                                Règlement:\n"
+"                            </b>"
+msgstr ""
+"<b>\n"
+"                            Règlement: \n"
+"                        </b>"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_header
+msgid ""
+"<br/>\n"
+"                                Email :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_header
+msgid ""
+"<br/>\n"
+"                                Fixe :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_header
+msgid ""
+"<br/>\n"
+"                    Equipe commerciale"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "<br/>3eme"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "<br/>8eme"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "<br/>Aix"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "<i class=\"fs-4 fa fa-info-circle mb-3\" aria-label=\"Bannière Info\"/>"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"<strong>\n"
+"                                        <span class=\"text-nowrap\">\n"
+"                                            Total TVA\n"
+"                                        </span>\n"
+"                                    </strong>"
+msgstr ""
+"<strong>\n"
+"                                    <span class=\"text-nowrap\">\n"
+"                                        Total TVA\n"
+"                                    </span>\n"
+"                                </strong>"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"<strong>\n"
+"                            Total HT:\n"
+"                        </strong>"
+msgstr ""
+"<strong>\n"
+"                        Total HT:\n"
+"                    </strong>"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"<strong>\n"
+"                            Total TTC:\n"
+"                        </strong>"
+msgstr ""
+"<strong>\n"
+"                        Total TTC:\n"
+"                    </strong>"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "<strong>FOURNITURES</strong>"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"<strong>M. ET MME ALLARD Pascal et Annick</strong><br/>\n"
+"                                10 RUE TILLOT<br/>\n"
+"                                21000 DIJON"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "<strong>MAIN D'OEUVRE</strong>"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "<strong>Marge du chantier</strong>"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "<strong>Montants du document</strong>"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "<strong>TRAVAUX</strong>"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "A prendre :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "ADRESSE"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "AH:"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "AP:"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "ARC :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "ATELIER"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Acompte :......................... €"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.view_attachment_add
+msgid "Add"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.actions.act_window,name:mr_store_report_folder.action_attachment_add_view
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.view_attachment_add
+msgid "Add Attachment"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model,name:mr_store_report_folder.model_attachment_add
+msgid "Add Attachment into saleorder"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.sale_order_form_mr_store_inherit
+msgid "Add Photo"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.sale_order_form_mr_store_inherit
+msgid "Additionnal Informations"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_header
+msgid "Adrese Installation"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_header
+msgid "Adresse"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Adresse de chantier"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__wall_aluminum
+msgid "Aluminum"
+msgstr "Aluminium"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__spray_aluminum_cleaner
+msgid "Aluminum Cleaner"
+msgstr "Nettoyant aluminium"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__security_anchor_bar
+msgid "Anchor Bar"
+msgstr "Barre d'ancrage"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_header
+msgid "App :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_header
+msgid "Appartement:"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Appel pour RDV :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model,name:mr_store_report_folder.model_ir_attachment
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__attachment_ids
+msgid "Attachment"
+msgstr "Pièce jointe"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__protection_barrier
+msgid "Barrier"
+msgstr "Barrière"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__basket_auto_12m
+msgid "Basket Auto 12m"
+msgstr "Nacelle Auto 12m"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__basket_auto_15m
+msgid "Basket Auto 15m"
+msgstr "Nacelle Auto 15m"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__basket_scissors_16m
+msgid "Basket Scissors 16m"
+msgstr "Nacelle Ciseaux 16m"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__basket_scissors_20m
+msgid "Basket Scissors 20m"
+msgstr "Nacelle Ciseaux 20m"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__basket_vl_12m
+msgid "Basket VL 12m"
+msgstr "Nacelle VL 12m"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__basket_vl_16m
+msgid "Basket VL 16m"
+msgstr "Nacelle VL 16m"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_header
+msgid "Bat:"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__kit_bayblock_roller_shutter
+msgid "Bayblock Roller Shutter Kit"
+msgstr "Kit Volet Roulant Bloc Baie"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__kit_belt_velum
+msgid "Belt Velum Kit"
+msgstr "Kit Velum Courroie"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__tool_big_angle_grinder_220v
+msgid "Big Angle Grinder 220V"
+msgstr "Grosse Disqueuse 220V"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__protection_board
+msgid "Board"
+msgstr "Planche"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "COMMANDE FOURNISSEURS"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__kit_cable_velum
+msgid "Cable Velum Kit"
+msgstr "Kit Velum câble"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.view_attachment_add
+msgid "Cancel"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__locker_canvas
+msgid "Canvas Locker"
+msgstr "Casier à Toiles"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__protection_cardboard
+msgid "Cardboard"
+msgstr "Carton"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__kit_carpentry
+msgid "Carpentry Kit"
+msgstr "Kit Charpente"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Casier Armature :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Casier Toile :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Charte de pose respectée : Oui"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_header
+msgid "Code porte:"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_header
+msgid "Code résidence:"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Coef : 3,31"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Commentaire commercial:"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Commentaire d'installation :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Commentaire installation:"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Commentaires lors de l'installation:"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Commercial : <strong>JULIEN Cyril</strong>"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__commercial_note
+msgid "Commercial Note"
+msgstr "Commentaire commercial"
+
+#. module: mr_store_report_folder
+#: model:ir.model,name:mr_store_report_folder.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__wall_concrete
+msgid "Concrete"
+msgstr "Béton"
+
+#. module: mr_store_report_folder
+#: model:ir.model,name:mr_store_report_folder.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuration"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__kit_corded_grinder
+msgid "Corded Grinder Kit"
+msgstr "Kit Meuleuse Filaire"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Coût total Achats et Frais : 263,41 €"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_attachment_add__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_attachment_add__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "DEPOSE :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "DETAIL DES MARGES"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "DOSSIER<br/>"
+msgstr "DOSSIER"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Date CDE :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Date confirmée:"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "De"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"Demande mairie : OUI ☐/ NON ☐<br/>\n"
+"                            Accord crédit :  OUI ☐/ NON  ☐<br/>"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Description des travaux"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"Devis N° : 24/1/1156029<br/>\n"
+"                                Date devis : 07/10/2024<br/>\n"
+"                                Réf. Client : VR / CJ"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__is_disassembly_required
+msgid "Disassembly"
+msgstr "Dépose"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_attachment_add__display_name
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__tool_edger_220v
+msgid "Edger 220V"
+msgstr "Déligneuse 220V"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Enter the Google API key to enable the map views."
+msgstr "Entrez la clé API Google pour activer les vues de carte."
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_header
+msgid "Etage:"
+msgstr "Étage:"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__line_existing
+msgid "Existing"
+msgstr "Existante"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__wall_exterior_insulation
+msgid "Exterior Insulation"
+msgstr "Isolation Extérieure"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "FEUILLE DE POSE"
+msgstr "FEUILLE DE POSE  -"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"Fait en double exemplaire à : "
+"...............................................................  Le : "
+"..............................................."
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_attachment_add__file
+msgid "File"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_attachment_add__file_name
+msgid "File Name"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__ladder_firefighter
+msgid "Firefighter - 8.30m"
+msgstr "Pompier - 8.30m"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Fixe :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__ladder_foldable
+msgid "Foldable - 8.30m"
+msgstr "Pliable - 8.30m"
+
+#. module: mr_store_report_folder
+#. odoo-python
+#: code:addons/mr_store_report_folder/models/sale_order.py:0
+#, python-format
+msgid "Folder - Order n°{0} - Client {1}"
+msgstr "Dossier - Commande n°{0} - Client {1}"
+
+#. module: mr_store_report_folder
+#: model:ir.actions.report,name:mr_store_report_folder.action_report_folder_raw
+msgid "Folder Mr Store"
+msgstr "Dossier Mr Store"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Folder Settings"
+msgstr "Paramètres Dossier"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"Fournitures : 632,18 €<br/>\n"
+"                                Frais : 0,00 €<br/>\n"
+"                                Remises consenties : 94,83 €"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__locker_frame
+msgid "Frame Locker"
+msgstr "Casier à Cadre"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__map_full_address
+msgid "Full Address"
+msgstr "Adresse Complète"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__gsc_pdf
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__gsc_pdf
+msgid "GCS PDF"
+msgstr "PDF CGV"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__glue_glue_gun
+msgid "Glue Gun"
+msgstr "Pistolet à Colle"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Google API Key"
+msgstr "Clé API Google"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__google_api_key
+msgid "Google Maps API Key"
+msgstr "Clé API Google Maps"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__wall_grumble_stone
+msgid "Grumble Stone"
+msgstr "Rogne"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__guarantee_book_pdf
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__guarantee_book_pdf
+msgid "Guarantee Book PDF"
+msgstr "PDF Livret de Garantie"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__guarantee_contract_pdf
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__guarantee_contract_pdf
+msgid "Guarantee Contract PDF"
+msgstr "PDF Contrat de Garantie"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__guard_page
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__guard_page
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Guard Page"
+msgstr "Page de Garde"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Guard Page - Steps"
+msgstr "Page de Garde - Étapes"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Guard Page - Supplier"
+msgstr "Page de Garde - Fournisseur"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Guard Page - Table Purchase"
+msgstr "Page de Garde - Table d'Achat"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__guard_page_steps
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__guard_page_steps
+msgid "Guard Page Steps"
+msgstr "Page de Garde - Étapes"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__guard_page_supplier
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__guard_page_supplier
+msgid "Guard Page Supplier"
+msgstr "Page de Garde - Fournisseur"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__guard_page_table_purchase
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__guard_page_table_purchase
+msgid "Guard Page Table Purchase"
+msgstr "Page de Garde - Table d'Achat"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "HAUTEUR DE POSE :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "HT"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__security_harness
+msgid "Harness"
+msgstr "Harnais"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__help_qr_code
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__help_qr_code
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Help QR Code"
+msgstr "QR Code d'Aide à La Pose"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__kit_hole_saw
+msgid "Hole Saw Kit"
+msgstr "Kit Scie Cloche"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__wall_hollow
+msgid "Hollow"
+msgstr "Creux"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__res_config_settings__map_type_1__hybrid
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__res_config_settings__map_type_2__hybrid
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__res_config_settings__map_type_3__hybrid
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__res_config_settings__map_type_4__hybrid
+msgid "Hybrid"
+msgstr "Hybride"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_attachment_add__id
+msgid "ID"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order_line__image_1920
+msgid "Image"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_header
+msgid "Immeuble:"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Installateur"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__installation_height
+msgid "Installation Height"
+msgstr "Hauteur D'Installation"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__installation_images
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__installation_images
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Installation Images"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Installation Images - Before Install"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Installation Images - Measurements"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Installation Images - Other"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Installation Images - With 3D"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__installation_images_before_install
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__installation_images_before_install
+msgid "Installation Images Before Install"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__installation_images_measurements
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__installation_images_measurements
+msgid "Installation Images Measurements"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__installation_images_other
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__installation_images_other
+msgid "Installation Images Other"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__installation_images_with_3d
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__installation_images_with_3d
+msgid "Installation Images With 3D"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__installation_note
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.sale_order_form_mr_store_inherit
+msgid "Installation Note"
+msgstr "Commentaire d'Installation"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.sale_order_form_mr_store_inherit
+msgid "Installation Photos"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__installation_sheet
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__installation_sheet
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Installation Sheet"
+msgstr "Feuille de Pose"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Installation Sheet - Google Review"
+msgstr "Feuille de Pose - Avis Google"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Installation Sheet - Google Street"
+msgstr "Feuille de Pose - Google Street"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Installation Sheet - Manual"
+msgstr "Feuille de Pose - Manuel"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Installation Sheet - Stock"
+msgstr "Feuille de Pose - Stock"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Installation Sheet - Stock Header"
+msgstr "Feuille de Pose - Entête Stock"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Installation Sheet - Supplier"
+msgstr "Feuille de Pose - Fournisseur"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__installation_sheet_google_review
+msgid "Installation Sheet Google Review"
+msgstr "Feuille de Pose Avis Google"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__installation_sheet_google_review
+msgid "Installation Sheet Google Review - Marseille"
+msgstr "Feuille de Pose Avis Google"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__installation_sheet_google_street
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__installation_sheet_google_street
+msgid "Installation Sheet Google Street"
+msgstr "Feuille de Pose Google Street"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__installation_sheet_manual
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__installation_sheet_manual
+msgid "Installation Sheet Manual"
+msgstr "Feuille de Pose Manuel"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__installation_sheet_stock_header
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__installation_sheet_stock
+msgid "Installation Sheet Stock"
+msgstr "Feuille de Pose Stock"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__installation_sheet_stock
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__installation_sheet_stock_header
+msgid "Installation Sheet Stock Header"
+msgstr "Feuille de Pose Stock"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__installation_sheet_supplier
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__installation_sheet_supplier
+msgid "Installation Sheet Supplier"
+msgstr "Feuille de Pose Fournisseur"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__kit_iron_drill_bit
+msgid "Iron Drill Bit Kit"
+msgstr "Kit Mèche Fer"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"Je soussigné (nom et prénom du client).....................................................................................................................<br/>\n"
+"                            Procède à la réception de travaux en date du : …......................…… / …......................…… / ….....................……<br/>\n"
+"                            en présence de l'entreprise nommée ci-dessus.<br/>\n"
+"                            (cocher la mention utile)<br/>\n"
+"\n"
+"                                ☐ Cette réception est prononcée sans réserve<br/>\n"
+"                                ☐ Cette réception est prononcée avec les réserves suivantes (soyez précis : emplacement, objet, description…)\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__saw_jigsaw
+msgid "Jigsaw"
+msgstr "Scie Sauteuse"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__kit_led
+msgid "LED Kit"
+msgstr "Kit LED"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__tool_laser
+msgid "Laser"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_attachment_add__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_attachment_add__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__forwarding_lifting_kit
+msgid "Lifting Kit"
+msgstr "Kit Levage"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__line_drawing_selection
+msgid "Line Drawing"
+msgstr "Tirage de ligne"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__tool_long_drill_bit
+msgid "Long Drill Bit"
+msgstr "Longues Mèches"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__protection_mr_store_carpet
+msgid "MR Store Carpet"
+msgstr "Tapis Mr Store"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Mail :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"Main d'oeuvre - Achat : 0,00 €<br/>\n"
+"                                Marge sur Main d'oeuvre : 335,00 €<br/>\n"
+"                                Coef : 1,00<br/>\n"
+"                                % de marge : 100,00"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"Main d'oeuvre - Vente : 335,00 €<br/>\n"
+"                                Remise sur M.O : 0,00 €<br/>"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Main d'oeuvre remisée : 335,00 €"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_header
+msgid "Maison:"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__kit_manual_velum
+msgid "Manual Velum Kit"
+msgstr "Kit Velum Manuel"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.sale_order_form_mr_store_inherit
+msgid "Manufractured Material"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__map_img_1
+msgid "Map Image 1"
+msgstr "Image carte 1"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__map_img_2
+msgid "Map Image 2"
+msgstr "Image carte 2"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__map_img_3
+msgid "Map Image 3"
+msgstr "Image carte 3"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__map_img_4
+msgid "Map Image 4"
+msgstr "Image carte 4"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__map_type_1
+msgid "Map Type 1"
+msgstr "Type de carte"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__map_type_2
+msgid "Map Type 2"
+msgstr "Type de carte"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__map_type_3
+msgid "Map Type 3"
+msgstr "Type de carte"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__map_type_4
+msgid "Map Type 4"
+msgstr "Type de carte"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__map_url_1
+msgid "Map URL 1"
+msgstr "Url carte 1"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__map_url_2
+msgid "Map URL 2"
+msgstr "Url carte 2"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__map_url_3
+msgid "Map URL 3"
+msgstr "Url carte 3"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__map_url_4
+msgid "Map URL 4"
+msgstr "Url carte 4"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__map_view_type_1
+msgid "Map View Type 1"
+msgstr "Type de vue"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__map_view_type_2
+msgid "Map View Type 2"
+msgstr "Type de vue"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__map_view_type_3
+msgid "Map View Type 3"
+msgstr "Type de vue"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__map_view_type_4
+msgid "Map View Type 4"
+msgstr "Type de vue"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__map_zoom_1
+msgid "Map Zoom 1"
+msgstr "Zoom Carte"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__map_zoom_2
+msgid "Map Zoom 2"
+msgstr "Zoom Carte"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__map_zoom_3
+msgid "Map Zoom 3"
+msgstr "Zoom Carte"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__map_zoom_4
+msgid "Map Zoom 4"
+msgstr "Zoom Carte"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Marge globale : 608,94 €"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"Marge sur fournitures : 273,94 €<br/>\n"
+"                                Coef : 2,04<br/>\n"
+"                                % de marge : 50,98"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__margin_page
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__margin_page
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Margin Page"
+msgstr "Marge"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Matériel vérfié, en bon état de fonctionnement : Oui"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__attachment_add__usetype__mesures
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__ir_attachment__photo_use_type__mesures
+msgid "Mesures Drawings"
+msgstr "Dessins de Mesures"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__kit_metal_curtain
+msgid "Metal Curtain Kit"
+msgstr "Kit Volet Métallique"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__saw_milter_saw
+msgid "Milter Saw"
+msgstr "Scie à Onglet"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_header
+msgid "Mobile :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Mode de règlement : ........................."
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__kit_monobloc_roller_shutter
+msgid "Monobloc Roller Shutter Kit"
+msgstr "Kit Volet Roulant Monobloc"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"Montant HT : 872,69 €<br/>\n"
+"                                Montant TTC : 959,96 €"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Montant de la commande : ......................... €"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Montant recu.: ...................€"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "NON"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__line_no
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__sale_order__line_drawing_selection__no
+msgid "No"
+msgstr "Non"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Nom :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Nombre d'heures : 5,00"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__res_config_settings__map_type_1__none
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__res_config_settings__map_type_2__none
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__res_config_settings__map_type_3__none
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__res_config_settings__map_type_4__none
+msgid "None"
+msgstr "Aucun"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "OUI"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "OUI A L'EXTERIEUR"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "OUI A L'INTERIEUR"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "OUI EXISTANTE"
+msgstr "OUI, EXISTANTE"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__security_other
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__ir_attachment__photo_use_type__other
+msgid "Other"
+msgstr "Autre"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__basket_other
+msgid "Other Basket Height"
+msgstr "Autre Hauteur de Nacelle"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__forwarding_other
+msgid "Other Forwarding Type"
+msgstr "Autre Type D'Acheminement"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__glue_other
+msgid "Other Glue Type"
+msgstr "Autre Type De Colle"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__line_other
+msgid "Other Line Drawing"
+msgstr "Autre Tirage De Ligne"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__masonry_other
+msgid "Other Masonry Tool"
+msgstr "Autre Outils de Maçonnerie"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__paint_other
+msgid "Other Paint Type"
+msgstr "Autre Type De Peinture"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__protection_other
+msgid "Other Protection Type"
+msgstr "Autre Type de Protection"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__silicon_other
+msgid "Other Silicon Type"
+msgstr "Autre Type de Silicone"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__spray_other
+msgid "Other Spray Type"
+msgstr "Autre Type de Bombe"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__wall_other
+msgid "Other Wall Type"
+msgstr "Autre Type de Mur"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_ir_actions_report__PDFdatas
+msgid "PDF Content"
+msgstr "Contenu du PDF"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,help:mr_store_report_folder.field_ir_actions_report__PDFdatas
+msgid "PDF content"
+msgstr "Contenu du PDF"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "POSE RDV"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "PROCES VERBAL DE RECEPTION DE TRAVAUX"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "PU"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__paint_anthracite
+msgid "Paint - Anthracite"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__paint_black
+msgid "Paint - Black"
+msgstr "Noir"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__paint_brown
+msgid "Paint - Brown"
+msgstr "Marron"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__paint_grey
+msgid "Paint - Grey"
+msgstr "Gris"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__paint_ivory
+msgid "Paint - Ivory"
+msgstr "Ivoire"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__paint_white
+msgid "Paint - White"
+msgstr "Blanc"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__spray_penetrating
+msgid "Penetrating"
+msgstr "Pénétrante"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__glue_pergola_glue
+msgid "Pergola Glue"
+msgstr "Colle Pergola"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__kit_pergola
+msgid "Pergola Kit"
+msgstr "Kit Pergola"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"Petites fournitures : 0,00 €<br/>\n"
+"                                Frais généraux : 0,00 €"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__attachment_add__usetype__before_installation
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__ir_attachment__photo_use_type__before_installation
+msgid "Photo Before Installation"
+msgstr "Photos Avant Installation"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_attachment_add__usetype
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_ir_attachment__photo_use_type
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_mrp_document__photo_use_type
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_product_document__photo_use_type
+msgid "Photo Use Type"
+msgstr "Type d'Utilisation de la Photo"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__attachment_add__usetype__with_3d
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__ir_attachment__photo_use_type__with_3d
+msgid "Photo With 3D"
+msgstr "Photos avec la 3D"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Photos avant Installation"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Photos avec 3D"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Photos des Mesures"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__wall_placo
+msgid "Placo"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"Pose ☐ <br/>\n"
+"                            Livraison ☐ <br/>\n"
+"                            Enlèvement ☐"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Produit"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Produits"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Prénom :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "QR CODES"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "QR Code"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__qr_code_1
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "QR Code 1 - 8eme"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__qr_code_1
+msgid "QR Code 1 - 8ème"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__qr_code_2
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "QR Code 2 - 3eme"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__qr_code_2
+msgid "QR Code 2 - 3ème"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__qr_code_3
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__qr_code_3
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "QR Code 3 - Aix"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Qty"
+msgstr "Quantité"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__kit_quiberon
+msgid "Quiberon Kit"
+msgstr "Kit Quiberon"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Remarque :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model,name:mr_store_report_folder.model_ir_actions_report
+msgid "Report Action"
+msgstr "Signaler l'action"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Repère"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_header
+msgid "Residence:"
+msgstr "Résidence:"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__ladder_retractable
+msgid "Retractable - 8.30m"
+msgstr "Rétractable - 8.30m"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__protection_ribbon
+msgid "Ribbon"
+msgstr "Ruban"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__kit_rings
+msgid "Rings Kit"
+msgstr "Kit Anneaux"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__tool_riveter
+msgid "Riveter"
+msgstr "Riveteuse"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__forwarding_ropes
+msgid "Ropes"
+msgstr "Cordes"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__masonry_ruler_4m
+msgid "Ruler 4M"
+msgstr "Règle 4M"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__masonry_ruler_5m
+msgid "Ruler 5M"
+msgstr "Règle 5M"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__masonry_ruler_6m
+msgid "Ruler 6M"
+msgstr "Règle 6M"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Règlement"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"Réf. Chantier : <strong>APPARTEMENT MICHELET</strong><br/>\n"
+"                                Adresse : 6 RUE MICHELET<br/>\n"
+"                                CP / Ville : 21000 DIJON"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "SIGNATURE - Client"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "SIGNATURE du représentant de l'entreprise"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "STOCKAGE :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__saw_saber_18v
+msgid "Saber 18V"
+msgstr "Sabre 18V"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__saw_saber_220v
+msgid "Saber 220V"
+msgstr "Sabre 220V"
+
+#. module: mr_store_report_folder
+#: model:ir.model,name:mr_store_report_folder.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: mr_store_report_folder
+#: model:ir.model,name:mr_store_report_folder.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Ligne de commande"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__basket_scaffodable
+msgid "Scaffodable"
+msgstr "Échafaudage"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__secondary_attachment_ids
+msgid "Secondary Attachment"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Section Configuration"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Select you folder configuration"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__forwarding_shark_4
+msgid "Shark 4"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__forwarding_shark_5
+msgid "Shark 5"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__forwarding_shark_6
+msgid "Shark 6"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__silicon_anthracite
+msgid "Silicon - Anthracite"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__silicon_black
+msgid "Silicon - Black"
+msgstr "Noir"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__silicon_brown
+msgid "Silicon - Brown"
+msgstr "Marron"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__silicon_grey
+msgid "Silicon - Grey"
+msgstr "Gris"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__silicon_ivory
+msgid "Silicon - Ivory"
+msgstr "Ivoire"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__silicon_transparent
+msgid "Silicon - Transparent"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__silicon_white
+msgid "Silicon - White"
+msgstr "Blanc"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__spray_silicon_lubricant
+msgid "Silicon Lubricant"
+msgstr "Lubrifiant Silicone"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__tool_silicon_pump_18v
+msgid "Silicon Pump 18V"
+msgstr "Pompe Silicone 18V"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Solde à régler : ......................... €"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__kit_stapler
+msgid "Stapler Kit"
+msgstr "Kit Agrafeuse"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__res_config_settings__map_view_type_1__staticmap
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__res_config_settings__map_view_type_2__staticmap
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__res_config_settings__map_view_type_3__staticmap
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__res_config_settings__map_view_type_4__staticmap
+msgid "Static Map"
+msgstr "Carte"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Stockage"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__res_config_settings__map_view_type_1__streetview
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__res_config_settings__map_view_type_2__streetview
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__res_config_settings__map_view_type_3__streetview
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__res_config_settings__map_view_type_4__streetview
+msgid "Street View"
+msgstr "StreetView"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__tool_suction_cup
+msgid "Suction Cup"
+msgstr "Ventouse"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "TIRAGE DE LIGNE :"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "TVA"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__tva_pdf
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__tva_pdf
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "TVA PDF"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid "Total"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"Total Net Fournitures : 537,35 €<br/>\n"
+"                                <em>Achats estimés :</em> 263,41 €<br/>\n"
+"                                <em>Achats réels :</em> 263,41 €"
+msgstr ""
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__kit_traditionnal_roller_shutter
+msgid "Traditionnal Roller Shutter Kit"
+msgstr "Kit Volet Roulant Traditionnel"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__vat_pdf
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__vat_pdf
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "VAT PDF"
+msgstr "PDF TVA"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__verbal_report
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__verbal_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Verbal Report"
+msgstr "Procès Verbal"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Verbal Report - Installer"
+msgstr "Procès Verbal - Installateur"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.res_config_settings_view_form
+msgid "Verbal Report - Show Google Review"
+msgstr "Procès Verbal - Afficher l'avis Google"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__verbal_report_google_review
+msgid "Verbal Report Google Review"
+msgstr "Procès Verbal Avis Google"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__verbal_report_google_review
+msgid "Verbal Report Google Review - Marseille"
+msgstr "Procès Verbal Avis Google"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_company__verbal_report_installer
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_res_config_settings__verbal_report_installer
+msgid "Verbal Report Installer"
+msgstr "Procès Verbal Installateur"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__wall_wood
+msgid "Wood"
+msgstr "Bois"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__saw_wood_circular
+msgid "Wood Circular Saw"
+msgstr "Scie Circulaire à Bois"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__work_deadline
+msgid "Work Deadline"
+msgstr "Délai des travaux"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__sale_order__line_drawing_selection__y_exist
+msgid "Yes Existing"
+msgstr "Oui, existant"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__sale_order__line_drawing_selection__y_in
+msgid "Yes Inside"
+msgstr "Oui, à l'intérieur"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields.selection,name:mr_store_report_folder.selection__sale_order__line_drawing_selection__y_out
+msgid "Yes Outside"
+msgstr "Oui, à l'extérieur"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__line_yes_interior
+msgid "Yes, Indoor"
+msgstr "Oui, Intérieur"
+
+#. module: mr_store_report_folder
+#: model:ir.model.fields,field_description:mr_store_report_folder.field_sale_order__line_yes_exterior
+msgid "Yes, Outdoor"
+msgstr "Oui, Extérieur"
+
+#. module: mr_store_report_folder
+#: model_terms:ir.ui.view,arch_db:mr_store_report_folder.report_folder_document
+msgid ""
+"☐ J’autorise Monsieur Store pour l’utilisation, à titre gracieux, des photos et / ou vidéos concernant mon installation,\n"
+"                                dans le cadre de la communication de Monsieur Store, qu’elle soit interne ou externe, imprimée ou numérique,\n"
+"                                sans limite géographique, d’une durée de 5 ans à compter de ce jour, et quel que soit le nombre d’utilisations."
+msgstr ""
+"J’autorise Monsieur Store pour l’utilisation, à titre gracieux, des photos et / ou vidéos concernant mon installation,\n"
+"    dans le cadre de la communication de Monsieur Store, qu’elle soit interne ou externe, imprimée ou numérique,\n"
+"    sans limite géographique, d’une durée de 5 ans à compter de ce jour, et quel que soit le nombre d’utilisations."

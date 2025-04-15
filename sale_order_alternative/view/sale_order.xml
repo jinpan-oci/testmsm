@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_order_form" model="ir.ui.view">
+        <field name="name">sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="priority">15</field>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position='inside'>
+                <button
+                    name="action_create_alternative"
+                    invisible="state in ['cancel' ,'sale']"
+                    string="Alternative Quotation"
+                    type="object"
+                    groups="sale_order_alternative.group_show_alternative_order"
+                />
+                <button
+                    name="copy_inherit"
+                    string="Duplicate"
+                    type="object"
+                    />
+            </xpath>
+            <xpath expr="//button[@name='action_view_invoice']" position="after">
+                <button
+                    name="action_view_alternatives"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-file-archive-o"
+                    invisible="not has_alternatives or alternatives_count == 0"
+                >
+
+                    <field
+                        name="alternatives_count"
+                        widget="statinfo"
+                        string="Alternatives"
+                    />
+                </button>
+            </xpath>
+            <field name="client_order_ref" position="after">
+               <field name="has_alternatives" invisible="1" />
+            </field>
+        </field>
+    </record>
+</odoo>

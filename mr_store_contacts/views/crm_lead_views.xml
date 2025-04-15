@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="crm_lead_view_form" model="ir.ui.view">
+        <field name="name">crm.lead.form</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//group[@name='lead_partner']//field[@name='street2']" position="after">
+                <field name="house_type" placeholder="House type" widget="selection"/>
+                <field name="residence_name" placeholder="Residence name" invisible="house_type == 'house' or house_type == 'building'"/>
+                <field name="residence_number" placeholder="Residence number" invisible="house_type == 'house' or house_type == 'building'"/>
+                <field name="floor_number" placeholder="Floor number" invisible="house_type == 'house'"/>
+                <field name="appartment_number" placeholder="Appartment number" invisible="house_type == 'house'"/>
+                <field name="portal_code" placeholder="Portal code"/>
+                <field name="entry_code" placeholder="Door code"/>
+            </xpath>
+
+            <xpath expr="//group[@name='opportunity_partner']/field[@name='partner_id']" position="before">
+                <xpath expr="//page[@name='lead']//field[@name='contact_name']" position="move"/>
+                <xpath expr="//page[@name='lead']//field[@name='street']" position="move"/>
+                <xpath expr="//page[@name='lead']//field[@name='street2']" position="move"/>
+                <xpath expr="//page[@name='lead']//field[@name='zip']" position="move"/>
+                <xpath expr="//page[@name='lead']//field[@name='city']" position="move"/>
+                <xpath expr="//page[@name='lead']//field[@name='country_id']" position="move"/>
+                <field name="house_type" placeholder="House type" widget="selection"/>
+                <field name="residence_name" placeholder="Residence name" invisible="house_type == 'house' or house_type == 'building' or not house_type"/>
+                <field name="residence_number" placeholder="Residence number" invisible="house_type == 'house' or house_type == 'building' or not house_type"/>
+                <field name="floor_number" placeholder="Floor number" invisible="house_type == 'house' or not house_type"/>
+                <field name="appartment_number" placeholder="Appartment number" invisible="house_type == 'house' or not house_type"/>
+                <field name="portal_code" placeholder="Portal code" invisible="not house_type"/>
+                <field name="entry_code" placeholder="Door code" invisible="not house_type"/>
+            </xpath>
+
+            <xpath expr="//group[@name='opportunity_partner']/label[@for='phone']" position="before">
+                <label for="mobile" class="oe_inline"/>
+                <div class="o_row o_row_readonly">
+                    <button name="phone_action_blacklist_remove" class="fa fa-ban text-danger" title="This phone number is blacklisted for SMS Marketing. Click to unblacklist." type="object" context="{'default_phone': phone}" groups="base.group_user" invisible="not phone_blacklisted"/>
+                    <field name="mobile" widget="phone"/>
+                    <span class="fa fa-exclamation-triangle text-warning oe_edit_only" title="By saving this change, the customer phone number will also be updated." invisible="not partner_phone_update"/>
+                </div>
+            </xpath>
+            <xpath expr="//group[@name='opportunity_partner']/field[@name='lost_reason_id']" position="before">
+                <xpath expr="//group[@name='opportunity_partner']/field[@name='partner_id']" position="move"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

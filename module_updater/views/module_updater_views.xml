@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="module_updater_tree_view" model="ir.ui.view">
+        <field name="name">module.updater.tree</field>
+        <field name="model">module.updater</field>
+        <field name="arch" type="xml">
+            <tree>
+                <header>
+                    <button name="update_all" string="Update All" type="object" class="oe_highlight"/>
+                    <button name="install_all" string="Install All" type="object" class="oe_highlight"/>
+                </header>
+                <field name="name"/>
+                <field name="update_ids" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="module_updater_form_view" model="ir.ui.view">
+        <field name="name">module.updater.form</field>
+        <field name="model">module.updater</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <header>
+                        <button name="update_all" string="Update All" type="object" class="oe_highlight"/>
+                        <button name="install_all" string="Install All" type="object" class="oe_highlight"/>
+                    </header>
+                    <group>
+                        <field name="name"/>
+                        <field name="update_ids" widget="many2many_tags"/>
+                        <field name="install_ids" widget="many2many_tags"/>
+                    </group>
+                    <group>
+                        <field name="module_updater_lines">
+                            <tree>
+                                <field name="name"/>
+                                <field name="response" widget="section_and_note_text"/>
+                                <button name="update_module" string="Update" type="object" class="oe_highlight"/>
+                                <button name="install_module" string="Install" type="object" class="oe_highlight"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_module_updater" model="ir.actions.act_window">
+        <field name="name">Module Updater</field>
+        <field name="res_model">module.updater</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="module_updater_tree_view"/>
+    </record>
+</odoo>

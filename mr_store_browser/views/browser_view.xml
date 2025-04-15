@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!--Views-->
+    <record id="browser_view_form" model="ir.ui.view">
+        <field name="name">browser.form</field>
+        <field name="model">browser</field>
+        <field name="arch" type="xml">
+            <form create="false" delete="false" edit="false">
+                <header/>
+                <sheet string="browser">
+                    <div class="o_control_panel">
+                        <div class="o_cp_buttons" role="toolbar" aria-label="Main actions">
+                            <center>
+                                <a target="_blank" href="https://mrstoresacoop.sharepoint.com/">
+                                    <button icon="fa-chrome" class="btn btn-primary  me-1">Intranet</button>
+                                </a>
+                                <a target="_blank" href="https://monsieurstore-catalogue.artefacto.eu/webapp/">
+                                    <button icon="fa-pencil-square-o" class="btn btn-primary  me-1">Configurator</button>
+                                </a>
+                                <a target="_blank" href="https://mrstore-preprod.herculepro.com/hpv5/index">
+                                    <button icon="fa-etsy" class="btn btn-primary  me-1">E-STORY</button>
+                                </a>
+
+                                <a target="_blank" href="https://outlook.office.com/">
+                                    <button icon="fa-envelope" class="btn btn-primary  me-1">Messaging</button>
+                                </a>
+
+                                <a target="_blank" href="https://outlook.office.com/calendar/">
+                                    <button icon="fa-calendar-o" class="btn btn-primary  me-1">Diary</button>
+                                </a>
+
+                                <a target="_blank" href="https://www.agt-ws.com/saml_mr_store.aspx">
+                                    <button icon="fa-bar-chart" class="btn btn-primary  me-1">AGT</button>
+                                </a>
+
+                                <a target="_blank" href="https://mrstoresacoop.sharepoint.com/Tarifs">
+                                    <button icon="fa-book" class="btn btn-primary  me-1">Rate</button>
+                                </a>
+
+                                <a target="_blank" href="http://www.clara-services.fr/svc_login.php">
+                                    <button icon="fa-file" class="btn btn-primary  me-1">CLARA</button>
+                                </a>
+
+                                <a target="_blank" href="https://e-bt.fr/boutique/monsieur-store/">
+                                    <button icon="fa-shopping-cart" class="btn btn-primary  me-1">E-STORE</button>
+                                </a>
+
+                                <a target="_blank" href="https://qantis.co/">
+                                    <button icon="fa-shopping-cart" class="btn btn-primary  me-1">Buying Center</button>
+                                </a>
+                                <a target="_blank" href="https://v2.finder-portal.com/login">
+                                    <button icon="fa-tachometer" class="btn btn-primary  me-1">GPS</button>
+                                </a>
+                            </center>
+                            <div class="o_form_buttons_edit"/>
+                        </div>
+                    </div>
+                   <iframe width="100%" height="1024px" src="https://monsieur.store/moteur-recherche/moteur-recherche-mstore.html"/>
+                  </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="browser_view_tree" model="ir.ui.view">
+        <field name="name">browser.tree</field>
+        <field name="model">browser</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="browser_view_search" model="ir.ui.view">
+        <field name="name">browser.search</field>
+        <field name="model">browser</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <!--Actions-->
+    <record id="action_view_browser_form" model="ir.actions.act_window">
+        <field name="name">action.browser.form</field>
+        <field name="res_model">browser</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+    </record>
+</odoo>

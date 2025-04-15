@@ -1,0 +1,138 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mr_store_installation_page
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e-20240624\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-30 09:18+0000\n"
+"PO-Revision-Date: 2024-08-30 09:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mr_store_installation_page
+#: model:ir.model,name:mr_store_installation_page.model_base_installation
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_sale_order__transaction_installation_ids
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_transaction_installation__base_installation_id
+msgid "Base Installation"
+msgstr "Catégorie"
+
+#. module: mr_store_installation_page
+#: model:ir.model,name:mr_store_installation_page.model_base_installation_line
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_transaction_installation__base_installation_line_ids
+msgid "Base Installation Line"
+msgstr "Ligne catégorie"
+
+#. module: mr_store_installation_page
+#: model_terms:ir.ui.view,arch_db:mr_store_installation_page.sale_order_form_mr_store
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: mr_store_installation_page
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_base_installation__create_uid
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_base_installation_line__create_uid
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_transaction_installation__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: mr_store_installation_page
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_base_installation__create_date
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_base_installation_line__create_date
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_transaction_installation__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: mr_store_installation_page
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_base_installation__display_name
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_base_installation_line__display_name
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_transaction_installation__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: mr_store_installation_page
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_base_installation__id
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_base_installation_line__id
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_transaction_installation__id
+msgid "ID"
+msgstr ""
+
+#. module: mr_store_installation_page
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_base_installation_line__base_installation_id
+#: model_terms:ir.ui.view,arch_db:mr_store_installation_page.sale_order_form_mr_store
+msgid "Installation"
+msgstr ""
+
+#. module: mr_store_installation_page
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_base_installation__base_installation_line_ids
+msgid "Installation Lines"
+msgstr "Ligne catégorie"
+
+#. module: mr_store_installation_page
+#: model:ir.ui.menu,name:mr_store_installation_page.menu_installation_page_root
+msgid "Installation Page"
+msgstr "Page Installation"
+
+#. module: mr_store_installation_page
+#: model:ir.actions.act_window,name:mr_store_installation_page.action_installation_page_settings
+msgid "Installation Page Settings"
+msgstr "Page d'installation"
+
+#. module: mr_store_installation_page
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_base_installation__write_uid
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_base_installation_line__write_uid
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_transaction_installation__write_uid
+msgid "Last Updated by"
+msgstr "Dernière maj par"
+
+#. module: mr_store_installation_page
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_base_installation__write_date
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_base_installation_line__write_date
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_transaction_installation__write_date
+msgid "Last Updated on"
+msgstr "Dernière maj le"
+
+#. module: mr_store_installation_page
+#: model_terms:ir.ui.view,arch_db:mr_store_installation_page.sale_order_form_mr_store
+msgid "Material to get"
+msgstr "Matériel à apporter"
+
+#. module: mr_store_installation_page
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_base_installation__name
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_base_installation_line__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: mr_store_installation_page
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_transaction_installation__sale_order_id
+msgid "Sale Order"
+msgstr "Bon de commande"
+
+#. module: mr_store_installation_page
+#: model:ir.model,name:mr_store_installation_page.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: mr_store_installation_page
+#: model:ir.model.fields,field_description:mr_store_installation_page.field_transaction_installation__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: mr_store_installation_page
+#: model:ir.ui.menu,name:mr_store_installation_page.menu_installation_settings
+msgid "Settings"
+msgstr "Paramètres"
+
+#. module: mr_store_installation_page
+#: model_terms:ir.ui.view,arch_db:mr_store_installation_page.sale_order_form_mr_store
+msgid "To take"
+msgstr "à apporter"
+
+#. module: mr_store_installation_page
+#: model:ir.model,name:mr_store_installation_page.model_transaction_installation
+msgid "Transaction Installation"
+msgstr "Transaction d'installation"

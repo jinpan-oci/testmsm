@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='street2']" position="after">
+                <field name="house_type" placeholder="House type" widget="selection"/>
+                <field name="residence_name" placeholder="Residence name" invisible="house_type == 'house' or house_type == 'building'"/>
+                <field name="residence_number" placeholder="Residence number" invisible="house_type == 'house' or house_type == 'building'"/>
+                <field name="floor_number" placeholder="Floor number" invisible="house_type == 'house'"/>
+                <field name="appartment_number" placeholder="Appartment number" invisible="house_type == 'house'"/>
+                <field name="portal_code" placeholder="Portal code"/>
+                <field name="entry_code" placeholder="Door code"/>
+            </xpath>
+            <xpath expr="//sheet/group/group" position="after">
+                <group>
+                    <field name="original_creation_date"/>
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='state_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="module_updater_line_form" model="ir.ui.view">
+        <field name="name">module.updater.line.form</field>
+        <field name="model">module.updater.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <header>
+                        <button name="update_module" string="Update" type="object" class="oe_highlight"/>
+                        <button name="install_module" string="Install" type="object" class="oe_highlight"/>
+                    </header>
+                    <group>
+                        <field name="name"/>
+                        <field name="url"/>
+                    </group>
+                    <group>
+                        <field name="response_date"/>
+                        <field name="response" widget="section_and_note_text"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

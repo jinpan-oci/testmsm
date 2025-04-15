@@ -1,0 +1,9 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+base_installation_line_user,base_installation_line_user,model_base_installation_line,base.group_user,1,1,1,0
+base_installation_line_system,base_installation_line_system,model_base_installation_line,base.group_system,1,1,1,1
+
+base_installation_user,base_installation_user,model_base_installation,base.group_user,1,1,1,0
+base_installation_system,base_installation_system,model_base_installation,base.group_system,1,1,1,1
+
+transaction_installation_user,transaction_installation_user,model_transaction_installation,base.group_user,1,1,1,0
+transaction_installation_system,transaction_installation_system,model_transaction_installation,base.group_system,1,1,1,1

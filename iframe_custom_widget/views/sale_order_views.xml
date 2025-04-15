@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+      <record id="sale_product_h5_form_view" model="ir.ui.view">
+        <field name="name">sale.product.h5.form.view</field>
+        <field name="model">product.product</field>
+        <field name="arch" type="xml">
+            <form>
+                <notebook>
+                    <page string="E-Story" name="iframe_custom_widget">
+                        <field name="iframe_url" widget="iframe_custom_widget" options="{'url': 'https://www.odoo.com', 'width' : '100%', 'height' : '1100px'}"/>
+                    </page>
+                   <!-- Reste de la vue formulaire https://demo.herculepro.com/hpv5/wizapi?sId=1_e40e4c0518dd41de9788a9e59b641772 -->
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+    <record id ="sale_view_order_form_inherit" model ="ir.ui.view">
+        <field name ="name">sale.order.form.inherit</field>
+        <field name ="model">sale.order</field>
+        <field name ="inherit_id" ref ="sale.view_order_form"/>
+        <field name ="arch" type ="xml">
+            <xpath expr="//form//sheet//notebook//page//field[@name='order_line']" position="before">
+                <field name="show_catalog_fart_code" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//form//sheet//notebook//page//field[@name='order_line']//tree" position="inside">
+                <field name="id" column_invisible="1"/>
+                <field name="description_html" column_invisible="1"/>
+                <field name="description_text" column_invisible="1"/>
+                <button name="action_edit_from_hp5" string="E-Story" type="object" class="px-4 btn-link" context="{'order_id': parent.id, 'line_id': id}" invisible="not full_code"/>
+                <field name="full_code" string="H.ID" column_invisible="parent.show_catalog_fart_code == False"/>
+            </xpath>
+            <xpath expr="//tree//field[@name='name']" position="attributes">
+                <attribute name="readonly">not display_type</attribute>
+            </xpath>
+            <xpath expr="//form//sheet//notebook//page//field[@name='order_line']//tree//control//create[@name='add_note_control']" position="after">
+                <button name="action_add_from_hp5" string="E-Story" type="object" class="px-4 btn-link" context="{'order_id': parent.id}"/>
+                <button name="action_open_configurator" string="Configurator" type="object" class="px-4 btn-link"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

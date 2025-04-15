@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sale_order_form" model="ir.ui.view">
+        <field name="name">sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="priority" eval="15"/>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="sign_request_id"/>
+                <field name="send_cerfa_after_confirmation"/>
+                <field name="locked" invisible="True"/>
+            </xpath>
+            <xpath expr="//page[@name='order_lines']//tree/field[@name='price_subtotal']" position="attributes">
+                <attribute name="invisible">is_downpayment</attribute>
+            </xpath>
+            <xpath expr="//tree/field[@name='name']" position="after">
+                <button name="mr_store_sale.sale_order_line_change_description_action" type="action" string="Edit Desc." invisible="parent.locked"/>
+            </xpath>
+            <xpath expr="//tree/field[@name='price_subtotal']" position="before">
+                <field name="use_update_price_line_wizard" column_invisible="True"/>
+                <button name="mr_store_sale.sale_order_line_service_update_action" type="action" string="Update Price" invisible="not use_update_price_line_wizard or product_type != 'product' or parent.locked"/>
+            </xpath>
+            <xpath expr="//group[@name='order_details']/div[1]" position="attributes">
+                <attribute name="groups"/>
+            </xpath>
+            <xpath expr="//group[@name='order_details']/field[@name='date_order'][1]" position="attributes">
+                <attribute name="groups"/>
+            </xpath>
+            <xpath expr="//group[@name='order_details']/div[2]" position="attributes">
+                <attribute name="invisible">state in ['draft', 'sent', 'cancel']</attribute>
+                <attribute name="readonly">state in ['draft', 'sent', 'cancel']</attribute>
+            </xpath>
+            <xpath expr="//group[@name='order_details']/field[@name='date_order'][2]" position="attributes">
+                <attribute name="invisible">state in ['draft', 'sent', 'cancel']</attribute>
+                <attribute name="readonly">state in ['draft', 'sent', 'cancel']</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_base_sync_line_form" model="ir.ui.view">
+        <field name="name">base.sync.line.form</field>
+        <field name="model">base.sync.line</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Base Sync Line">
+                <sheet>
+                    <group>
+                        <field name="name" readonly="True"/>
+                        <field name="file_number" readonly="True"/>
+                        <field name="base_sync_id" readonly="True"/>
+                        <field name="file_name" invisible="True"/>
+                        <field name="file_data" filename="file_name" readonly="True" widget="binary"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

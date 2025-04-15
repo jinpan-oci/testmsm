@@ -1,0 +1,224 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mr_store_contacts
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e-20240624\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-31 09:51+0000\n"
+"PO-Revision-Date: 2024-07-31 09:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mr_store_contacts
+#: model_terms:ir.ui.view,arch_db:mr_store_contacts.crm_lead_view_form
+msgid ""
+"<span class=\"fa fa-exclamation-triangle text-warning oe_edit_only\" "
+"title=\"By saving this change, the customer phone number will also be "
+"updated.\" invisible=\"not partner_phone_update\"/>"
+msgstr ""
+"<span class=\"fa fa-exclamation-triangle text-warning oe_edit_only\" "
+"title=\"En enregistrant cette modification, le numéro de téléphone du client"
+" sera également mis à jour.\" invisible=\"not partner_phone_update\"/>"
+
+#. module: mr_store_contacts
+#: model:ir.model.fields,field_description:mr_store_contacts.field_crm_lead__appartment_number
+#: model:ir.model.fields,field_description:mr_store_contacts.field_res_partner__appartment_number
+#: model:ir.model.fields,field_description:mr_store_contacts.field_res_users__appartment_number
+#: model:ir.model.fields,field_description:mr_store_contacts.field_sale_order__appartment_number
+msgid "Appartment Number"
+msgstr "Numéro d'appartement"
+
+#. module: mr_store_contacts
+#: model_terms:ir.ui.view,arch_db:mr_store_contacts.crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:mr_store_contacts.view_partner_form
+msgid "Appartment number"
+msgstr "Numéro d'appartement"
+
+#. module: mr_store_contacts
+#: model:ir.model.fields.selection,name:mr_store_contacts.selection__crm_lead__house_type__building
+#: model:ir.model.fields.selection,name:mr_store_contacts.selection__res_partner__house_type__building
+msgid "Building"
+msgstr "Immeuble"
+
+#. module: mr_store_contacts
+#. odoo-python
+#: code:addons/mr_store_contacts/models/sale_order.py:0
+#, python-format
+msgid "Building: "
+msgstr "Immeuble: "
+
+#. module: mr_store_contacts
+#: model:ir.model,name:mr_store_contacts.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: mr_store_contacts
+#: model_terms:ir.ui.view,arch_db:mr_store_contacts.view_order_form
+msgid "Details"
+msgstr "Détails"
+
+#. module: mr_store_contacts
+#: model:ir.model.fields,field_description:mr_store_contacts.field_crm_lead__entry_code
+#: model:ir.model.fields,field_description:mr_store_contacts.field_res_partner__entry_code
+#: model:ir.model.fields,field_description:mr_store_contacts.field_res_users__entry_code
+#: model:ir.model.fields,field_description:mr_store_contacts.field_sale_order__entry_code
+msgid "Door Code"
+msgstr "Code De La Porte"
+
+#. module: mr_store_contacts
+#. odoo-python
+#: code:addons/mr_store_contacts/models/sale_order.py:0
+#, python-format
+msgid "Door Code: "
+msgstr "Code de la porte: "
+
+#. module: mr_store_contacts
+#: model_terms:ir.ui.view,arch_db:mr_store_contacts.crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:mr_store_contacts.view_partner_form
+msgid "Door code"
+msgstr "Code de la porte"
+
+#. module: mr_store_contacts
+#. odoo-python
+#: code:addons/mr_store_contacts/models/sale_order.py:0
+#, python-format
+msgid "Floor "
+msgstr "Etage "
+
+#. module: mr_store_contacts
+#: model:ir.model.fields,field_description:mr_store_contacts.field_crm_lead__floor_number
+#: model:ir.model.fields,field_description:mr_store_contacts.field_res_partner__floor_number
+#: model:ir.model.fields,field_description:mr_store_contacts.field_res_users__floor_number
+#: model:ir.model.fields,field_description:mr_store_contacts.field_sale_order__floor_number
+msgid "Floor Number"
+msgstr "Étage"
+
+#. module: mr_store_contacts
+#: model_terms:ir.ui.view,arch_db:mr_store_contacts.crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:mr_store_contacts.view_partner_form
+msgid "Floor number"
+msgstr "Étage"
+
+#. module: mr_store_contacts
+#: model:ir.model.fields.selection,name:mr_store_contacts.selection__crm_lead__house_type__house
+#: model:ir.model.fields.selection,name:mr_store_contacts.selection__res_partner__house_type__house
+msgid "House"
+msgstr "Maison"
+
+#. module: mr_store_contacts
+#: model:ir.model.fields,field_description:mr_store_contacts.field_crm_lead__house_type
+#: model:ir.model.fields,field_description:mr_store_contacts.field_res_partner__house_type
+#: model:ir.model.fields,field_description:mr_store_contacts.field_res_users__house_type
+#: model:ir.model.fields,field_description:mr_store_contacts.field_sale_order__house_type
+msgid "House Type"
+msgstr "Type d'habitation"
+
+#. module: mr_store_contacts
+#: model_terms:ir.ui.view,arch_db:mr_store_contacts.crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:mr_store_contacts.view_partner_form
+msgid "House type"
+msgstr "Type d'habitation"
+
+#. module: mr_store_contacts
+#. odoo-python
+#: code:addons/mr_store_contacts/models/sale_order.py:0
+#, python-format
+msgid "House: "
+msgstr "Maison: "
+
+#. module: mr_store_contacts
+#: model:ir.model,name:mr_store_contacts.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Piste/opportunité"
+
+#. module: mr_store_contacts
+#: model:ir.model.fields,field_description:mr_store_contacts.field_res_partner__original_creation_date
+#: model:ir.model.fields,field_description:mr_store_contacts.field_res_users__original_creation_date
+msgid "Original Creation Date"
+msgstr "Date de création d'origine"
+
+#. module: mr_store_contacts
+#: model:ir.model.fields,field_description:mr_store_contacts.field_crm_lead__portal_code
+#: model:ir.model.fields,field_description:mr_store_contacts.field_res_partner__portal_code
+#: model:ir.model.fields,field_description:mr_store_contacts.field_res_users__portal_code
+#: model:ir.model.fields,field_description:mr_store_contacts.field_sale_order__portal_code
+msgid "Portal Code"
+msgstr "Code Du Portail"
+
+#. module: mr_store_contacts
+#. odoo-python
+#: code:addons/mr_store_contacts/models/sale_order.py:0
+#, python-format
+msgid "Portal Code: "
+msgstr "Code du portail: "
+
+#. module: mr_store_contacts
+#: model_terms:ir.ui.view,arch_db:mr_store_contacts.crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:mr_store_contacts.view_partner_form
+msgid "Portal code"
+msgstr "Code du portail"
+
+#. module: mr_store_contacts
+#: model:ir.model.fields.selection,name:mr_store_contacts.selection__crm_lead__house_type__residence
+#: model:ir.model.fields.selection,name:mr_store_contacts.selection__res_partner__house_type__residence
+msgid "Residence"
+msgstr "Résidence"
+
+#. module: mr_store_contacts
+#: model:ir.model.fields,field_description:mr_store_contacts.field_crm_lead__residence_name
+#: model:ir.model.fields,field_description:mr_store_contacts.field_res_partner__residence_name
+#: model:ir.model.fields,field_description:mr_store_contacts.field_res_users__residence_name
+#: model:ir.model.fields,field_description:mr_store_contacts.field_sale_order__residence_name
+msgid "Residence Name"
+msgstr "Nom De La Résidence"
+
+#. module: mr_store_contacts
+#: model:ir.model.fields,field_description:mr_store_contacts.field_crm_lead__residence_number
+#: model:ir.model.fields,field_description:mr_store_contacts.field_res_partner__residence_number
+#: model:ir.model.fields,field_description:mr_store_contacts.field_res_users__residence_number
+#: model:ir.model.fields,field_description:mr_store_contacts.field_sale_order__residence_number
+msgid "Residence Number"
+msgstr "Numéro De La Résidence"
+
+#. module: mr_store_contacts
+#: model_terms:ir.ui.view,arch_db:mr_store_contacts.crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:mr_store_contacts.view_partner_form
+msgid "Residence name"
+msgstr "Nom de la résidence"
+
+#. module: mr_store_contacts
+#: model_terms:ir.ui.view,arch_db:mr_store_contacts.crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:mr_store_contacts.view_partner_form
+msgid "Residence number"
+msgstr "Numéro de la résidence"
+
+#. module: mr_store_contacts
+#. odoo-python
+#: code:addons/mr_store_contacts/models/sale_order.py:0
+#, python-format
+msgid "Residence: "
+msgstr "Résidence: "
+
+#. module: mr_store_contacts
+#: model:ir.model,name:mr_store_contacts.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: mr_store_contacts
+#: model:ir.model.fields,field_description:mr_store_contacts.field_sale_order__short_name
+msgid "Short Name"
+msgstr "Nom court"
+
+#. module: mr_store_contacts
+#: model_terms:ir.ui.view,arch_db:mr_store_contacts.crm_lead_view_form
+msgid ""
+"This phone number is blacklisted for SMS Marketing. Click to unblacklist."
+msgstr ""
+"Ce numéro de téléphone est sur liste noire pour le marketing SMS. Cliquez "
+"pour le retirer de la liste noire."

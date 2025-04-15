@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="document_tax_totals_template_so">
+        <t t-foreach="tax_totals['subtotals']" t-as="subtotal">
+            <!-- Montant HT -->
+            <t t-if="doc and doc.currency_id and total_excl != None">
+                <tr class="text-end" style="border: none !important;">
+                    <td>
+                        <strong>
+                            Montant HT
+                        </strong>
+                    </td>
+                    <td class="text-end">
+                        <span t-att-class="" t-esc="'%0.2f' % total_excl"/>
+                        <span t-esc="doc.currency_id.symbol"/>
+                    </td>
+                </tr>
+            </t>
+            <!-- Remise totale -->
+            <t t-if="doc and doc.currency_id and total_reduce != 0">
+                <tr class="text-end" style="border: none !important;">
+                    <td>
+                        <strong>
+                            Remise totale HT
+                        </strong>
+                    </td>
+                    <td class="text-end">
+                        <span t-att-class="" t-esc="'%0.2f' % total_reduce"/>
+                        <span t-esc="doc.currency_id.symbol"/>
+                    </td>
+                </tr>
+            </t>
+            <!-- Montant remisé total HT -->
+            <t t-if="doc and doc.currency_id and total_excl != 0 and total_reduce != 0">
+                <tr class="text-end" style="border: none !important;">
+                    <td>
+                        <strong>
+                            Total Remisé HT
+                        </strong>
+                    </td>
+                    <td class="text-end">
+                        <span t-att-class="" t-esc="'%0.2f' % (total_excl - total_reduce)"/>
+                        <span t-esc="doc.currency_id.symbol"/>
+                    </td>
+                </tr>
+            </t>
+            <t t-set="subtotal_to_show" t-value="subtotal['name']"/>
+            <t t-foreach="tax_totals['groups_by_subtotal'][subtotal_to_show]" t-as="amount_by_group">
+                <tr>
+                    <t t-if="tax_totals['display_tax_base']">
+                        <td class="text-end">
+                            <strong>
+                                Total
+                                <span class="text-end" t-esc="amount_by_group['tax_group_name']"/>
+                            </strong>
+                        </td>
+                        <td class="text-end o_price_total">
+                            <span class="text-nowrap" t-esc="'%0.2f' % amount_by_group['tax_group_amount']"/>
+                            <t t-if="doc and doc.pricelist_id and doc.pricelist_id.currency_id">
+                                <span t-esc="doc.currency_id.symbol"/>
+                            </t>
+                        </td>
+                    </t>
+                    <t t-else="">
+                        <td class="text-end">
+                            <strong>
+                                <span class="text-nowrap">
+                                    Total <span class="text-end" t-esc="amount_by_group['tax_group_name']"/>
+                                </span>
+                            </strong>
+                        </td>
+                        <td class="text-end o_price_total">
+                            <span class="text-nowrap" t-esc="'%0.2f' % amount_by_group['tax_group_amount']"/>
+                            <t t-if="doc and doc.pricelist_id and doc.pricelist_id.currency_id">
+                                <span t-esc="doc.currency_id.symbol"/>
+                            </t>
+                        </td>
+                    </t>
+                </tr>
+            </t>
+            <tr class="" style="background: #81b87c; color:#eff1e8;">
+                <td style="text-align: end;">
+                    <strong style="color:#eff1e8;">
+                        Total TTC
+                    </strong>
+                </td>
+                <td class="text-end">
+                    <t t-if="tax_totals and 'amount_total' in tax_totals">
+                        <span t-esc="'%0.2f' % tax_totals['amount_total']"/>
+                        <span t-esc="doc.currency_id.symbol"/>
+                    </t>
+                </td>
+            </tr>
+        </t>
+    </template>
+</odoo>

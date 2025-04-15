@@ -1,0 +1,562 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mr_store_trello_connector
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e-20241007\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-15 17:18+0000\n"
+"PO-Revision-Date: 2024-10-15 17:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_project_task__trello_forwarding_duration
+msgid "(AH) Trello Forwarding Duration in hours"
+msgstr "(AH) Trello - Durée d'acheminement en heures"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_project_task__trello_pax_number_for_forwarding
+msgid "(AP) Trello Pax Number for Forwarding"
+msgstr "(AP) Trello - Nombre de passagers pour l'acheminement"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_project_task__trello_duration
+msgid "(H) Trello Duration in hours"
+msgstr "(H) Trello - Durée en heures"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_project_task__trello_installers_number
+msgid "(P) Trello Installers Number"
+msgstr "(P) Trello - Nombre d'installateurs"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,help:mr_store_trello_connector.field_sale_order__AH
+msgid "AH"
+msgstr ""
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "AH - Forwarding Duration: "
+msgstr ""
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_sale_order__AH
+msgid "AH - Forwarding Time"
+msgstr "AH - Durée d'acheminement en heures"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,help:mr_store_trello_connector.field_sale_order__AP
+msgid "AP"
+msgstr ""
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_sale_order__AP
+msgid "AP - Forwarding Installer Number"
+msgstr "AP - Nombre de passagers pour l'acheminement"
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "AP - Pax Number for Forwarding: "
+msgstr ""
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Appartment: "
+msgstr "Appartement: "
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_trello_sync__available_boards
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.view_trellosync_form
+msgid "Available Boards"
+msgstr "Tableaux Disponibles"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_trello_sync__available_pull_lists
+msgid "Available Lists - pull"
+msgstr "Listes Disponibles"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_trello_sync__available_push_lists
+msgid "Available Lists - push"
+msgstr "Listes Disponibles"
+
+#. module: mr_store_trello_connector
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.view_trellosync_form
+msgid "Available Pull Lists"
+msgstr "Listes Disponibles pour récupération depuis Trello"
+
+#. module: mr_store_trello_connector
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.view_trellosync_form
+msgid "Available Push Lists"
+msgstr "Listes Disponibles pour envoi vers Trello"
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Billing Address: "
+msgstr "Addresse de Facturation: "
+
+#. module: mr_store_trello_connector
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.view_trellosync_form
+msgid "Board"
+msgstr "Tableau"
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Building: "
+msgstr "Immeuble: "
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Command Date: "
+msgstr "Date de Commande: "
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Commercial note: "
+msgstr "Commentaire commercial: "
+
+#. module: mr_store_trello_connector
+#: model:ir.model,name:mr_store_trello_connector.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuration"
+
+#. module: mr_store_trello_connector
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.res_config_settings_view_form
+msgid "Connecteur Trello"
+msgstr ""
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Create Date: "
+msgstr "Date de Création Commande: "
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_trello_sync__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_trello_sync__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Deposit: "
+msgstr "Acompte: "
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_trello_sync__display_name
+msgid "Display Name"
+msgstr "Nom"
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Door Code: "
+msgstr "Code de la porte: "
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Email: "
+msgstr ""
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Floor: "
+msgstr "Etage: "
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Folder"
+msgstr "Ficher"
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Folder Order"
+msgstr "Dossier"
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Folder Order "
+msgstr "Dossier "
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "H - Duration: "
+msgstr "H - Durée travaux:"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_sale_order__H
+msgid "H - Hours Number"
+msgstr "H - Durée en heures"
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "House: "
+msgstr "Maison: "
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_trello_sync__id
+msgid "ID"
+msgstr "Identifiant"
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Install Address: "
+msgstr "Addresse de Pose: "
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Installation Note: "
+msgstr "Commentaire d'installation: "
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_trello_sync__active
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.view_trellosync_form
+msgid "Is Cron Active"
+msgstr "Es-ce que le Cron est actif"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_sale_order__is_planned
+msgid "Is Planned"
+msgstr "Est planifiée"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_project_task__is_trello_finished_card
+msgid "Is trello finished"
+msgstr "Es-ce que Trello est terminé"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_project_task_type__is_trello_finished_card
+msgid "Is trello finished card"
+msgstr "Es-ce que Trello est terminé"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_sale_order__L
+msgid "L - Zip Code or Place Name"
+msgstr "L - Code postal ou nom du lieu"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_trello_sync__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_trello_sync__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Mobile: "
+msgstr ""
+
+#. module: mr_store_trello_connector
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.view_trellosync_form
+msgid "Moulinette"
+msgstr ""
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_trello_sync__name
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.view_trellosync_form
+msgid "Name"
+msgstr "Nom"
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Order"
+msgstr "Commande"
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Order "
+msgstr "Commande "
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Order: \n"
+msgstr "Commande: \n"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_sale_order__P
+msgid "P - Installer Number"
+msgstr "P - Nombre d'installateurs"
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "P - Installer Number: "
+msgstr "P - Nombre d'installateurs: "
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Payment Terms: "
+msgstr "Méthode de paiement: "
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Phone: "
+msgstr "Téléphone Fixe: "
+
+#. module: mr_store_trello_connector
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.sale_order_form_mr_store_inherit
+msgid "Planing Estimate"
+msgstr "Estimation de planification"
+
+#. module: mr_store_trello_connector
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.sale_order_form_mr_store_inherit
+msgid "Planned"
+msgstr "Planifiée"
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Portal Code: "
+msgstr "Corde du portail: "
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_trello_sync__pull_list
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.view_trellosync_form
+msgid "Pull List"
+msgstr "Liste de récupération depuis Trello"
+
+#. module: mr_store_trello_connector
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.view_trellosync_form
+msgid "Pull from trello"
+msgstr "Récupération depuis Trello"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_trello_sync__push_list
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.view_trellosync_form
+msgid "Push List"
+msgstr "Liste d'envoi vers Trello"
+
+#. module: mr_store_trello_connector
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.view_trellosync_form
+msgid "Push to trello"
+msgstr "Envoyer vers Trello"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_project_task__trello_qr_code
+msgid "QR Code"
+msgstr ""
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Residence No: "
+msgstr "N° de résidence: "
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Residence: "
+msgstr "Résidence: "
+
+#. module: mr_store_trello_connector
+#: model:ir.model,name:mr_store_trello_connector.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_trello_sync__board
+msgid "Select Board"
+msgstr "Selectionner un tableau"
+
+#. module: mr_store_trello_connector
+#: model:ir.actions.server,name:mr_store_trello_connector.trello_sync_cron_ir_actions_server
+msgid "Send to/Recieve from Trello: Cron"
+msgstr "Envoyer vers/Récupérer depuis Trello: Cron"
+
+#. module: mr_store_trello_connector
+#: model:ir.model,name:mr_store_trello_connector.model_project_task
+msgid "Task"
+msgstr "Tâche"
+
+#. module: mr_store_trello_connector
+#: model:ir.model,name:mr_store_trello_connector.model_project_task_type
+msgid "Task Stage"
+msgstr "Étape de tâche"
+
+#. module: mr_store_trello_connector
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.view_trellosync_form
+msgid "Test Actions"
+msgstr "Test d'actions"
+
+#. module: mr_store_trello_connector
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.view_trellosync_form
+msgid "Test Pull From Trello"
+msgstr "Test de récupération depuis Trello"
+
+#. module: mr_store_trello_connector
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.view_trellosync_form
+msgid "Test Push Into Trello"
+msgstr "Test d'envoi vers Trello"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_res_config_settings__trello_api_key
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.res_config_settings_view_form
+msgid "Trello API Key"
+msgstr "Clé API Trello"
+
+#. module: mr_store_trello_connector
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.res_config_settings_view_form
+msgid "Trello API Keys"
+msgstr "Clés API Trello"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_res_config_settings__trello_api_secret
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.res_config_settings_view_form
+msgid "Trello API Secret"
+msgstr "Clé secrète API Trello"
+
+#. module: mr_store_trello_connector
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.view_trellosync_form
+msgid "Trello Destination"
+msgstr "Destination Trello"
+
+#. module: mr_store_trello_connector
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.res_config_settings_view_form
+msgid "Trello Keys"
+msgstr "Clé Trello"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_project_task__trello_L
+msgid "Trello L"
+msgstr "(L) Trello - L"
+
+#. module: mr_store_trello_connector
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.res_config_settings_view_form
+msgid "Trello OAuth Token"
+msgstr "Token OAuth Trello"
+
+#. module: mr_store_trello_connector
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.res_config_settings_view_form
+msgid "Trello OAuth Token Secret"
+msgstr "Token secret OAuth Trello (token + '-' + token_secret)"
+
+#. module: mr_store_trello_connector
+#: model:ir.actions.act_window,name:mr_store_trello_connector.action_trellosync
+#: model:ir.ui.menu,name:mr_store_trello_connector.menu_trellosync
+msgid "Trello Sync"
+msgstr "Synchronisation Trello"
+
+#. module: mr_store_trello_connector
+#: model_terms:ir.ui.view,arch_db:mr_store_trello_connector.view_trellosync_form
+msgid "Trello Sync Settings"
+msgstr "Paramètres de synchronisation Trello"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_res_config_settings__trello_token
+msgid "Trello Token"
+msgstr "Token Trello"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_res_config_settings__trello_token_secret
+msgid "Trello Token Secret"
+msgstr "Token secret Trello (token + '-' + token_secret)"
+
+#. module: mr_store_trello_connector
+#: model:ir.model,name:mr_store_trello_connector.model_trello_sync
+msgid "Trello base connector"
+msgstr "Connecteur de base Trello"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_project_task__trello_idcardsource
+msgid "Trello id card source"
+msgstr "Id de la carte source Trello"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_project_task__trello_rdv_confirmed
+msgid "Trello rdv confirmed"
+msgstr "Rdv confirmé Trello"
+
+#. module: mr_store_trello_connector
+#: model:ir.model.fields,field_description:mr_store_trello_connector.field_project_task__trello_url
+msgid "Trello url"
+msgstr "Url Trello"
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "Work Deadline: "
+msgstr "Délai D'Installation: "
+
+#. module: mr_store_trello_connector
+#. odoo-python
+#: code:addons/mr_store_trello_connector/models/trello_sync.py:0
+#, python-format
+msgid "[Odoo Task URL]"
+msgstr "[URL de la tâche Odoo]"

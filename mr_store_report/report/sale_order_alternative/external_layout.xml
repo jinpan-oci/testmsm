@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="external_layout_standard_soa">
+        <t t-if="not company" t-set="company" t-value="doc.company_id"/>
+
+        <div t-attf-class="header o_company_#{company.id}_layout" style="width: 98%;margin-left: 1%; margin-right: 1%;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6">
+                        <img t-if="company.header" t-att-src="image_data_uri(company.header)" style="background-repeat: no-repeat; background-position: center; width:100%; margin-left: 4px; margin-top: 20px" alt="Logo"/>
+                    </div>
+                    <div class="col-6" style="text-align: end; margin-top: 6px; margin-left: -12px;">
+                        <h2 style="font-size: 1.5em; color: #81b87c">
+                            <span style="text-transform: uppercase; font-weight: bold;" t-if="env.context.get('proforma', False) or is_pro_forma">Pro-Forma Invoice # </span>
+                            <span style="text-transform: uppercase; font-weight: bold;" t-elif="doc.state in ['draft','sent']">Devis # </span>
+                            <span style="text-transform: uppercase; font-weight: bold;" t-else="">Commande # </span>
+                            <span style="text-transform: uppercase; font-weight: bold;" t-field="doc.name"/>
+                        </h2>
+                        <div style="font-size: 0.8em; margin-top: -8px;">
+                            <div>
+                                <span> Suivi par </span><span t-out="doc.user_id.name"/>
+                            </div>
+                            <div>
+                                <span class="fw-bold">Tél :<span t-out="doc.user_id.phone or ''"/></span>
+                            </div>
+                            <div>
+                                Le <span t-field="doc.date_order" t-options="{'widget':'date'}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <t t-if="mrstore_type == 'invoice' or mrstore_type == 'purchaseorder'">
+                <div class="container-fluid" style="margin-top: 5px !important;">
+                    <div class="row">
+                        <div class="col-4" name="company_address" style=" font-size: 14px !important;">
+                            <div class="row">
+                                <div class="col-12">
+                                    <ul class="list-unstyled">
+                                        <li t-if="company.name">
+                                            <span t-esc="company.name"/>
+                                        </li>
+                                        <li t-if="company.street">
+                                            <span t-esc="company.street"/>
+                                        </li>
+                                        <li t-if="company.zip">
+                                            <span t-esc="company.zip"/> <span t-if="company.city" t-esc="company.city"/>
+                                        </li>
+                                        <li t-if="forced_vat">
+                                            <span t-esc="company.country_id.vat_label or 'Tax ID'"/>:
+                                            <span t-esc="forced_vat"/>
+                                        </li>
+                                        <li t-if="company.phone">
+                                            <span t-esc="company.phone"/>
+                                        </li>
+                                        <li t-if="company.mobile">
+                                            <span t-esc="company.mobile"/>
+                                        </li>
+                                        <li t-if="company.email">
+                                            <t t-esc="company.email"/>
+                                        </li>
+                                        <li t-if="company.website">
+                                            <t t-esc="company.website"/>
+                                        </li>
+                                        <t t-if="mrstore_type == 'invoice'">
+                                            <li t-if="o.invoice_user_id">
+                                                Affaire suivie par: <t t-esc="o.invoice_user_id.name"/>
+                                            </li>
+                                        </t>
+                                        <li>
+                                            <br/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <t t-if="information_block">
+                                <div class="row">
+                                    <div class="col-12" name="information_block">
+                                        <t t-out="information_block"/>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                        <div class="col-3"/>
+                        <div name="address" class="col-6">
+                            <t t-esc="address"/>
+                        </div>
+                    </div>
+                    <div class="oe_structure" id="oe_structure"/>
+                </div>
+            </t>
+        </div>
+
+        <div t-attf-class="article o_report_layout_standard o_company_#{company.id}_layout {{  'o_report_layout_background' if company.layout_background in ['Geometric', 'Custom']  else  '' }}" t-attf-style="background-image: url({{ 'data:image/png;base64,%s' % company.layout_background_image.decode('utf-8') if company.layout_background_image and company.layout_background == 'Custom' else '/base/static/img/bg_background_template.jpg' if company.layout_background == 'Geometric' else ''}});" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+            <div class="pt-5">
+                <!-- This div ensures that the address is not cropped by the header. -->
+            </div>
+            <t t-out="0"/>
+        </div>
+
+        <div t-attf-class="footer o_standard_footer o_company_#{company.id}_layout" style="width:104%;margin-left: -2%; margin-right: -2%; margin-top: -50px;">
+            <img t-if="company.footer" t-att-src="image_data_uri(company.footer)" style="background-repeat: no-repeat; background-size: contain; position: center; width:94%; margin-left: 3%; margin-right: 3%; margin-bottom: 0px" alt="Logo"/>
+            <div style="background: #ececec">
+                <div t-if="company.footer_title" class="sub-footer" style="background: #ececec; width: 100%;color: #555554; width:90%; margin: 0 auto; padding-left: 1em; margin-bottom: -10px;">
+                    <p style="font-weight: 900; color: #555554; text-transform: uppercase; letter-spacing: 4px; margin: 0"><t t-esc="company.footer_title"/></p>
+                </div>
+                <div class="d-flex mt-1" style="width: 90%;background: #ececec;margin: 0 auto; display: flex; flex-direction: column; justify-content: center; color: #555554; margin-bottom: -8px;">
+                    <t t-if="company.column_1_title and company.column_2_title and company.column_3_title">
+                        <div class="marseille" style="width: 30%; margin: 0 1em;">
+                            <p t-if="company.column_1_title" style="border-bottom: 1px solid #555554; margin-bottom:0px;text-transform: uppercase; font-size: 12px;"><t t-esc="company.column_1_title"/></p>
+                            <p t-if="company.column_1_line_1" style="margin: 0; font-size:10px; margin-bottom:-5px;"><t t-esc="company.column_1_line_1"/></p>
+                            <p t-if="company.column_1_line_2" style="margin: 0; font-size:10px; margin-bottom:-5px;"><t t-esc="company.column_1_line_2"/></p>
+                            <p t-if="company.column_1_line_3" style="margin: 0; font-size:10px; margin-bottom:-5px;"><t t-esc="company.column_1_line_3"/></p>
+                            <p t-if="company.column_1_line_4" style="margin: 0; font-size:10px;"><t t-esc="company.column_1_line_4"/></p>
+                        </div>
+                        <div class="atelier" style="width: 30%; margin: 0 1em;">
+                            <p t-if="company.column_2_title" style="border-bottom: 1px solid #555554; margin-bottom:0px;text-transform: uppercase; font-size: 12px;"><t t-esc="company.column_2_title"/></p>
+                            <p t-if="company.column_2_line_1" style="margin: 0; font-size:10px; margin-bottom:-5px;"><t t-esc="company.column_2_line_1"/></p>
+                            <p t-if="company.column_2_line_2" style="margin: 0; font-size:10px; margin-bottom:-5px;"><t t-esc="company.column_2_line_2"/></p>
+                            <p t-if="company.column_2_line_3" style="margin: 0; font-size:10px; margin-bottom:-5px;"><t t-esc="company.column_2_line_3"/></p>
+                            <p t-if="company.column_2_line_4" style="margin: 0; font-size:10px;"><t t-esc="company.column_2_line_4"/></p>
+                        </div>
+                        <div class="aix" style="width: 30%; margin: 0 1em;">
+                            <p t-if="company.column_3_title" style="border-bottom: 1px solid #555554; margin-bottom:0px;text-transform: uppercase; font-size: 12px;"><t t-esc="company.column_3_title"/></p>
+                            <p t-if="company.column_3_line_1" style="margin: 0; font-size:10px; margin-bottom:-5px;"><t t-esc="company.column_3_line_1"/></p>
+                            <p t-if="company.column_3_line_2" style="margin: 0; font-size:10px; margin-bottom:-5px;"><t t-esc="company.column_3_line_2"/></p>
+                            <p t-if="company.column_3_line_3" style="margin: 0; font-size:10px; margin-bottom:-5px;"><t t-esc="company.column_3_line_3"/></p>
+                            <p t-if="company.column_3_line_4" style="margin: 0; font-size:10px;"><t t-esc="company.column_3_line_4"/></p>
+                        </div>
+                    </t>
+                    <t t-elif="company.column_1_title and company.column_2_title and not company.column_3_title">
+                        <div class="marseille" style="width: 45%; margin: 0 1em;">
+                            <p t-if="company.column_1_title" style="border-bottom: 1px solid #555554; margin-bottom:0px;text-transform: uppercase; font-size: 12px;"><t t-esc="company.column_1_title"/></p>
+                            <p t-if="company.column_1_line_1" style="margin: 0; font-size:10px; margin-bottom:-5px;"><t t-esc="company.column_1_line_1"/></p>
+                            <p t-if="company.column_1_line_2" style="margin: 0; font-size:10px; margin-bottom:-5px;"><t t-esc="company.column_1_line_2"/></p>
+                            <p t-if="company.column_1_line_3" style="margin: 0; font-size:10px; margin-bottom:-5px;"><t t-esc="company.column_1_line_3"/></p>
+                            <p t-if="company.column_1_line_4" style="margin: 0; font-size:10px;"><t t-esc="company.column_1_line_4"/></p>
+                        </div>
+                        <div class="atelier" style="width: 45%; margin: 0 1em;">
+                            <p t-if="company.column_2_title" style="border-bottom: 1px solid #555554; margin-bottom:0px;text-transform: uppercase; font-size: 12px;"><t t-esc="company.column_2_title"/></p>
+                            <p t-if="company.column_2_line_1" style="margin: 0; font-size:10px; margin-bottom:-5px;"><t t-esc="company.column_2_line_1"/></p>
+                            <p t-if="company.column_2_line_2" style="margin: 0; font-size:10px; margin-bottom:-5px;"><t t-esc="company.column_2_line_2"/></p>
+                            <p t-if="company.column_2_line_3" style="margin: 0; font-size:10px; margin-bottom:-5px;"><t t-esc="company.column_2_line_3"/></p>
+                            <p t-if="company.column_2_line_4" style="margin: 0; font-size:10px;"><t t-esc="company.column_2_line_4"/></p>
+                        </div>
+                    </t>
+                    <t t-elif="company.column_1_title and not company.column_2_title and not company.column_3_title">
+                        <div class="marseille" style="width: 90%; margin: 0 1em;">
+                            <p t-if="company.column_1_title" style="border-bottom: 1px solid #555554; margin-bottom:0px;text-transform: uppercase; font-size: 12px;"><t t-esc="company.column_1_title"/></p>
+                            <p t-if="company.column_1_line_1" style="margin: 0; font-size:10px; margin-bottom:-5px;"><t t-esc="company.column_1_line_1"/></p>
+                            <p t-if="company.column_1_line_2" style="margin: 0; font-size:10px; margin-bottom:-5px;"><t t-esc="company.column_1_line_2"/></p>
+                            <p t-if="company.column_1_line_3" style="margin: 0; font-size:10px; margin-bottom:-5px;"><t t-esc="company.column_1_line_3"/></p>
+                            <p t-if="company.column_1_line_4" style="margin: 0; font-size:10px;"><t t-esc="company.column_1_line_4"/></p>
+                        </div>
+                    </t>
+                </div>
+                <div t-if="company.footer_line_1 and company.footer_line_2" class="mt-1 pb-3" style="background: #ececec; width:98%; margin-left: 1%; margin-right: 1%; text-align: center;">
+                    <p style="font-size: 9px !important; font-weight: normal; margin-bottom: -4px"><t t-esc="company.footer_line_1"/></p>
+                    <p style="font-size: 9px !important; font-weight: normal;"><t t-esc="company.footer_line_2"/></p>
+                </div>
+                <div t-elif="company.footer_line_1 and not company.footer_line_2" class="w-100 mt-3 pb-2" style="background: #ececec; width:98%;margin-left: 1%; margin-right: 1%;">
+                    <p style="font-size: 9px; text-align: center; font-weight: bold"><t t-esc="company.footer_line_1"/></p>
+                </div>
+                <div class="oe_structure"  id="oe_structure" style="background: #ececec;"/>
+            </div>
+        </div>
+    </template>
+
+    <template id="external_layout_soa">
+        <t t-if="not company">
+            <!-- Multicompany -->
+            <t t-if="company_id">
+                <t t-set="company" t-value="company_id"/>
+            </t>
+            <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                <t t-set="company" t-value="o.company_id.sudo()"/>
+            </t>
+            <t t-else="else">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+        </t>
+        <t t-call="mr_store_report.external_layout_standard_soa">
+            <t t-out="0"/>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="module_install_tag_tree_view" model="ir.ui.view">
+        <field name="name">module.install.tag.tree</field>
+        <field name="model">module.install.tag</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_module_install_tag" model="ir.actions.act_window">
+        <field name="name">Module Tag</field>
+        <field name="res_model">module.install.tag</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="module_install_tag_tree_view"/>
+    </record>
+</odoo>
