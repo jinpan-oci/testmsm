@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_attachment_add" model="ir.ui.view">
+        <field name="name">Add Attachment</field>
+        <field name="model">attachment.add</field>
+        <field name="arch" type="xml">
+            <form string="Add Attachment">
+                <group>
+                    <field name="file" filename="file_name"/>
+                    <field name="file_name" invisible="1"/>
+                    <field name="usetype"/>
+                </group>
+                <footer>
+                    <button string="Add" type="object" class="btn-primary" name="action_add_attachment"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_attachment_add_view" model="ir.actions.act_window">
+        <field name="name">Add Attachment</field>
+        <field name="res_model">attachment.add</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

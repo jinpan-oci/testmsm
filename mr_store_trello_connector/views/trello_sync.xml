@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_trellosync_tree" model="ir.ui.view">
+        <field name="name">trellosync.tree</field>
+        <field name="model">trello.sync</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_trellosync_form" model="ir.ui.view">
+        <field name="name">trellosync.form</field>
+        <field name="model">trello.sync</field>
+        <field name="arch" type="xml">
+            <form>
+                <notebook>
+                    <page string="Trello Sync Settings">
+                        <group>
+                            <field name="name" placeholder="Name"/>
+                            <field name="active" placeholder="Is Cron Active"/>
+                        </group>
+                        <group string="Test Actions"/>
+                        <button name="test_push" string="Test Push Into Trello" type="object" class="oe_highlight"/>
+                        <button name="test_pull" string="Test Pull From Trello" type="object" class="oe_highlight"/>
+                        <button name="action_moulinette" string="Moulinette" type="object" class="oe_highlight" groups="base.group_user"/>
+                        <group string="Trello Destination">
+                            <field name="available_boards" placeholder="Available Boards" readonly="True"/>
+                            <field name="board" placeholder="Board"/>
+                            <group string="Push to trello">
+                                <field name="available_push_lists" placeholder="Available Push Lists" readonly="True" invisible="not board"/>
+                                <field name="push_list" placeholder="Push List"/>
+                            </group>
+                            <group string="Pull from trello">
+                                <field name="available_pull_lists" placeholder="Available Pull Lists" readonly="True" invisible="not board"/>
+                                <field name="pull_list" placeholder="Pull List"/>
+                            </group>
+                        </group>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_trellosync" model="ir.actions.act_window">
+        <field name="name">Trello Sync</field>
+        <field name="res_model">trello.sync</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_trellosync_tree"/>
+    </record>
+
+    <menuitem id="menu_trellosync"
+            name="Trello Sync"
+            parent="project.menu_project_config"
+            action="action_trellosync"
+            sequence="10"/>
+</odoo>

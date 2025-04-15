@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+update_service_price_wizard_user,update_service_price_wizard_user,model_sale_order_line_service_update_wizard,base.group_user,1,1,1,1
+
+change_description_wizard_user,change_description_wizard_user,model_sale_order_line_change_description_wizard,base.group_user,1,1,1,1

@@ -1,0 +1,110 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_alternative
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-09 09:40+0000\n"
+"PO-Revision-Date: 2024-10-09 09:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_order_alternative
+#: model_terms:ir.ui.view,arch_db:sale_order_alternative.view_order_form
+msgid "Alternative Quotation"
+msgstr "Devis Alternatif"
+
+#. module: sale_order_alternative
+#: model:ir.model.fields,field_description:sale_order_alternative.field_sale_order__alternative_so_ids
+msgid "Alternative SOs"
+msgstr "BC Alternatifs"
+
+#. module: sale_order_alternative
+#: model:ir.model.fields,field_description:sale_order_alternative.field_sale_order__alternatives_count
+#: model_terms:ir.ui.view,arch_db:sale_order_alternative.view_order_form
+msgid "Alternatives"
+msgstr ""
+
+#. module: sale_order_alternative
+#: model:ir.model.fields,field_description:sale_order_alternative.field_so_alternative_group__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: sale_order_alternative
+#: model:ir.model.fields,field_description:sale_order_alternative.field_so_alternative_group__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: sale_order_alternative
+#: model:ir.model.fields,field_description:sale_order_alternative.field_so_alternative_group__display_name
+msgid "Display Name"
+msgstr "Nom à afficher"
+
+#. module: sale_order_alternative
+#: model_terms:ir.ui.view,arch_db:sale_order_alternative.view_order_form
+msgid "Duplicate"
+msgstr "Dupliquer"
+
+#. module: sale_order_alternative
+#: model:ir.model.fields,field_description:sale_order_alternative.field_sale_order__has_alternatives
+msgid "Has Alternatives"
+msgstr "A des alternatives"
+
+#. module: sale_order_alternative
+#: model:ir.model.fields,field_description:sale_order_alternative.field_so_alternative_group__id
+msgid "ID"
+msgstr ""
+
+#. module: sale_order_alternative
+#: model:ir.model.fields,field_description:sale_order_alternative.field_so_alternative_group__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: sale_order_alternative
+#: model:ir.model.fields,field_description:sale_order_alternative.field_so_alternative_group__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: sale_order_alternative
+#: model:ir.model.fields,field_description:sale_order_alternative.field_so_alternative_group__order_ids
+msgid "Order"
+msgstr "Commande"
+
+#. module: sale_order_alternative
+#: model:ir.model.fields,help:sale_order_alternative.field_sale_order__alternative_so_ids
+msgid "Other potential quotes for customer"
+msgstr "Autres potentiel devis pour le client"
+
+#. module: sale_order_alternative
+#: model:ir.model.fields,field_description:sale_order_alternative.field_sale_order__sale_order_group_id
+msgid "Sale Order Group"
+msgstr "Groupe De Commandes"
+
+#. module: sale_order_alternative
+#: model:ir.model,name:sale_order_alternative.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: sale_order_alternative
+#: model:res.groups,name:sale_order_alternative.group_show_alternative_order
+msgid "Show Alternative Order Button"
+msgstr ""
+
+#. module: sale_order_alternative
+#: model:ir.model,name:sale_order_alternative.model_so_alternative_group
+msgid "Technical model to group Quotations"
+msgstr "Model technique pour regrouper les devis"
+
+#. module: sale_order_alternative
+#: model:ir.model.fields,help:sale_order_alternative.field_sale_order__has_alternatives
+msgid ""
+"Whether or not this quote order is linked to another quote order as an "
+"alternative."
+msgstr ""
+"Si oui ou non ce devis est lié à un autre devis en tant qu'alternative."

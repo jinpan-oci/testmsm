@@ -1,0 +1,283 @@
+<odoo>
+
+
+    <template id="ms_report_saleorder_document_light">
+        <t t-set="company" t-value="doc.company_id" />
+        <div class="container">     <!-- Début header (pas external_layout) -->
+            <div class="row" style="margin-top: -50px;">
+                <div class="col-6">
+                    <span>
+                        <b>
+                            Le réseau N°1 que l'on recommande à ses voisins
+                        </b>
+                    </span>
+                    <img t-if="company.image_google_mark"
+                        t-att-src="image_data_uri(company.image_google_mark)" style="width: 230px;" />
+                </div>
+                <div class="col-6" style="margin-left: 23px;">
+                    <div>
+                        <ul class="list-unstyled"
+                            style="font-size: 20px; margin-left: 10px; margin-top: 5px; padding-left: 5px; padding-top: 5px">
+                            <t t-set="customer" t-value="doc.partner_id" />
+                            <li t-if="customer.name">
+                                <b>
+                                    <span t-esc="customer.name" />
+                                </b>
+                            </li>
+                            <li t-if="customer.street">
+                                <span t-esc="customer.street" />
+                            </li>
+                            <li t-if="customer.street2">
+                                <span t-esc="customer.street2" />
+                            </li>
+                            <li t-if="customer.zip">
+                                <b>
+                                    <span t-esc="customer.zip" />
+                                    <span t-if="customer.city" t-esc="customer.city" />
+                                </b>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div style="padding-top: 5px;">
+                    <h3>
+                        Devis / Commande N° :
+                        <span t-field="doc.name"/>
+                    </h3>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 5px; color: white;">
+                <div class="col-6" style="padding-right: 1px; margin-left: -13px; margin-right: 18px;">
+                    <div style="background-color:#78af72; font-color: #FFFFFF; height: 130px;">
+                        <ul class="list-unstyled" style="font-size: 13px; padding: 10px;">
+                            <li>
+                                <U>Date :</U>
+                                <t t-esc="' '"/>
+                                <span t-field="doc.date_order" t-options="{'format': 'dd/MM/yyyy'}"/>
+                            </li>
+                            <li>
+                                <div style="padding-top: 10px;">
+                                    <U>Votre contact :</U>
+                                    <t t-esc="' '"/>
+                                    <t t-if="doc.user_id" t-esc="doc.user_id.name"/>
+                                    <t t-esc="' (Tél : '"/>
+                                    <t t-if="doc.user_id.mobile" t-esc="doc.user_id.mobile"/>
+                                    <t t-elif="doc.user_id.phone" t-esc="doc.user_id.phone"/>
+                                    <t t-esc="')'"/>
+                                </div>
+                            </li>
+                            <li t-if="doc.work_deadline">
+                                <div style="padding-top: 10px;">
+                                    <U>Délais des travaux :</U>
+                                    <t t-esc="' '" />
+                                    <t t-esc="doc.work_deadline" />
+                                </div>
+                            </li>
+                            <li t-if="doc.client_order_ref">
+                                <div style="padding-top: 10px;">
+                                    <U>Réf Client :</U>
+                                    <t t-esc="' '" />
+                                    <t t-esc="doc.client_order_ref" />
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6" style="padding-left: 1px; margin-left: 7px;">
+                    <div style="background-color:#78af72; font-color: #FFFFFF; height: 130px;">
+                        <t t-set="customer_info" t-value="doc.partner_id" />
+                        <ul class="list-unstyled" style="font-size: 13px; margin-left: 10px; margin-top: 5px">
+                            <li>
+                                <div style="padding-top: 15px;">
+                                    <U>Informations Client :</U>
+                                    <div style="margin-top: 10px; margin-bottom: 5px">
+                                        <t t-if="customer.mobile"> Tél : <t t-esc="customer.mobile" />
+                                            / </t>
+                                        <t t-if="customer.email"> Email : <span
+                                                t-esc="customer.email" /> / </t>
+                                        <t t-if="customer.residence_name"> Bât : <span
+                                                t-esc="customer.residence_name" />
+                                        </t>
+                                    </div>
+                                </div>
+                            </li>
+                            <li t-if="doc.partner_shipping_id">
+                                <div style="margin-top: 10px">
+                                    <U>Information Livraison :</U>
+                                    <div style="margin-top: 10px; padding-bottom: 15px">
+                                        <t t-if="doc.partner_shipping_id.name">
+                                            <t t-esc="doc.partner_shipping_id.name" /> / </t>
+                                        <t t-if="doc.partner_shipping_id.street">
+                                            <span t-esc="doc.partner_shipping_id.street" /> / </t>
+                                        <t t-if="doc.partner_shipping_id.city">
+                                            <span t-esc="doc.partner_shipping_id.city" />
+                                        </t>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>      <!--
+        Fin header (pas external_layout) -->
+        <div class="page" style="margin-top: 10px; ">
+
+            <t t-set="lines_to_report" t-value="doc._get_order_lines_to_report()" />
+
+            <t t-set="display_discount" t-value="any(l.discount for l in lines_to_report)" />
+            <t t-set="discount_subtotal" t-value="0" />
+            <t t-set="total_excl" t-value="0" />
+            <t t-set="total_reduce" t-value="0" />
+
+            <table class="table border-borderless border-white" style="font-size: 12px;">
+                <thead style="display: table-row-group">
+                    <tr style="background-color: #D3D3D3;">
+                        <th/>
+                        <th style="max-width: 100px;">Descriptif</th>
+                        <th>Qté</th>
+                        <th>PU.</th>
+                        <th>Tot.HT</th>
+                        <th>TVA</th>
+                    </tr>
+                </thead>
+                <tbody class="sale_tbody">
+                    <t t-foreach="lines_to_report" t-as="line">
+                        <t t-if="line_index == 0">
+                            <t t-set="style" t-value="'page-break-inside: auto;'" />
+                        </t>
+                        <t t-else="">
+                            <t t-set="style" t-value="'page-break-inside: avoid;'" />
+                        </t>
+                        <div t-att-style="style">
+                            <t t-set="current_subtotal" t-value="0" />
+                            <!-- ADD -->
+                            <t t-set="total_excl"
+                                t-value="total_excl + (line.price_unit * line.product_uom_qty)" />
+                            <t t-set="total_reduce"
+                                t-value="total_reduce + ((line.price_unit - line.price_reduce_taxexcl) * line.product_uom_qty)" />
+                            <!-- ADD -->
+                            <t t-set="current_subtotal"
+                                t-value="current_subtotal + line.price_subtotal" />
+                            <t t-set="current_total" t-value="current_subtotal + line.price_total"
+                                t-if="doc.company_id.tax_calculation_rounding_method == 'round_per_line'" />
+                            <tr t-if="line.display_type not in ['line_section', 'line_note']">
+                                <td style="width: 20px">
+                                    <t t-if="line.image_1920">
+                                        <img style="width: 100px; margin: auto"
+                                            t-att-src="image_data_uri(line.product_id.image_256)" />
+                                    </t>
+                                </td>
+                                <td style="font-size: 13px; max-width: 100px;">
+                                    <t t-if="line.description_html">
+                                        <span t-field="line.description_html" />
+                                    </t>
+                                    <t t-elif="line.description_text">
+                                        <span t-field="line.description_text"/>
+                                    </t>
+                                    <t t-elif="line.name">
+                                        <span t-field="line.name"/>
+                                    </t>
+                                </td>
+                                <td style="width: 15px">
+                                    <span t-field="line.product_uom_qty" t-options="{'widget': 'integer'}"/>
+                                </td>
+                                <td style="width: 30px">
+                                    <span t-field="line.price_unit" t-options="{'widget': 'monetary'}"/>
+                                </td>
+                                <td style="width: 30px">
+                                    <span t-field="line.price_subtotal" t-options="{'widget': 'monetary'}"/>
+                                </td>
+                                <t t-set="taxes"
+                                    t-value="', '.join([tax.name for tax in line.tax_id])"/>
+                                <td name="td_taxes"
+                                    t-attf-class="text-end {{ 'text-nowrap' if len(taxes) &lt; 10 else '' }}"
+                                    style="width: 15px">
+                                    <span t-out="taxes" />
+                                </td>
+                            </tr>
+                            <tr t-else="">
+                                <td colspan="99">
+                                    <span t-field="line.name"/>
+                                </td>
+                            </tr>
+                        </div>
+                    </t>
+                </tbody>
+            </table>
+        </div>
+        <div class="container clearfix" name="so_total_summary">
+            <div id="total" class="row" name="total">
+                <!-- <div t-attf-class="#{'col-6' if report_type != 'html' else 'col-sm-7 col-md-6'}
+                ms-auto"> -->
+                <div class="col-7">
+                    <span t-field="doc.note"
+                        t-attf-style="#{'text-align:justify;text-justify:inter-word;' if doc.company_id.terms_type != 'html' else ''}"
+                        name="order_note" />
+                </div>
+                <div class="col-5">
+                    <table class="table table-sm table-borderless">
+                        <!-- Tax totals -->
+                        <t t-set="tax_totals" t-value="doc.tax_totals" />
+                        <t t-call="mr_store_report.document_tax_totals_template_sol" />
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p t-if="not is_html_empty(doc.payment_term_id.note)">
+                <span t-field="doc.payment_term_id.note">The payment should also be transmitted with
+                    love</span>
+            </p>
+            <p
+                t-if="doc.fiscal_position_id and not is_html_empty(doc.fiscal_position_id.sudo().note)"
+                id="fiscal_position_remark">
+                <strong>Fiscal Position Remark:</strong>
+                <span t-field="doc.fiscal_position_id.sudo().note">No further requirements for this
+                    payment</span>
+            </p>
+        </div>
+        <div t-if="doc.validity_date and doc.state in ['draft', 'sent']"
+            class="col-auto col-3 mw-100 mb-2" name="expiration_date">
+            <strong>Validité du devis: </strong>
+            <span class="m-0" t-field="doc.validity_date">2023-12-31</span>
+        </div>
+        <div class="container" style="margin-top: 15px;">
+            <div class="row">
+                <div t-if="not doc.signature" class="placeholder_signature col-6">
+                    <div>
+                        <b> Fait à ............................................................., le
+                            ....../....../.......... <br /><br /> Signature précédée de la mention "Bon pour
+                            accord" </b>
+                    </div>
+                </div>
+                <div class="col-6" t-if="not doc.signature and not doc.env['ir.config_parameter'].sudo().get_param('portal_remover.deactivate_portal')">
+                    <h5><a class="btn btn-secondary" t-attf-href="#{doc._get_share_url()}" target="_blank"> &gt; Signature en ligne</a></h5>
+                </div>
+                <div t-if="doc.signature" class="placeholder_signature col-6">
+                    <strong>Bon pour accord et acceptation des Conditions Générales de Vente en pièce jointe de ce mail</strong>
+                    <br/>
+                    <img t-att-src="image_data_uri(doc.signature)" style="max-height: 4cm; max-width: 8cm;"/>
+                    <div class="text-center">
+                        <p t-field="doc.signed_by"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="ms_report_saleorder_light">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-set="mrstore_type" t-value="'saleorder'" />
+                <t t-call="mr_store_report.external_layout_sol">
+                    <div style="margin-left: 10px; margin-right: 10px;">
+                        <t t-call="mr_store_report.ms_report_saleorder_document_light"/>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

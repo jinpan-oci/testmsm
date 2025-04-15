@@ -1,0 +1,13 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+
+hercule_category_user,hercule_category_user,model_hercule_category,base.group_user,1,1,1,0
+hercule_category_system,hercule_category_system,model_hercule_category,base.group_system,1,1,1,1
+
+hercule_product_user,hercule_product_user,model_hercule_product,base.group_user,1,1,1,0
+hercule_product_system,hercule_product_system,model_hercule_product,base.group_system,1,1,1,1
+
+hercule_label_user,hercule_label_user,model_hercule_label,base.group_user,1,1,1,0
+hercule_label_system,hercule_label_system,model_hercule_label,base.group_system,1,1,1,1
+
+hercule_title_user,hercule_title_user,model_hercule_title,base.group_user,1,1,1,0
+hercule_title_system,hercule_title_system,model_hercule_title,base.group_system,1,1,1,1

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<record id="view_mail_activity_type_form_inherit" model="ir.ui.view">
+    <field name="name">mail.activity.type.form.inherit</field>
+    <field name="model">mail.activity.type</field>
+    <field name="inherit_id" ref="mail.mail_activity_type_view_form"/>
+    <field name="arch" type="xml">
+       <xpath expr="//group[@name='activity_details']" position="after">
+            <group string="Stages">
+                <field name="from_stage_id"/>
+                <field name="to_stage_id"/>
+                <field name="rules" widget="ace" options="{'mode': 'python'}"/>
+            </group>
+        </xpath>
+    </field>
+</record>
+<record id="view_mail_activity_form_inherit" model="ir.ui.view">
+    <field name="name">mail.activity.form.inherit</field>
+    <field name="model">mail.activity</field>
+    <field name="inherit_id" ref="mail.mail_activity_view_form_popup"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='res_model_id']" position="after">
+            <field name="stage_id"/>
+        </xpath>
+    </field>
+</record>
+
+<record id="view_mail_activity_stage_tree" model="ir.ui.view">
+    <field name="name">mail.activity.stage.tree</field>
+    <field name="model">mail.activity.stage</field>
+    <field name="arch" type="xml">
+        <tree string="Mail Activity Stage">
+            <field name="name"/>            
+            <field name="sequence"/>
+            <field name="res_model"/>
+            <field name="is_start_stage"/>
+            <field name="is_close_stage"/>
+            <field name ="activity_transition"/>
+        </tree>
+    </field>
+</record>
+<record id="view_mail_activity_stage_form" model="ir.ui.view">
+    <field name="name">mail.activity.stage.form</field>
+    <field name="model">mail.activity.stage</field>
+    <field name="arch" type="xml">
+        <form string="Mail Activity Stage">
+            <group>
+                <field name="name"/>
+                <field name="res_model"/>
+                <field name="is_start_stage"/>
+                <field name="is_close_stage"/>
+                <field name="activity_transition"/>
+            </group>
+        </form>
+    </field>
+</record>
+<record id="action_mail_activity_stage" model="ir.actions.act_window">
+    <field name="name">Mail Activity Stages</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">mail.activity.stage</field>
+    <field name="view_mode">tree,form</field>
+    <field name="view_id" ref="view_mail_activity_stage_tree"/>
+    <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+            Create the first Mail Activity Stage
+        </p>
+    </field>
+</record>
+<menuitem id="menu_mail_activity_stage" 
+          name="Mail Activity Stages" 
+          parent="sale.prod_config_main" 
+          action="action_mail_activity_stage"
+          sequence="100"/>
+
+</odoo>

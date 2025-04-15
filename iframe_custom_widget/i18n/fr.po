@@ -1,0 +1,440 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* iframe_custom_widget
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e-20240904\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-11 09:06+0000\n"
+"PO-Revision-Date: 2024-09-11 09:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: iframe_custom_widget
+#. odoo-python
+#: code:addons/iframe_custom_widget/controler/hp5.py:0
+#, python-format
+msgid " qty : "
+msgstr "qté : "
+
+#. module: iframe_custom_widget
+#. odoo-python
+#: code:addons/iframe_custom_widget/controler/hp5.py:0
+#, python-format
+msgid " € excl. taxes"
+msgstr "€ HT"
+
+#. module: iframe_custom_widget
+#. odoo-python
+#: code:addons/iframe_custom_widget/models/sale_order_line.py:0
+#, python-format
+msgid ""
+"<p class=\"o_view_nocontent_smiling_face\">\n"
+"                Create a new product\n"
+"            </p><p>\n"
+"                You must define a product for everything you sell or purchase,\n"
+"                whether it's a storable product, a consumable or a service.\n"
+"            </p>"
+msgstr ""
+"<p class=\"o_view_nocontent_smiling_face\">\n"
+"                Créez un nouveau produit\n"
+"            </p><p>\n"
+"                Vous devez définir un produit pour tout ce que vous vendez ou achetez,\n"
+"                que ce soit un produit stockable, un consommable ou un service.\n"
+"            </p>"
+
+#. module: iframe_custom_widget
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.res_config_settings_view_form
+msgid "Auto Complete Description Matrix"
+msgstr "Complétion automatique Matrice description"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_res_config_settings__autocomplete_desc_matrix
+msgid "Auto Completion"
+msgstr "Complétion automatique"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hp5_categ_matrix__categ_id
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: iframe_custom_widget
+#: model:ir.actions.act_window,name:iframe_custom_widget.action_hp5_categ_matrix
+#: model:ir.ui.menu,name:iframe_custom_widget.menu_hp5_categ_matrix_config
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.view_hp5_categ_matrix_form
+msgid "Category Matrix"
+msgstr "Matrice Catégories"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_res_config_settings__iframe_change_pwd
+msgid "Change Password"
+msgstr "Changer Le Mot De Passe"
+
+#. module: iframe_custom_widget
+#: model:ir.model,name:iframe_custom_widget.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: iframe_custom_widget
+#: model:ir.model,name:iframe_custom_widget.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuration"
+
+#. module: iframe_custom_widget
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.sale_view_order_form_inherit
+msgid "Configurator"
+msgstr "Configurateur"
+
+#. module: iframe_custom_widget
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.res_config_settings_view_form
+msgid "Connection IDs"
+msgstr "Identifiants de connexion"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_label__create_uid
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_product__create_uid
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_title__create_uid
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hp5_categ_matrix__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_label__create_date
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_product__create_date
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_title__create_date
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hp5_categ_matrix__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_label__custom_label
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.view_hercule_label_form
+msgid "Custom Description"
+msgstr "Label personnalisé"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_title__custom_title
+msgid "Custom Title"
+msgstr "Titre personnalisé"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_res_config_settings__hp5_default_categ_id
+msgid "Default Category"
+msgstr "Catégorie par défaut"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_res_config_settings__hp5_default_route_id
+msgid "Default MTO Routes"
+msgstr "Routes MTO par défaut"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_label__name
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.view_hercule_label_form
+msgid "Description"
+msgstr ""
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_sale_order_line__description_html
+msgid "Description Html"
+msgstr "Description - Html"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_sale_order_line__description_text
+msgid "Description Text"
+msgstr "Description - Texte"
+
+#. module: iframe_custom_widget
+#: model:ir.ui.menu,name:iframe_custom_widget.top_menu_hercule_label
+msgid "Descriptions Matrix"
+msgstr "Matrice Descriptions"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_label__display_name
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_product__display_name
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_title__display_name
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hp5_categ_matrix__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: iframe_custom_widget
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.sale_product_h5_form_view
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.sale_view_order_form_inherit
+msgid "E-Story"
+msgstr ""
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hp5_categ_matrix__full_code
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_sale_order_line__full_code
+msgid "Full Code"
+msgstr "Code complet"
+
+#. module: iframe_custom_widget
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.sale_view_order_form_inherit
+msgid "H.ID"
+msgstr ""
+
+#. module: iframe_custom_widget
+#: model:ir.ui.menu,name:iframe_custom_widget.menu_hp5_categ_matrix
+msgid "Hercule"
+msgstr ""
+
+#. module: iframe_custom_widget
+#: model:ir.model,name:iframe_custom_widget.model_hercule_label
+msgid "Hercule Description"
+msgstr "Label Hercule"
+
+#. module: iframe_custom_widget
+#: model:ir.actions.act_window,name:iframe_custom_widget.action_hercule_label
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.view_hercule_label_form
+msgid "Hercule Descriptions"
+msgstr "Labels Hercule"
+
+#. module: iframe_custom_widget
+#: model:ir.actions.act_window,name:iframe_custom_widget.action_hercule_product
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_label__hercule_product_ids
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_title__hercule_product_ids
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.view_hercule_product_form
+msgid "Hercule Products"
+msgstr "Produits Hercule"
+
+#. module: iframe_custom_widget
+#: model:ir.model,name:iframe_custom_widget.model_hercule_title
+msgid "Hercule Title"
+msgstr "Titre Hercule"
+
+#. module: iframe_custom_widget
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.view_hercule_title_form
+msgid "Hercule Titles"
+msgstr "Titres Hercule"
+
+#. module: iframe_custom_widget
+#: model:ir.model,name:iframe_custom_widget.model_hercule_product
+msgid "Hercule products model"
+msgstr "Modèle produits Hercule"
+
+#. module: iframe_custom_widget
+#: model:ir.actions.act_window,name:iframe_custom_widget.action_hercule_title
+msgid "Hercule titles"
+msgstr "Titres Hercule"
+
+#. module: iframe_custom_widget
+#: model:ir.model,name:iframe_custom_widget.model_hp5_categ_matrix
+msgid "Hp5 Category Matrix"
+msgstr "Catégorie Matrice HP5"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_label__id
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_product__id
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_title__id
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hp5_categ_matrix__id
+msgid "ID"
+msgstr ""
+
+#. module: iframe_custom_widget
+#. odoo-javascript
+#: code:addons/iframe_custom_widget/static/src/js/iframe_custom_widget.js:0
+#, python-format
+msgid "Iframe"
+msgstr ""
+
+#. module: iframe_custom_widget
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.res_config_settings_view_form
+msgid "Iframe / Hercule settings"
+msgstr "Iframe / Paramètres Hercule"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_res_config_settings__iframe_api_tool_id
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.res_config_settings_view_form
+msgid "Iframe API Tool ID"
+msgstr "Identifiant de l'outil API Iframe"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_res_config_settings__iframe_external_tool_id
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.res_config_settings_view_form
+msgid "Iframe External Tool ID"
+msgstr "Identifiant de l'outil externe Iframe"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_res_config_settings__iframe_host
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.res_config_settings_view_form
+msgid "Iframe Host"
+msgstr "Nom de domaine Iframe/hercule"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_res_config_settings__iframe_md5_pwd
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.res_config_settings_view_form
+msgid "Iframe MD5 Password"
+msgstr "Mot de passe MD5 Iframe/hercule"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_res_config_settings__iframe_pwd
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.res_config_settings_view_form
+msgid "Iframe Password"
+msgstr "Mot de passe Iframe/hercule"
+
+#. module: iframe_custom_widget
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.res_config_settings_view_form
+msgid "Iframe Sub URL"
+msgstr "Sous URL Iframe"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_res_config_settings__iframe_sub_url
+msgid "Iframe Sub Url"
+msgstr "Sous URL Iframe"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_product_product__iframe_url
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_sale_order__iframe_rul
+msgid "Iframe URL"
+msgstr "Url Iframe/hercule"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_res_config_settings__iframe_usr
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.res_config_settings_view_form
+msgid "Iframe User"
+msgstr "Identifiant Iframe/hercule"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_product__label_id
+msgid "Label"
+msgstr "Description"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_label__write_uid
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_product__write_uid
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_title__write_uid
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hp5_categ_matrix__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_label__write_date
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_product__write_date
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_title__write_date
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hp5_categ_matrix__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_sale_order_line__hercule_line
+msgid "Line"
+msgstr "Ligne"
+
+#. module: iframe_custom_widget
+#. odoo-javascript
+#: code:addons/iframe_custom_widget/static/src/xml/iframe_custom_widget.xml:0
+#, python-format
+msgid "No Url"
+msgstr "Pas d'URL"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_label__origin_label
+msgid "Origin Description"
+msgstr "Label d'origine"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_title__origin_title
+msgid "Origin Title"
+msgstr "Titre d'origine"
+
+#. module: iframe_custom_widget
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.view_hercule_product_form
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.view_hercule_title_form
+msgid "Product"
+msgstr "Produit"
+
+#. module: iframe_custom_widget
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.view_hercule_product_form
+msgid "Product 'Id'"
+msgstr "'Id' produit"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_product__name
+msgid "Product Code"
+msgstr "Code produit"
+
+#. module: iframe_custom_widget
+#: model:ir.ui.menu,name:iframe_custom_widget.top_menu_hercule_product
+msgid "Product Matrix"
+msgstr "Matrice Produits"
+
+#. module: iframe_custom_widget
+#: model:ir.model,name:iframe_custom_widget.model_product_product
+msgid "Product Variant"
+msgstr "Variante de produit"
+
+#. module: iframe_custom_widget
+#. odoo-python
+#: code:addons/iframe_custom_widget/models/sale_order_line.py:0
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.view_hercule_label_form
+#, python-format
+msgid "Products"
+msgstr "Produit"
+
+#. module: iframe_custom_widget
+#: model:ir.model,name:iframe_custom_widget.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: iframe_custom_widget
+#: model:ir.model,name:iframe_custom_widget.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Ligne de bons de commande"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hp5_categ_matrix__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_product__sequence
+msgid "Sequence order in product description"
+msgstr "Ordre séquence de la description produit"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_res_company__show_catalog_fart_code
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_res_config_settings__show_catalog_fart_code
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_sale_order__show_catalog_fart_code
+msgid "Show Catalog and Fart Code"
+msgstr "Voir Catalogue et Code Fart"
+
+#. module: iframe_custom_widget
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.res_config_settings_view_form
+msgid "Show HP5. Full Code on sale order lines"
+msgstr "Voir HP5. Full Code sur lignes de commande"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_label__show_origin
+msgid "Show Origin Description"
+msgstr "Afficher la description d'origine"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_title__show_origin
+msgid "Show Origin Label"
+msgstr "Afficher la description d'origine"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_label__show_price
+msgid "Show Price"
+msgstr "Afficher prix"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_product__title_id
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_hercule_title__name
+msgid "Title"
+msgstr "Titre"
+
+#. module: iframe_custom_widget
+#: model:ir.ui.menu,name:iframe_custom_widget.top_menu_hercule_title
+msgid "Titles Matrix"
+msgstr "Matrice Titres"
+
+#. module: iframe_custom_widget
+#: model_terms:ir.ui.view,arch_db:iframe_custom_widget.view_hercule_title_form
+msgid "title"
+msgstr "Titre"

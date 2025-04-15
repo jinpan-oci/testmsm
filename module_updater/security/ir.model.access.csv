@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+module_install_tag_user,module_install_tag_user,model_module_install_tag,base.group_user,1,1,1,1
+
+module_update_tag_user,module_update_tag_user,model_module_update_tag,base.group_user,1,1,1,1
+
+module_updater_line_user,module_updater_line_user,model_module_updater_line,base.group_user,1,1,1,1
+
+module_updater_user,module_updater_user,model_module_updater,base.group_user,1,1,1,1

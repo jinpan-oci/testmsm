@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.folder</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="5"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/app[@name='mr_store']" position="inside">
+                <block title="Folder Settings">
+                    <settings help="Enter the Google API key to enable the map views.">
+                        <group string="Google API Key">
+                            <field name="google_api_key" placeholder="Google API Key" password="True"/>
+                        </group>
+                    </settings>
+                    <settings help="Select you folder configuration">
+                        <group string="Section Configuration">
+                            <field name="guard_page" string="Guard Page"/>
+                            <field name="guard_page_steps" string="Guard Page - Steps" invisible="not guard_page"/>
+                            <field name="guard_page_supplier" string="Guard Page - Supplier" invisible="not guard_page"/>
+                            <field name="guard_page_table_purchase" string="Guard Page - Table Purchase" invisible="not guard_page"/>
+                            <field name="margin_page" string="Margin Page"/>
+                            <field name="installation_sheet" string="Installation Sheet"/>
+                            <field name="installation_sheet_stock_header" string="Installation Sheet - Stock Header" invisible="not installation_sheet"/>
+                            <field name="installation_sheet_stock" string="Installation Sheet - Stock" invisible="not installation_sheet"/>
+                            <field name="installation_sheet_manual" string="Installation Sheet - Manual" invisible="not installation_sheet"/>
+                            <field name="installation_sheet_supplier" string="Installation Sheet - Supplier" invisible="not installation_sheet"/>
+                            <field name="installation_sheet_google_review" string="Installation Sheet - Google Review" invisible="not installation_sheet"/>
+                            <field name="installation_sheet_google_street" string="Installation Sheet - Google Street" invisible="not installation_sheet"/>
+                            <field name="verbal_report" string="Verbal Report"/>
+                            <field name="verbal_report_installer" string="Verbal Report - Installer" invisible="not verbal_report"/>
+                            <field name="verbal_report_google_review" string="Verbal Report - Show Google Review" invisible="not verbal_report"/>
+                            <field name="installation_images" string="Installation Images"/>
+                            <field name="installation_images_before_install" string="Installation Images - Before Install" invisible="not installation_images"/>
+                            <field name="installation_images_with_3d" string="Installation Images - With 3D" invisible="not installation_images"/>
+                            <field name="installation_images_measurements" string="Installation Images - Measurements" invisible="not installation_images"/>
+                            <field name="installation_images_other" string="Installation Images - Other" invisible="not installation_images"/>
+                            <field name="tva_pdf" string="VAT PDF"/>
+                        </group>
+                    </settings>
+                    <settings help="TVA PDF" invisible="not tva_pdf">
+                        <group string="TVA PDF">
+                            <field name="vat_pdf" placeholder="VAT PDF"/>
+                        </group>
+                    </settings>
+                    <settings help="Help QR Code">
+                        <group string="QR CODES">
+                            <field name="help_qr_code" placeholder="QR Code" widget="image" style="width: 100px;"/>
+                            <field name="qr_code_1" placeholder="QR Code 1 - 8eme" widget="image" style="width: 100px;" invisible="not installation_sheet_google_review and not verbal_report_google_review"/>
+                            <field name="qr_code_2" placeholder="QR Code 2 - 3eme" widget="image" style="width: 100px;" invisible="not installation_sheet_google_review and not verbal_report_google_review"/>
+                            <field name="qr_code_3" placeholder="QR Code 3 - Aix" widget="image" style="width: 100px;" invisible="not installation_sheet_google_review and not verbal_report_google_review"/>
+                        </group>
+                    </settings>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

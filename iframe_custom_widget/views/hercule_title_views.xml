@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_hercule_title_form" model="ir.ui.view">
+        <field name="name">hercule.title.form</field>
+        <field name="model">hercule.title</field>
+        <field name="arch" type="xml">
+            <form string="Hercule Titles">
+                <sheet>
+                    <field name="show_origin" invisible="1"/>
+                    <group>
+                        <group string="title">
+                            <field name="origin_title" readonly="True" invisible="not show_origin"/>
+                            <field name="name"/>
+                        </group>
+                        <group string="Product">
+                            <field name="hercule_product_ids" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hercule_title_tree" model="ir.ui.view">
+        <field name="name">hercule.title.tree</field>
+        <field name="model">hercule.title</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="hercule_product_ids" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hercule_title" model="ir.actions.act_window">
+        <field name="name">Hercule titles</field>
+        <field name="res_model">hercule.title</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_hercule_title_tree"/>
+    </record>
+</odoo>

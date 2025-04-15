@@ -1,0 +1,1072 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mr_store_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e-20240904\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-04 14:58+0000\n"
+"PO-Revision-Date: 2024-12-04 14:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "&gt; Signature en ligne"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.actions.report,print_report_name:mr_store_report.ms_action_report_saleorder_alternative
+#: model:ir.actions.report,print_report_name:mr_store_report.ms_action_report_saleorder_light
+msgid "'Devis Monsieur Store - N°' + str(object.name)"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.actions.report,print_report_name:mr_store_report.account_invoices_mail
+msgid "'Facture Mail Monsieur Store - N°' + str(object.name)"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+msgid "(Tél :"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.external_layout_standard_inva
+#: model_terms:ir.ui.view,arch_db:mr_store_report.external_layout_standard_inva_mail
+#: model_terms:ir.ui.view,arch_db:mr_store_report.external_layout_standard_sol
+msgid "(document name)"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "- Réglement de"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.tax_groups_totals_inva
+msgid "1.05"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "2023-12-31"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.tax_groups_totals_inva
+msgid "27.00"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "30.00"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.tax_groups_totals_inva
+msgid "4.05"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid ""
+"<b> Fait à ............................................................., le\n"
+"                            ....../....../.......... <br/><br/> Signature précédée de la mention \"Bon pour\n"
+"                            accord\" </b>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid ""
+"<small style=\"font-size: 1em; font-style: italic !important;\">\"Bon pour "
+"accord et acceptation des Conditions Générales de Vente en pièce jointe de "
+"ce mail\"</small>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid ""
+"<span>\n"
+"                        <b>\n"
+"                            Le réseau N°1 que l'on recommande à ses voisins\n"
+"                        </b>\n"
+"                    </span>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.external_layout_standard_soa
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+msgid "<span> Suivi par </span>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<span> due le </span>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.tax_groups_totals_inva
+msgid "<span> sur </span>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<span>Description</span>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<span>PU HT</span>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<span>Prix HT</span>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<span>Prix TTC</span>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<span>Qté</span>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<span>Rem.%</span>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "<span>Remise</span>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<span>Suivi par: </span>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<span>TVA</span>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "<span>Total HT</span>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<span>Vendeur: </span>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_purchaseorder_document
+msgid "<strong class=\"mr16\">Total HT</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.document_tax_totals_template_so
+#: model_terms:ir.ui.view,arch_db:mr_store_report.document_tax_totals_template_soa
+#: model_terms:ir.ui.view,arch_db:mr_store_report.document_tax_totals_template_sol
+msgid ""
+"<strong style=\"color:#eff1e8;\">\n"
+"                        Total TTC\n"
+"                    </strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.document_tax_totals_template_so
+#: model_terms:ir.ui.view,arch_db:mr_store_report.document_tax_totals_template_soa
+#: model_terms:ir.ui.view,arch_db:mr_store_report.document_tax_totals_template_sol
+msgid ""
+"<strong>\n"
+"                            Montant HT\n"
+"                        </strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.document_tax_totals_template_so
+#: model_terms:ir.ui.view,arch_db:mr_store_report.document_tax_totals_template_soa
+#: model_terms:ir.ui.view,arch_db:mr_store_report.document_tax_totals_template_sol
+msgid ""
+"<strong>\n"
+"                            Remise totale HT\n"
+"                        </strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.document_tax_totals_template_so
+#: model_terms:ir.ui.view,arch_db:mr_store_report.document_tax_totals_template_soa
+#: model_terms:ir.ui.view,arch_db:mr_store_report.document_tax_totals_template_sol
+msgid ""
+"<strong>\n"
+"                            Total Remisé HT\n"
+"                        </strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_purchaseorder_document
+msgid "<strong>Adresse de Livraison:</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "<strong>Adresse de livraison:</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid ""
+"<strong>Bon pour accord et acceptation des Conditions Générales de Vente en pièce jointe de ce mail</strong>\n"
+"                    <br/>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<strong>Code Client:</strong><br/>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<strong>Commande:</strong><br/>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.sale_order_portal_content
+msgid ""
+"<strong>Commentaire Commertial:</strong>\n"
+"                    <br/>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<strong>Date Avoir:</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<strong>Date Facture:</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<strong>Date Livraison:</strong><br/>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_purchaseorder_document
+msgid "<strong>Date Req.</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<strong>Date Réception:</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<strong>Date d'échéance:</strong><br/>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_purchaseorder_document
+msgid "<strong>Date de commande:</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_purchaseorder_document
+msgid "<strong>Date limite de livraison:</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<strong>Date:</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_purchaseorder_document
+msgid "<strong>Description</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.sale_order_portal_content
+msgid ""
+"<strong>Délais Travaux:</strong>\n"
+"                    <br/>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "<strong>Fiscal Position Remark:</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<strong>Incoterm:</strong><br/>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.account_document_tax_totals_inva
+msgid "<strong>Montant du solde</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.account_document_tax_totals_inva
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_purchaseorder_document
+msgid "<strong>Montant</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_purchaseorder_document
+msgid "<strong>PU H.T.</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_purchaseorder_document
+msgid "<strong>Qté</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "<strong>Reference:</strong><br/>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_purchaseorder_document
+msgid "<strong>Représentant d'Achat:</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "<strong>Signature</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_purchaseorder_document
+msgid "<strong>Taxes</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "<strong>Validité du devis: </strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_purchaseorder_document
+msgid "<strong>Votre référence de commande:</strong>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "Adresse de Facturation:"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "Adresse de Livraison"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "Adresse de facturation et de livraison:"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.external_layout_standard_po
+#: model_terms:ir.ui.view,arch_db:mr_store_report.external_layout_standard_so
+#: model_terms:ir.ui.view,arch_db:mr_store_report.external_layout_standard_soa
+msgid "Affaire suivie par:"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "Article ("
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "Avoir"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "Avoir Annulé"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "Avoir Brouillon"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "Avoir Fournisseur"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_purchaseorder_document
+msgid "Bon de Commande #"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_purchaseorder_document
+msgid "Bon de Commande Annulé #"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "Bât :"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__column_1_line_1
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__column_1_line_1
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Column 1 Line 1"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__column_1_line_2
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__column_1_line_2
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Column 1 Line 2"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__column_1_line_3
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__column_1_line_3
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Column 1 Line 3"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__column_1_line_4
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__column_1_line_4
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Column 1 Line 4"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__column_1_title
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__column_1_title
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Column 1 Title"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__column_2_line_1
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__column_2_line_1
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Column 2 Line 1"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__column_2_line_2
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__column_2_line_2
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Column 2 Line 2"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__column_2_line_3
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__column_2_line_3
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Column 2 Line 3"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__column_2_line_4
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__column_2_line_4
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Column 2 Line 4"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__column_2_title
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__column_2_title
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Column 2 Title"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__column_3_line_1
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__column_3_line_1
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Column 3 Line 1"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__column_3_line_2
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__column_3_line_2
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Column 3 Line 2"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__column_3_line_3
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__column_3_line_3
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Column 3 Line 3"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__column_3_line_4
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__column_3_line_4
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Column 3 Line 4"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__column_3_title
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__column_3_title
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Column 3 Title"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.external_layout_standard_soa
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+msgid "Commande #"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model,name:mr_store_report.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: mr_store_report
+#: model:ir.model,name:mr_store_report.model_base_document_layout
+msgid "Company Document Layout"
+msgstr "Mise en page des documents de votre société"
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Custom Mr Store Footer"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Custom Mr Store Images"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "Date :"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "De"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_purchaseorder_document
+msgid "Demande de Devis #"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "Descriptif"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+msgid "Description"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.external_layout_standard_soa
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+msgid "Devis #"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "Devis / Commande N° :"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "Délai des travaux :"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "Délais des travaux :"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "Email :"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "Facture"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "Facture Annulée"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "Facture Brouillon"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "Facture Fournisseur"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__footer_line_1
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__footer_line_1
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Footer Line 1"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__footer_line_2
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__footer_line_2
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Footer Line 2"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__footer_title
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__footer_title
+#: model_terms:ir.ui.view,arch_db:mr_store_report.view_base_document_layout_mr_store
+msgid "Footer Title"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.product_template_tree_view_mr_store
+msgid "Image"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "Information Livraison :"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "Informations Client :"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.actions.report,name:mr_store_report.account_invoices_mail
+msgid "Invoice mail with payment"
+msgstr "Facture - enveloppe à fenêtre"
+
+#. module: mr_store_report
+#: model:ir.model,name:mr_store_report.model_account_move
+msgid "Journal Entry"
+msgstr "Pièce comptable"
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.external_layout_standard_soa
+msgid "Le"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.external_layout_standard_inva
+#: model_terms:ir.ui.view,arch_db:mr_store_report.external_layout_standard_inva_mail
+#: model_terms:ir.ui.view,arch_db:mr_store_report.external_layout_standard_po
+#: model_terms:ir.ui.view,arch_db:mr_store_report.external_layout_standard_so
+#: model_terms:ir.ui.view,arch_db:mr_store_report.external_layout_standard_soa
+#: model_terms:ir.ui.view,arch_db:mr_store_report.external_layout_standard_sol
+msgid "Logo"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.actions.report,name:mr_store_report.ms_action_report_saleorder_alternative
+msgid "MS - Quote/SaleOrder Alt."
+msgstr "MS - Devis/BC Alt."
+
+#. module: mr_store_report
+#: model:ir.actions.report,name:mr_store_report.ms_action_report_saleorder_light
+msgid "MS - Quote/SaleOrder Light"
+msgstr "MS - Devis/BC Light"
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+msgid "Mise en oeuvre"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "Montant total en mots: <br/>"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid ""
+"No further requirements for this\n"
+"                    payment"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__image_google_mark
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__image_google_mark
+msgid "PDF Google Mark"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__footer
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__footer
+msgid "PDF footer"
+msgstr "pied de page PDF"
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__header
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__header
+msgid "PDF header"
+msgstr "entête de page PDF"
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "PROFORMA"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "PU."
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "PU.HT"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "PU.Remisé HT"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "Payment sous 30 jours"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "Payé le"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_account_bank_statement_line__pu_position_selection
+#: model:ir.model.fields,field_description:mr_store_report.field_account_move__pu_position_selection
+#: model:ir.model.fields,field_description:mr_store_report.field_account_payment__pu_position_selection
+#: model:ir.model.fields,field_description:mr_store_report.field_sale_order__pu_position_selection
+msgid "Position of PU"
+msgstr "Position du PU"
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "Prix Unitaire HT"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "Prix remisé HT"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.external_layout_standard_soa
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+msgid "Pro-Forma Invoice #"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+msgid "Présentation"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "Qté"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "Quantité"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "Remarque commerciale :"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "Remarque installation :"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "Remise HT"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model,name:mr_store_report.model_ir_actions_report
+msgid "Report Action"
+msgstr "Signaler l'action"
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.account_document_tax_totals_inva
+msgid "Rounding"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "Règlement n°"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "Réf Client :"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "Référence à rappeler lors du paiement:"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "Réglement :"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_base_document_layout__image_total_saleorder
+#: model:ir.model.fields,field_description:mr_store_report.field_res_company__image_total_saleorder
+msgid "Sale Order Total image"
+msgstr "Image Total Devis"
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.product_template_form_view_mr_store
+msgid "Saleorder presentation"
+msgstr "Présentation devis"
+
+#. module: mr_store_report
+#: model:ir.model,name:mr_store_report.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "Scanner le QR Code pour<br/>payer avec votre téléphone"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "Signature client"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "Signature client, ou en ligne en cliquant sur le bouton"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields,field_description:mr_store_report.field_sale_order__simple_report
+msgid "Simple Report"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "Solde à régler"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "T.HT"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "TVA"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.tax_groups_totals_inva
+msgid "Tax 15%"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid ""
+"The payment should also be transmitted with\n"
+"                    love"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.document_tax_totals_template_so
+#: model_terms:ir.ui.view,arch_db:mr_store_report.document_tax_totals_template_soa
+#: model_terms:ir.ui.view,arch_db:mr_store_report.document_tax_totals_template_sol
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "Total"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "Total Acomptes"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "Total Commande"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.external_layout_standard_soa
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "Tél :"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "Validité du devis :"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "Visuel"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_light
+msgid "Votre contact :"
+msgstr ""
+
+#. module: mr_store_report
+#: model:ir.model.fields.selection,name:mr_store_report.selection__account_move__pu_position_selection__with_pu
+msgid "With PU"
+msgstr "Avec PU"
+
+#. module: mr_store_report
+#: model:ir.model.fields.selection,name:mr_store_report.selection__sale_order__pu_position_selection__with_pu_bot
+msgid "With PU on bottom"
+msgstr "Avec PU en bas"
+
+#. module: mr_store_report
+#: model:ir.model.fields.selection,name:mr_store_report.selection__sale_order__pu_position_selection__with_pu_top
+msgid "With PU on top"
+msgstr "Avec PU en haut"
+
+#. module: mr_store_report
+#: model:ir.model.fields.selection,name:mr_store_report.selection__account_move__pu_position_selection__without_pu
+#: model:ir.model.fields.selection,name:mr_store_report.selection__sale_order__pu_position_selection__without_pu
+msgid "Without PU"
+msgstr "Sans PU"
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_alternative_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_invoice_mail_alternative_document
+msgid "due si payé avant"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document_alternative
+msgid "en"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.ms_report_saleorder_document
+msgid "le"
+msgstr ""
+
+#. module: mr_store_report
+#: model_terms:ir.ui.view,arch_db:mr_store_report.tax_groups_totals_inva
+msgid "sur"
+msgstr ""

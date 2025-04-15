@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="sale_order_portal_content_inherit" inherit_id="sale.sale_order_portal_content">
+        <xpath expr="//div[@id='introduction']" position="before">
+            <t t-if="sale_order.state not in ['sale', 'cancel'] and sale_order.has_alternatives">
+                <h5>
+                    <t t-esc="'Devis alternatifs associés à ' + sale_order.name"/>
+                </h5>
+                <table>
+                    <tr>
+                        <t t-foreach="sale_order.alternative_so_ids" t-as="alternative">
+                            <t t-if="alternative.id != sale_order.id">
+                                <td>
+                                    <a t-att-href="str(alternative.get_portal_url())" class="btn btn-primary">
+                                        <t t-esc="alternative.name"/>
+                                    </a>
+                                </td>
+                            </t>
+                        </t>
+                    </tr>
+                </table>
+                <br/>
+            </t>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sale_order_line_change_description_wizard_form" model="ir.ui.view">
+        <field name="name">sale.order.line.change.description.wizard.form</field>
+        <field name="model">sale.order.line.change.description.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Change Description">
+                <group>
+                    <field name="presentation_before"/>
+                    <field name="description_html"/>
+                    <!-- <field name="description_text" widget="section_and_note_text"/> -->
+                    <field name="presentation_after"/>
+                </group>
+                <footer>
+                    <button
+                        string='Save Changes'
+                        name="change_description"
+                        type="object"
+                        class="btn-primary"
+                    />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="sale_order_line_change_description_action" model="ir.actions.act_window">
+        <field name="name">Change Description</field>
+        <field name="res_model">sale.order.line.change.description.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="sale_order_line_change_description_wizard_form"/>
+        <field name="domain">[('line_id', '=', active_id)]</field>
+        <field name="context">{'default_line_id': active_id}</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

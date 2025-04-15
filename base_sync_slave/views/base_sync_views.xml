@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_base_sync_config_tree" model="ir.ui.view">
+        <field name="name">base.sync.config.tree</field>
+        <field name="model">base.sync</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" readonly="True"/>
+                <field name="is_imported" readonly="True"/>
+                <field name="has_errors" readonly="True"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_base_sync_config_form" model="ir.ui.view">
+        <field name="name">base.sync.config.form</field>
+        <field name="model">base.sync</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <button name="test_import_first_file" string="Test Import One File" type="object" class="oe_highlight"/>
+                    <group>
+                        <field name="name"/>
+                        <field name="csv_or_xlsx"/>
+                        <field name="has_import_started"/>
+                        <field name="is_imported"/>
+                        <field name="has_errors"/>
+                        <field name="base_sync_line_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="file_number"/>
+                                <field name="file_data" filename="file_name" widget="binary"/>
+                                <field name="is_imported"/>
+                                <button name="import_one" string="Import" type="object" class="oe_highlight" invisible="is_imported"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_base_sync_config" model="ir.actions.act_window">
+        <field name="name">Base Sync</field>
+        <field name="res_model">base.sync</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_base_sync_config_tree"/>
+    </record>
+
+    <menuitem
+        id="menu_base_sync_config"
+        name="Base Sync"
+        parent="stock.menu_stock_config_settings"
+        action="action_base_sync_config"
+        sequence="100"/>
+</odoo>

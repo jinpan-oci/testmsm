@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_hercule_label_form" model="ir.ui.view">
+        <field name="name">hercule.label.form</field>
+        <field name="model">hercule.label</field>
+        <field name="arch" type="xml">
+            <form string="Hercule Descriptions">
+                <sheet>
+                    <field name="show_origin" invisible="1"/>
+                    <group>
+                        <group string="Description">
+                            <field name="show_price"/>
+                            <field name="origin_label" readonly="True" invisible="not show_origin"/>
+                            <field name="name" string="Custom Description"/>
+                        </group>
+                        <group string="Products">
+                            <field name="hercule_product_ids" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hercule_label_tree" model="ir.ui.view">
+        <field name="name">hercule.label.tree</field>
+        <field name="model">hercule.label</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="show_price"/>
+                <field name="hercule_product_ids" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hercule_label" model="ir.actions.act_window">
+        <field name="name">Hercule Descriptions</field>
+        <field name="res_model">hercule.label</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_hercule_label_tree"/>
+    </record>
+</odoo>

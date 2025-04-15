@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="ms_report_saleorder_document_alternative">
+        <t t-set="mrstore_type" t-value="'saleorder'"/>
+
+        <t t-call="mr_store_report.external_layout_soa">
+
+            <t t-set="doc" t-value="doc.with_context(lang=doc.partner_id.lang)"/>
+            <t t-set="forced_vat" t-value="doc.fiscal_position_id.foreign_vat"/><!-- So that it appears in the footer of the report instead of the company VAT if it's set -->
+            <t t-set="address">
+                <div t-field="doc.partner_id" t-options="{'widget': 'contact', 'fields': ['address', 'name'], 'no_marker': True}"/>
+                <p t-if="doc.partner_id.vat"><t t-out="doc.company_id.account_fiscal_country_id.vat_label or 'Tax ID'"/>: <span t-field="doc.partner_id.vat"/></p>
+            </t>
+            <t t-if="doc.partner_shipping_id == doc.partner_invoice_id and doc.partner_invoice_id != doc.partner_id or doc.partner_shipping_id != doc.partner_invoice_id">
+                <t t-set="information_block">
+                    <strong>
+                        <t t-if="doc.partner_shipping_id == doc.partner_invoice_id">
+                            Adresse de facturation et de livraison:
+                        </t>
+                        <t t-else="">
+                            Adresse de Facturation:
+                        </t>
+                    </strong>
+                    <div t-field="doc.partner_invoice_id" t-options="{'widget': 'contact', 'fields': ['address', 'name', 'phone'], 'no_marker': True, 'phone_icons': True}"/>
+                    <t t-if="doc.partner_shipping_id != doc.partner_invoice_id">
+                        <strong>Adresse de livraison:</strong>
+                        <div t-field="doc.partner_shipping_id" t-options="{'widget': 'contact', 'fields': ['address', 'name', 'phone'], 'no_marker': True, 'phone_icons': True}"/>
+                    </t>
+                </t>
+            </t>
+            <div class="page" style="width: 96%;margin-left: 2%; margin-right: 2%; margin-top: -60px">
+                <t t-if="doc.partner_shipping_id == doc.partner_id">
+                    <div class="d-flex flex-row justify-content-between w-100 mt-3 mb-3" style="display: flex; flex-direction: row; justify-content: space-between; width: 100%">
+                        <!--<t t-call="web.address_layout"/>-->
+                        <div class="address" style="width:45%;margin-right:10%;">
+                            <p style="background: #81b87c; color:#eff1e8; padding:0.3em; margin: 0;font-size: 0.8em;">De</p>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.company_id.name or ''"/>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.company_id.street or ''"/>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.company_id.street2 or ''"/>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;"> <span t-esc="doc.company_id.zip or ''"/> <span t-esc="doc.company_id.city or ''"/> </p>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-if="doc.company_id.phone"><span t-esc="doc.company_id.phone"/></p>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-if="doc.company_id.email"><span t-esc="doc.company_id.email"/></p>
+                        </div>
+                        <div class="address" style="width:45%;">
+                            <p style="background: #81b87c; color:#eff1e8; padding:0.3em; margin: 0;font-size: 0.8em;">A</p>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.partner_id.name or ''"/>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.partner_id.street or ''"/>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.partner_id.street2 or ''"/>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;"> <span t-esc="doc.partner_id.zip or ''"/> <span t-esc="doc.partner_id.city or ''"/> </p>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-if="doc.partner_id.phone"><span t-esc="doc.partner_id.phone"/></p>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-if="doc.partner_id.mobile"><span t-esc="doc.partner_id.mobile"/></p>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-if="doc.partner_id.email"><span t-esc="doc.partner_id.email"/></p>
+                        </div>
+                    </div>
+                </t>
+                <t t-elif="doc.partner_shipping_id != doc.partner_id">
+                    <div class="d-flex flex-row justify-content-between w-100 mt-3 mb-3" style="display: flex; flex-direction: row; justify-content: space-between; width: 100%">
+                        <div class="address" style="width:30%;margin-right:5%;">
+                            <p style="background: #81b87c; color:#eff1e8; padding:0.3em; margin: 0;font-size: 0.8em;">De</p>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.company_id.name or ''"/>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.company_id.street or ''"/>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.company_id.street2 or ''"/>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;"> <span t-esc="doc.company_id.zip or ''"/> <span t-esc="doc.company_id.city or ''"/> </p>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-if="doc.company_id.phone"><span t-esc="doc.company_id.phone"/></p>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-if="doc.company_id.email"><span t-esc="doc.company_id.email"/></p>
+                        </div>
+                        <div class="address" style="width:30%;margin-right:5%;">
+                            <p style="background: #81b87c; color:#eff1e8; padding:0.3em; margin: 0;font-size: 0.8em;">A</p>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.partner_id.name or ''"/>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.partner_id.street or ''"/>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.partner_id.street2 or ''"/>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;"> <span t-esc="doc.partner_id.zip or ''"/> <span t-esc="doc.partner_id.city or ''"/> </p>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-if="doc.partner_id.phone"><span t-esc="doc.partner_id.phone"/></p>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-if="doc.partner_id.mobile"><span t-esc="doc.partner_id.mobile"/></p>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-if="doc.partner_id.email"><span t-esc="doc.partner_id.email"/></p>
+                        </div>
+                        <div class="address" style="width:30%;">
+                            <p style="background: #81b87c; color:#eff1e8; padding:0.3em; margin: 0;font-size: 0.8em;">Adresse de Livraison</p>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.partner_shipping_id.name or ''"/>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.partner_shipping_id.street or ''"/>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.partner_shipping_id.street2 or ''"/>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;"> <span t-esc="doc.partner_shipping_id.zip or ''"/> <span t-esc="doc.partner_shipping_id.city or ''"/> </p>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-if="doc.partner_shipping_id.phone"><span t-esc="doc.partner_shipping_id.phone"/></p>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-if="doc.partner_shipping_id.mobile"><span t-esc="doc.partner_shipping_id.mobile"/></p>
+                            <p style="margin:0; color:#808080;font-size: 0.8em;" t-if="doc.partner_shipping_id.email"><span t-esc="doc.partner_shipping_id.email"/></p>
+                        </div>
+                    </div>
+                </t>
+
+
+                <!-- Is there a discount on at least one line? -->
+                <t t-set="lines_to_report" t-value="doc._get_order_lines_to_report()"/>
+                <t t-set="display_discount" t-value="any(l.discount for l in lines_to_report)"/>
+
+                <t t-set="discount_subtotal" t-value="0"/>
+                <t t-set="total_excl" t-value="0"/>
+                <t t-set="total_reduce" t-value="0"/>
+
+                <t t-foreach="lines_to_report" t-as="line">
+                    <!-- CADRE GRIS -->
+                    <!-- OPTMISATION PREMIER ARTICLE - SUPPRIME L EFFET PAGE BLANCHE SUE LA PREMIERE PAGE -->
+                    <t t-if="line_index == 0"> 
+                        <t t-set="style" t-value="'page-break-inside: auto; border-width: 2px; border-color: #808080; border-top-width: 0; border-style: solid; border-top-style: none; margin-top:7px; padding-top:0px;'"/> 
+                    </t>
+                    <t t-else="">              
+                        <t t-set="style" t-value="'page-break-inside: avoid; border-width: 2px; border-color: #808080; border-top-width: 0; border-style: solid; border-top-style: none; margin-top:7px; padding-top:0px;'"/> 
+                    </t>
+                    <div t-att-style="style">
+                        <t t-set="current_subtotal" t-value="0"/>
+                        <!-- ADD -->
+                        <t t-set="total_excl" t-value="total_excl + (line.price_unit * line.product_uom_qty)"/>
+                        <t t-set="total_reduce" t-value="total_reduce + ((line.price_unit - line.price_reduce_taxexcl) * line.product_uom_qty)"/>
+                        <!-- ADD -->
+                        <t t-set="current_subtotal" t-value="current_subtotal + line.price_subtotal"/>
+                        <t t-set="current_total" t-value="current_subtotal + line.price_total" t-if="doc.company_id.tax_calculation_rounding_method == 'round_per_line'"/>
+
+                        <div t-if="not line.display_type">
+                            <p style="background:#808080;color:#f4f4f4; padding-left:3px; margin:0px; !important; ">
+                                Article (<t t-esc="line_index+1"/>/<t t-esc="line_size"/>)
+                            </p>
+                            <div class="container-fluid" style="padding:3px;margin:0px">
+                            <!--<div class="row">
+                                <div class="col">-->
+                                    <table class="table table-sm table-sm o_main_table table-borderless" style="padding:3px;margin:0px;">
+                                        <tr style="padding:3px;margin:0px;">
+                                            <td style="width: 10%;">
+                                                <t t-if="line.product_id.image_256">
+                                                    <img t-att-src="image_data_uri(line.product_id.image_256)" style="max-width: 125px;"/>
+                                                </t>
+                                            </td>
+                                            <td style="width: 70%; max-width: 200px;">
+                                                <span style="font-size: 12px !important">
+                                                    <div t-if="line.presentation_before" t-esc="line.presentation_before" style="font-size: 12px !important"/>
+                                                    <div t-elif="line.product_id.presentation_before" t-esc="line.product_id.presentation_before" style="font-size: 12px !important"/>
+                                                    <span t-if="line.description_html" style="font-size: 12px !important" t-field="line.description_html"/>
+                                                    <span t-elif="line.description_text" style="font-size: 12px !important" t-field="line.description_text"/>
+                                                    <span t-elif="line.name" style="font-size: 12px !important;" t-field="line.name"/>
+                                                    <div t-if="line.presentation_after" t-esc="line.presentation_after" style="font-size: 12px !important"/>
+                                                    <div t-elif="line.product_id.presentation_after" t-esc="line.product_id.presentation_after" style="font-size: 12px !important"/>
+                                                </span>
+                                            </td>
+                                            <td style="width: 30px;">
+                                                <t t-if="pu_type =='with_pu_top'">
+                                                    <table style="width: 175px;  padding: 3px; border: 1px solid #eff1e8; color:6e6b6b; font-size: 0.8em;">
+                                                        <tr>
+                                                            <th name="th_quantity" style="padding:0.5em !important;color:#81b87c;" class="text-end">Qté</th>
+                                                            <td name="td_quantity" class="text-start " style="padding:0.5em;border-left: 1px solid #eff1e8;">
+                                                                <span t-field="line.product_uom_qty"/>
+                                                                <!--<span t-field="line.product_uom"/>-->
+                                                            </td>
+                                                        </tr>
+                                                        <t t-if="line.discount != 0">
+                                                            <tr>
+                                                                <th name="th_priceunit" style="padding:0.5em !important;color:#81b87c;" class="text-end">PU.HT</th>
+                                                                <td name="td_priceunit" class="text-start o_price_total " style="padding:0.5em;border-left: 1px solid #eff1e8;text-decoration: line-through;">
+                                                                    <span t-field="line.price_unit"/> €
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th name="th_discount_price" style="padding:0.5em !important;color:#81b87c;" class="text-end">PU.Remisé HT</th>
+                                                                <td name="td_discount_price" class="text-start o_price_total " style="padding:0.5em;border-left: 1px solid #eff1e8;">
+                                                                    <t t-set="unit_price_discount" t-value="round(line.price_unit - line.price_unit * (line.discount / 100), 2)"/>
+                                                                    <t t-out="unit_price_discount"/> €
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th name="th_discount" style="padding:0.5em !important;color:#81b87c;" t-if="display_discount" class="text-end">
+                                                                    <span>Remise</span>
+                                                                </th>
+                                                                <td t-if="display_discount" class="text-start " style="padding:0.5em;border-left: 1px solid #eff1e8;">
+                                                                    <span t-field="line.discount"/> %
+                                                                </td>
+                                                            </tr>
+                                                        </t>
+                                                        <t t-else="">
+                                                            <tr>
+                                                                <th name="th_priceunit" style="padding:0.5em !important;color:#81b87c;" class="text-end">PU.HT</th>
+                                                                <td name="td_priceunit" class="text-start o_price_total" style="padding:0.5em;border-left: 1px solid #eff1e8;">
+                                                                    <span t-field="line.price_unit"/> €
+                                                                </td>
+                                                            </tr>
+                                                        </t>
+                                                        <tr t-if="', '.join(map(lambda x: (x.description or x.name), line.tax_id))">
+                                                            <th name="th_taxes" style="padding:0.5em !important;color:#81b87c;" class="text-end">TVA</th>
+                                                            <td name="td_taxes" class="text-start " style="padding:0.5em;border-left: 1px solid #eff1e8;">
+                                                                <span t-out="', '.join(map(lambda x: (x.description or x.name), line.tax_id))"/>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th name="th_subtotal" style="padding:0.5em !important;font-size: 1em;color:#81b87c;" class="text-end">
+                                                                <span>Total HT</span>
+                                                            </th>
+                                                            <td t-if="not line.is_downpayment" name="td_subtotal" class="text-start o_price_total " style="padding:0.5em;font-size: 1em;border-left: 1px solid #eff1e8;">
+                                                                <span t-field="line.price_subtotal"/>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </t>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+
+                            </div> <!-- END CONTAINER -->
+
+                            <div class="container-fluid ml-1 mr-1" style="padding-left:3px;padding-right:3px;">
+
+                                <t t-if="pu_type == 'with_pu_bot' or pu_type == 'without_pu' ">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <table class="table table-sm o_main_table table-borderless mt-4">
+                                                    <tr>
+                                                        <td style="width: 60%;"/>
+                                                        <td style="width: 30px;">
+                                                            <table style="width: 250px;  padding: 10px; border: 1px solid #eff1e8; background: #81b87c; color:#eff1e8; font-size: 0.8em;">
+                                                                <tr t-if="line.product_id.name != 'Discount' and line.product_id.name != 'Remise'">
+                                                                    <th name="th_quantity" style="padding:0.5em !important;" class="text-end">Quantité</th>
+                                                                    <td name="td_quantity" class="text-start " style="padding:0.5em;border-left: 1px solid #eff1e8;">
+                                                                        <span t-field="line.product_uom_qty"/>
+                                                                        <span t-field="line.product_uom"/>
+                                                                    </td>
+                                                                </tr>
+                                                                <t t-if="pu_type == 'with_pu_bot' and line.product_id.name != 'Discount' and line.product_id.name != 'Remise'">
+                                                                    <t t-if="line.discount != 0">
+                                                                        <tr>
+                                                                            <th name="th_priceunit" style="padding:0.5em !important;" class="text-end">Prix Unitaire HT</th>
+                                                                            <td name="td_priceunit" class="text-start o_price_total " style="padding:0.5em;border-left: 1px solid #eff1e8;text-decoration: line-through;">
+                                                                                <span t-field="line.price_unit"/> €
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th name="th_discount_price" style="padding:0.5em !important;" class="text-end">Prix remisé HT</th>
+                                                                            <td name="td_discount_price" class="text-start o_price_total " style="padding:0.5em;border-left: 1px solid #eff1e8;">
+                                                                                <t t-set="unit_price_discount" t-value="round(line.price_unit - line.price_unit * (line.discount / 100), 2)"/>
+                                                                                <t t-out="unit_price_discount"/> €
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th name="th_discount" style="padding:0.5em !important;" t-if="display_discount" class="text-end">
+                                                                                <span>Remise</span>
+                                                                            </th>
+                                                                            <td t-if="display_discount" class="text-start " style="padding:0.5em;border-left: 1px solid #eff1e8;">
+                                                                                <span t-field="line.discount"/> %
+                                                                            </td>
+                                                                        </tr>
+                                                                    </t>
+                                                                    <t t-else="">
+                                                                        <tr>
+                                                                            <th name="th_priceunit" style="padding:0.5em !important;" class="text-end">Prix Unitaire HT</th>
+                                                                            <td name="td_priceunit" class="text-start o_price_total" style="padding:0.5em;border-left: 1px solid #eff1e8;">
+                                                                                <span t-field="line.price_unit"/> €
+                                                                            </td>
+                                                                        </tr>
+                                                                    </t>
+                                                                </t>
+                                                                <t t-if="line.product_id.name == 'Discount' or line.product_id.name == 'Remise'">
+                                                                    <tr>
+                                                                        <th name="th_priceunit" style="padding:0.5em !important;" class="text-end">Remise HT</th>
+                                                                        <td name="td_priceunit" class="text-start o_price_total" style="padding:0.5em;border-left: 1px solid #eff1e8;">
+                                                                            <span t-field="line.price_unit"/> €
+                                                                        </td>
+                                                                    </tr>
+                                                                </t>
+                                                                <tr t-if="', '.join(map(lambda x: (x.description or x.name), line.tax_id))">
+                                                                    <th name="th_taxes" style="padding:0.5em !important;" class="text-end">TVA</th>
+                                                                    <td name="td_taxes" class="text-start " style="padding:0.5em;border-left: 1px solid #eff1e8;">
+                                                                        <span t-out="', '.join(map(lambda x: (x.description or x.name), line.tax_id))"/>
+                                                                    </td>
+                                                                </tr>
+                                                                <t t-if="pu_type == 'with_pu_bot' and line.product_id.name != 'Discount' and line.product_id.name != 'Remise'">
+                                                                    <tr>
+                                                                        <th name="th_subtotal" style="padding:0.5em !important;font-size: 1em; background:#808080" class="text-end">
+                                                                            <span>Total HT</span>
+                                                                        </th>
+                                                                        <td t-if="not line.is_downpayment" name="td_subtotal" class="text-start o_price_total " style="padding:0.5em;font-size: 1em;border-left: 1px solid #eff1e8; background:#808080">
+                                                                            <span t-field="line.price_subtotal"/>
+                                                                        </td>
+                                                                    </tr>
+                                                                </t>
+                                                            </table>
+
+                                                        </td>
+                                                        <td style="width: 5%;">
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                        <t t-elif="line.display_type == 'line_section'">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col" name="td_section_line">
+                                        <span t-out="' '"/><span t-field="line.name"/>
+                                    </div>
+                                    <t t-set="current_section" t-value="line" style="border-left: 1px solid #808080;"/>
+                                    <t t-set="current_subtotal" t-value="0" style="border-left: 1px solid #808080;"/>
+                                </div>
+                            </div>
+                        </t>
+                        <t t-elif="line.display_type == 'line_note'">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col" name="td_note_line">
+                                        <span t-out="' '"/><span t-field="line.name"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                        <t t-if="current_section and (line_last or doc.order_line[line_index+1].display_type == 'line_section') and not line.is_downpayment">
+                            <div class="container-fluid">
+                                <div class="row is-subtotal text-end">
+                                    <div class="col" name="td_section_subtotal">
+                                        <!--<strong class="mr16">Subtotal</strong>
+                                        <span t-out="current_subtotal" t-options="{'widget': 'monetary', 'display_currency': doc.currency_id}"/>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </div>  <!-- FIN CADRE GRIS -->
+                </t> <!-- FIN FOR EACH -->
+
+                <table class="table table-sm o_main_table table-borderless mt-4" style="page-break-before: always;">
+                    <thead style="display: table-row-group; background:#808080;color:#f4f4f4; padding:0.2em !important;">
+                        <tr style="min-height: 1em;">
+                            <th name="th_description" style="padding:0.5em !important;font-size: 1em;" colspan="99" class="text-start">
+                                Total
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+                <table class="table table-borderless table-sm o_main_table mt-4">
+                    <tr>
+                        <td>
+                            <div>
+                                <t t-if="doc.company_id.image_total_saleorder">
+                                    <img t-att-src="image_data_uri(doc.company_id.image_total_saleorder)" style="width:300px;"/>
+                                </t>
+                            </div>
+                        </td>
+                        <td style="width: 100%;" colspan="2">
+                            <div class="clearfix" name="so_total_summary">
+                                <div style="min-height:50px;" class="row"/>
+                                <div id="total" class="row" name="total">
+                                    <div t-attf-class="#{'col-9' if report_type != 'html' else 'col-sm-7 col-md-6'} ms-auto">
+                                        <table class="table table-sm table-borderless">
+                                            <!-- Tax totals -->
+                                            <t t-set="tax_totals" t-value="doc.tax_totals"/>
+                                            <t t-call="mr_store_report.document_tax_totals_template_soa"/>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix" name="payment_term_sample">
+                                <div id="payement_sample" class="row" name="payment">
+                                    <div t-attf-class="#{'col-9' if report_type != 'html' else 'col-sm-7 col-md-6'} ms-auto">
+                                        <table t-if="doc.payment_term_id.line_ids" class="table table-sm table-borderless">
+                                            <t t-set="amount_due" t-value="doc.amount_total"/>
+                                            <t t-set="updated_amount" t-value="0"/>
+                                            <t t-set="percent" t-value="0"/>
+                                            <t t-foreach="enumerate(doc.payment_term_id.line_ids)" t-as="line">
+                                                <t t-set="line_amount" t-value="(amount_due * line[1].value_amount) / 100"/>
+                                                <t t-set="percent" t-value="percent + line[1].value_amount"/>
+                                                <t t-set="updated_amount" t-value="updated_amount + line_amount "/>
+                                                <tr>
+                                                    <td class="text-center" style="background: #81b87c; color:#eff1e8; border: 2px solid #fff;">
+                                                        Règlement n° <t t-esc="line[0] +1 "/> - <t t-esc="line[1].value_amount if line[1].value_amount &gt; 0 else 100 - percent"/> % - <t t-esc="'Réglement' if line[0] + 1 &gt; 1 else 'Acompte'"/> en <span t-esc="doc.pricelist_id.currency_id.symbol"/>
+                                                    </td>
+                                                    <td class="text-center" style="background: #81b87c; color:#eff1e8; border: 2px solid #fff;">
+                                                        <t t-if="line[1].value == 'percent'" t-esc="'%0.2f' % line_amount"/>
+                                                        <t t-if="line[1].value == 'balance'" t-esc="'%0.2f' % amount_due - updated_amount"/>
+                                                    </td>
+                                                </tr>
+                                            </t>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <span t-if="doc.payment_term_id.name" style="font-weight: bold; color:#909090;"> Réglement : <span style="font-weight: normal" t-esc="doc.payment_term_id.name"/></span>
+                <br/>
+                <span t-if="doc.validity_date" style="font-weight: bold; color:#909090;"> Validité du devis : <span style="font-weight: normal" t-field="doc.validity_date" t-options="{'format': 'dd/MM/yyyy'}"/></span>
+                <br/>
+                <span t-if="doc.work_deadline" style="font-weight: bold; color:#909090;"> Délai des travaux : <span style="font-weight: normal" t-esc="doc.work_deadline"/></span>
+                <br/>
+                <span t-if="doc.commercial_note" style="font-weight: bold; color:#909090;"> Remarque commerciale : <span style="font-weight: normal" t-esc="doc.commercial_note"/></span>
+                <br/>
+                <span t-if="doc.installation_note" style="font-weight: bold; color:#909090;"> Remarque installation : <span style="font-weight: normal" t-esc="doc.installation_note"/></span>
+                <br/>
+                <div class="placeholder_signature" style="width:100%">
+                    <div style="border: 1px solid #808080; padding: 10px; min-height: 10em; color:#808080;">
+                        <t t-if="not doc.env['ir.config_parameter'].sudo().get_param('portal_remover.deactivate_portal')">
+                            <h5>Signature client, ou en ligne en cliquant sur le bouton <a class="btn btn-secondary" t-attf-href="#{doc._get_share_url()}" target="_blank"> &gt; Signature en ligne</a></h5>
+                        </t>
+                        <t t-else="">
+                            <h5>Signature client</h5>
+                        </t>
+                        <small style="font-size: 1em; font-style: italic !important;">"Bon pour accord et acceptation des Conditions Générales de Vente en pièce jointe de ce mail"</small>
+
+
+
+
+                    </div>
+                </div>
+
+
+                <div t-if="doc.signature" class="mt-4 ml64 mr4" name="signature">
+                    <div class="offset-8">
+                        <strong>Signature</strong>
+                    </div>
+                    <div class="offset-8">
+                        <img t-att-src="image_data_uri(doc.signature)" style="max-height: 4cm; max-width: 8cm;"/>
+                    </div>
+                    <div class="offset-8 text-center">
+                        <p t-field="doc.signed_by"/>
+                    </div>
+                </div>
+                <div>
+                    <p t-field="doc.note" name="order_note"/>
+                    <p t-if="doc.fiscal_position_id and not is_html_empty(doc.fiscal_position_id.sudo().note)" id="fiscal_position_remark">
+                        <strong>Fiscal Position Remark:</strong>
+                        <span t-field="doc.fiscal_position_id.sudo().note"/>
+                    </p>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="ms_report_saleorder_alternative">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-set="o" t-value="doc"/>
+                <t t-set="pu_type" t-value="doc.pu_position_selection"/>
+                <t t-if="doc.simple_report == True">
+                    <t t-call="mr_store_report.ms_report_saleorder_document_alternative" t-lang="doc.partner_id.lang"/>
+                </t>
+                <t t-else="">
+                    <div style="margin-left: 15px; margin-right: 15px;">
+                        <t t-call="mr_store_report.ms_report_saleorder_document_alternative"/>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

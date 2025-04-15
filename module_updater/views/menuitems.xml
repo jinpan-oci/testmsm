@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem
+        id="menu_module_updater_root"
+        name="Module Updater"
+        sequence="100"
+        groups="module_updater.group_module_updater_master"
+        web_icon="module_updater,static/description/icon.png"/>
+
+    <menuitem
+        id="menu_module_updater_main"
+        name="Module Updater"
+        parent="module_updater.menu_module_updater_root"
+        action="module_updater.action_module_updater"
+        sequence="10"/>
+
+    <menuitem
+        id="menu_module_tag_main"
+        name="Module Tag"
+        parent="module_updater.menu_module_updater_root"
+        sequence="20"/>
+
+        <menuitem
+            id="menu_module_update_tag"
+            name="Update Tag"
+            parent="module_updater.menu_module_tag_main"
+            action="module_updater.action_module_update_tag"
+            sequence="10"/>
+
+        <menuitem
+            id="menu_module_install_tag"
+            name="Install Tag"
+            parent="module_updater.menu_module_tag_main"
+            action="module_updater.action_module_install_tag"
+            sequence="20"/>
+</odoo>

@@ -1,0 +1,128 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mr_store_browser
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-23 14:23+0000\n"
+"PO-Revision-Date: 2024-02-23 14:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mr_store_browser
+#: model_terms:ir.ui.view,arch_db:mr_store_browser.browser_view_form
+msgid "AGT"
+msgstr "AGT"
+
+#. module: mr_store_browser
+#: model:ir.model,name:mr_store_browser.model_browser
+#: model:ir.ui.menu,name:mr_store_browser.Browser_menu
+#: model:ir.ui.menu,name:mr_store_browser.menu_root_browser
+msgid "Browser"
+msgstr "Navigateur"
+
+#. module: mr_store_browser
+#: model_terms:ir.ui.view,arch_db:mr_store_browser.browser_view_form
+msgid "Buying Center"
+msgstr "Centre d'achats"
+
+#. module: mr_store_browser
+#: model_terms:ir.ui.view,arch_db:mr_store_browser.browser_view_form
+msgid "CLARA"
+msgstr "CLARA"
+
+#. module: mr_store_browser
+#: model_terms:ir.ui.view,arch_db:mr_store_browser.browser_view_form
+msgid "Configurator"
+msgstr "Configurateur"
+
+#. module: mr_store_browser
+#: model:ir.model.fields,field_description:mr_store_browser.field_browser__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: mr_store_browser
+#: model:ir.model.fields,field_description:mr_store_browser.field_browser__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: mr_store_browser
+#: model_terms:ir.ui.view,arch_db:mr_store_browser.browser_view_form
+msgid "Diary"
+msgstr "Agenda"
+
+#. module: mr_store_browser
+#: model:ir.model.fields,field_description:mr_store_browser.field_browser__display_name
+msgid "Display Name"
+msgstr "Nom"
+
+#. module: mr_store_browser
+#: model_terms:ir.ui.view,arch_db:mr_store_browser.browser_view_form
+msgid "E-STORE"
+msgstr "E-STORE"
+
+#. module: mr_store_browser
+#: model_terms:ir.ui.view,arch_db:mr_store_browser.browser_view_form
+msgid "E-STORY"
+msgstr "E-STORY"
+
+#. module: mr_store_browser
+#: model_terms:ir.ui.view,arch_db:mr_store_browser.browser_view_form
+msgid "GPS"
+msgstr "GPS"
+
+#. module: mr_store_browser
+#: model:ir.model.fields,field_description:mr_store_browser.field_browser__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mr_store_browser
+#: model_terms:ir.ui.view,arch_db:mr_store_browser.browser_view_form
+msgid "Intranet"
+msgstr "Intranet"
+
+#. module: mr_store_browser
+#: model:ir.model.fields,field_description:mr_store_browser.field_browser__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: mr_store_browser
+#: model:ir.model.fields,field_description:mr_store_browser.field_browser__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: mr_store_browser
+#: model_terms:ir.ui.view,arch_db:mr_store_browser.browser_view_form
+msgid "Main actions"
+msgstr "Actions principales"
+
+#. module: mr_store_browser
+#: model_terms:ir.ui.view,arch_db:mr_store_browser.browser_view_form
+msgid "Messaging"
+msgstr "Messagerie"
+
+#. module: mr_store_browser
+#: model:ir.model.fields,field_description:mr_store_browser.field_browser__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: mr_store_browser
+#: model_terms:ir.ui.view,arch_db:mr_store_browser.browser_view_form
+msgid "Rate"
+msgstr "Taux"
+
+#. module: mr_store_browser
+#: model:ir.actions.act_window,name:mr_store_browser.action_view_browser_form
+msgid "action.browser.form"
+msgstr "action.browser.form"
+
+#. module: mr_store_browser
+#: model_terms:ir.ui.view,arch_db:mr_store_browser.browser_view_form
+msgid "browser"
+msgstr "MoteurDeRecherche"

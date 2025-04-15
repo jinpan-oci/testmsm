@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+base_sync_line_user,base_sync_line_user,model_base_sync_line,base.group_user,1,1,1,0
+base_sync_line_system,base_sync_line_system,model_base_sync_line,base.group_system,1,1,1,1
+
+base_sync_slaves_user,base_sync_slaves_user,model_base_sync_slaves,base.group_user,1,1,1,0
+base_sync_slaves_system,base_sync_slaves_system,model_base_sync_slaves,base.group_system,1,1,1,1
+
+base_sync_template_line_user,base_sync_template_line_user,model_base_sync_template_line,base.group_user,1,1,1,0
+base_sync_template_line_system,base_sync_template_line_system,model_base_sync_template_line,base.group_system,1,1,1,1
+
+base_sync_template_user,base_sync_template_user,model_base_sync_template,base.group_user,1,1,1,0
+base_sync_template_system,base_sync_template_system,model_base_sync_template,base.group_system,1,1,1,1
+
+base_sync_user,base_sync_user,model_base_sync,base.group_user,1,1,1,0
+base_sync_system,base_sync_system,model_base_sync,base.group_system,1,1,1,1

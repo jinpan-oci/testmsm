@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="product_category_form_view_inherit" model="ir.ui.view">
+        <field name="name">product.category.form.view.inherit</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="product.product_category_form_view"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='parent_id']" position="before">
+                <field name="is_category_intended_for_shared_catalog" widget="boolean_toggle" invisible="parent_id" readonly="parent_id"/>
+                <!--<field name="catalog_id" invisible="not is_category_intended_for_shared_catalog" readonly="True"/>-->
+            </xpath>
+
+            <xpath expr="//field[@name='parent_id']" position="attributes">
+                <attribute name="invisible">is_category_intended_for_shared_catalog</attribute>
+            </xpath>
+
+            <xpath expr="//button" position="after">
+                <button name="publish_catalog" type="object" class="oe_stat_button" icon="fa-pencil-square-o" invisible="not is_category_intended_for_shared_catalog">
+                    <div class="oe_field_widget o_stat_info">
+                        <span class="oe_stat_text">Publish New Catalog</span>
+                        <span class="oe_stat_value"><field name="base_sync_id" readonly="True"/></span>
+                    </div>
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

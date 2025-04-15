@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="product_template_tree_view_mr_store" model="ir.ui.view">
+        <field name="name">product.template.tree.view.mr.store</field>
+        <field name="model">product.template</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="image_128" string="Image" widget="image" class="oe_avatar"/>
+                <field name="priority" widget="priority"/>
+                <field name="name"/>
+                <field name="seller_ids" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

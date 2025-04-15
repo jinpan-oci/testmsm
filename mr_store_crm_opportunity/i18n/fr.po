@@ -1,0 +1,198 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mr_store_crm_opportunity
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-29 11:39+0000\n"
+"PO-Revision-Date: 2024-02-29 11:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mr_store_crm_opportunity
+#: model:ir.model,name:mr_store_crm_opportunity.model_mail_activity
+msgid "Activity"
+msgstr "Activité"
+
+#. module: mr_store_crm_opportunity
+#. odoo-python
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#, python-format
+msgid "Address : "
+msgstr "Adresse: "
+
+#. module: mr_store_crm_opportunity
+#. odoo-python
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#, python-format
+msgid "Building : "
+msgstr "Immeuble :"
+
+#. module: mr_store_crm_opportunity
+#: model:ir.model,name:mr_store_crm_opportunity.model_calendar_event
+msgid "Calendar Event"
+msgstr "Evènements du Calendrier"
+
+#. module: mr_store_crm_opportunity
+#. odoo-python
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#, python-format
+msgid "City : "
+msgstr "Ville : "
+
+#. module: mr_store_crm_opportunity
+#: model_terms:ir.ui.view,arch_db:mr_store_crm_opportunity.calendar_event_view_form
+msgid "Create new quotation"
+msgstr "Créer un nouveau devis"
+
+#. module: mr_store_crm_opportunity
+#. odoo-python
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#, python-format
+msgid "Door code : "
+msgstr "Code de la porte : "
+
+#. module: mr_store_crm_opportunity
+#. odoo-python
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#, python-format
+msgid "Email : "
+msgstr "Email : "
+
+#. module: mr_store_crm_opportunity
+#. odoo-python
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#, python-format
+msgid "House : "
+msgstr "Maison : "
+
+#. module: mr_store_crm_opportunity
+#: model:ir.model,name:mr_store_crm_opportunity.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Piste/opportunité"
+
+#. module: mr_store_crm_opportunity
+#. odoo-python
+#: code:addons/mr_store_crm_opportunity/models/crm_lead.py:0
+#, python-format
+msgid "Meeting at Home"
+msgstr "RDV à Domicile"
+
+#. module: mr_store_crm_opportunity
+#. odoo-python
+#: code:addons/mr_store_crm_opportunity/models/crm_lead.py:0
+#, python-format
+msgid "Meeting at Store"
+msgstr "RDV en Magasin"
+
+#. module: mr_store_crm_opportunity
+#. odoo-python
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#, python-format
+msgid "Mobile : "
+msgstr "Mobile : "
+
+#. module: mr_store_crm_opportunity
+#: model_terms:ir.ui.view,arch_db:mr_store_crm_opportunity.crm_lead_view_form
+msgid "New Home Meeting"
+msgstr "RDV à Domicile"
+
+#. module: mr_store_crm_opportunity
+#: model_terms:ir.ui.view,arch_db:mr_store_crm_opportunity.crm_lead_view_form
+msgid "New Phone Meeting"
+msgstr "RDV Téléphonique"
+
+#. module: mr_store_crm_opportunity
+#: model_terms:ir.ui.view,arch_db:mr_store_crm_opportunity.calendar_event_view_form
+msgid "New Quotation"
+msgstr "Nouveau Devis"
+
+#. module: mr_store_crm_opportunity
+#: model_terms:ir.ui.view,arch_db:mr_store_crm_opportunity.crm_lead_view_form
+msgid "New Store Meeting"
+msgstr "RDV en Magasin"
+
+#. module: mr_store_crm_opportunity
+#. odoo-python
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#, python-format
+msgid "Phone : "
+msgstr "Fixe : "
+
+#. module: mr_store_crm_opportunity
+#. odoo-python
+#: code:addons/mr_store_crm_opportunity/models/crm_lead.py:0
+#, python-format
+msgid "Phone Call"
+msgstr "RDV Telephonique"
+
+#. module: mr_store_crm_opportunity
+#. odoo-python
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#, python-format
+msgid "Residence : "
+msgstr "Résidence : "
+
+#. module: mr_store_crm_opportunity
+#. odoo-python
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#, python-format
+msgid "Residence No : "
+msgstr "No de Résidence : "
+
+#. module: mr_store_crm_opportunity
+#. odoo-python
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#, python-format
+msgid "Zip : "
+msgstr "Code Postal : "
+
+#. module: mr_store_crm_opportunity
+#. odoo-python
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#, python-format
+msgid "appartment : "
+msgstr "appartement : "
+
+#. module: mr_store_crm_opportunity
+#. odoo-python
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#, python-format
+msgid "floor : "
+msgstr "etage : "
+
+#. module: mr_store_crm_opportunity
+#. odoo-python
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#: code:addons/mr_store_crm_opportunity/models/calendar_event.py:0
+#, python-format
+msgid "portal code : "
+msgstr "code du portail : "

@@ -1,0 +1,1098 @@
+<odoo>
+    <template id="report_folder_header">
+        <table width="100%" height="100%" class="table table-bordered">
+            <tr>
+                <td align="center" style="width:25%; font-size:x-large;">
+                    <t t-out="doc.name"/>
+                </td>
+                <td align="center" style="width:45%; font-size:large;">
+                    <t t-if="doc.partner_id.name" t-out="doc.partner_id.name"/>
+                    <t t-if="doc.partner_shipping_id.name != doc.partner_id.name">
+                        <t t-if="doc.partner_shipping_id.name"> / <t t-out="doc.partner_shipping_id.name"/></t>
+                    </t>
+                </td>
+                <td align="center" style="width:15%; font-size:x-small;">
+                    <t t-out="doc.user_id.name"/>
+                    <br/>
+                    Equipe commerciale
+                </td>
+                <td align="center" style="width:10%; font-size:x-small">
+                    <t t-out="doc.date_order"/>
+                </td>
+                <td align="center" rowspan="2" style="width:15%">
+                    <t t-if="doc.tasks_ids">
+                        <t t-foreach="doc.tasks_ids" t-as="task">
+                            <t t-if="task.trello_idcardsource">
+                                <img t-att-src="image_data_uri(task.trello_qr_code)"/>
+                            </t>
+                        </t>
+                    </t>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" align="center">
+                    <table style="font-size:small;" class="table table-bordered">
+                        <!-- ADRESSE -->
+                        <tr>
+                            <td width="80px;">Adresse</td>
+                            <td><t t-if="doc.partner_id.name">   <t t-out="doc.partner_id.name"/></t></td>
+                            <td>
+                                <t t-if="doc.house_type == 'residence' and doc.residence_name">
+                                    Residence: <b><t t-out="doc.residence_name"/></b>
+                                </t>
+                                <t t-elif="doc.house_type == 'building' and doc.residence_name">
+                                    Immeuble: <b><t t-out="doc.residence_name"/></b>
+                                </t>
+                                <t t-elif="doc.house_type == 'house' and doc.residence_name">
+                                    Maison: <b><t t-out="doc.residence_name"/></b>
+                                </t>
+                                <t t-else="doc.residence_name">
+                                    <b><t t-out="doc.residence_name"/></b>
+                                </t>
+                                <t t-if="doc.residence_number">
+                                    Bat: <b><t t-out="doc.residence_number"/>
+                                    </b>
+                                </t>
+                                <b>
+                                    <t t-if="doc.partner_id.street" t-out="doc.partner_id.street"/>
+                                    <t t-if="doc.partner_id.street2" t-out="doc.partner_id.street2"/>
+                                    <t t-if="doc.partner_id.zip" t-out="doc.partner_id.zip"/>
+                                    <t t-if="doc.partner_id.city" t-out="doc.partner_id.city"/>
+                                </b>
+
+                                <t t-if="doc.floor_number">
+                                    Etage: <b><t t-out="doc.floor_number"/></b>
+                                </t>
+                                <t t-if="doc.appartment_number">
+                                    App : <b><t t-out="doc.appartment_number"/></b>
+                                </t>
+                                <br/>
+                                <t t-if="doc.portal_code">
+                                    Code résidence: <b><t t-out="doc.portal_code"/></b>
+                                </t>
+                                <t t-if="doc.entry_code">
+                                    Code porte: <b><t t-out="doc.entry_code"/></b>
+                                </t>
+                            </td>
+                            <!-- CONTACT -->
+                            <td>
+                                Mobile : <t t-if="doc.partner_id.mobile"> <t t-out="doc.partner_id.mobile"/></t><br/>
+                                Fixe :   <t t-if="doc.partner_id.phone">  <t t-out="doc.partner_id.phone"/></t><br/>
+                                Email :  <t t-if="doc.partner_id.email">  <t t-out="doc.partner_id.email"/></t><br/>
+                            </td>
+                        </tr>
+                        <!-- ADRESSE INSTALLATION -->
+                        <tr>
+                            <td width="80px;">Adrese Installation</td>
+                            <td><t t-if="doc.partner_shipping_id.name">   <t t-out="doc.partner_shipping_id.name"/></t></td>
+                            <td>
+                                <t t-if="doc.house_type == 'residence'"> Residence: <t t-out="doc.residence_name"/>
+                                </t>
+                                <t t-elif="doc.house_type == 'building'"> Immeuble: <t t-out="doc.residence_name"/>
+                                </t>
+                                <t t-elif="doc.house_type == 'house'"> Maison: <t t-out="doc.residence_name"/>
+                                </t>
+                                <t t-else="doc.residence_name">
+                                    <t t-out="doc.residence_name"/>
+                                </t>
+
+                                <br/>
+                                <t t-if="doc.partner_shipping_id.street">
+                                    <t t-out="doc.partner_shipping_id.street"/> , </t>
+                                <t t-if="doc.partner_shipping_id.street2">
+                                    <t t-out="doc.partner_shipping_id.street2"/> , </t>
+                                <t t-if="doc.partner_shipping_id.zip">
+                                    <t t-out="doc.partner_shipping_id.zip"/> , </t>
+                                <t t-if="doc.partner_shipping_id.city" t-out="doc.partner_shipping_id.city"/>
+
+                                <br/>
+                                <t t-if="doc.residence_number"> Bat: <t t-out="doc.residence_number"/><br/></t>
+
+                                <t t-if="doc.floor_number"> Etage: <t t-out="doc.floor_number"/><br/></t>
+
+                                <t t-if="doc.appartment_number"> Appartement: <t t-out="doc.appartment_number"/>
+                                </t>
+                            </td>
+                            <!-- CONTACT -->
+                            <td>
+                                <!-- TODO - REPLACE PAR LE CONTACT SHIPPING AFFICHER UNIQUEMENT SI LES DONNES SONT PRESENTEES -->
+                                Mobile : <t t-if="doc.partner_shipping_id.mobile"> <t t-out="doc.partner_shipping_id.mobile"/></t><br/>
+                                Fixe :   <t t-if="doc.partner_shipping_id.phone">  <t t-out="doc.partner_shipping_id.phone"/></t><br/>
+                                Email :  <t t-if="doc.partner_shipping_id.email">  <t t-out="doc.partner_shipping_id.email"/></t><br/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </template>
+
+    <template id="report_folder_document">
+        <t t-set="folder_page_de_garde" t-value="doc.company_id.guard_page"/> <!-- Permet d'afficher la page de garde -->
+        <t t-set="folder_page_de_garde_etapes" t-value="doc.company_id.guard_page_steps"/> <!-- Permet d'afficher le bloc les étapes du dossier -->
+        <t t-set="folder_page_de_garde_fournisseur_col" t-value="doc.company_id.guard_page_supplier"/> <!-- Dans la page de garde, il permet d'ajouter une colonne par produit avec le nom du fournisseur, le numéro du contact commercial et celui du chef de marché, le mail de passage de commande -->
+        <t t-set="folder_page_de_garde_tableau_achat" t-value="doc.company_id.guard_page_table_purchase"/> <!-- Permet d'afficher sur la page de garde, le tableau des achats -->
+        <t t-set="folder_marge" t-value="doc.company_id.margin_page"/> <!-- Permet d'afficher la page des marges -->
+        <t t-set="folder_feuille_de_pose" t-value="doc.company_id.installation_sheet"/> <!-- Permet d'afficher la page de pose -->
+        <t t-set="folder_feuille_de_pose_stock_header" t-value="doc.company_id.installation_sheet_stock_header"/> <!-- Permet d'afficher le stock et les toile en haut de la feuille de pose -->
+        <t t-set="folder_feuille_de_pose_stock_col" t-value="doc.company_id.installation_sheet_stock"/> <!-- Dans la feuille de pose, il permet d'ajouter une colonne par produit stockage -->
+        <t t-set="folder_feuille_de_pose_manuel_col" t-value="doc.company_id.installation_sheet_manual"/> <!-- Dans la feuille de pose, il permet d'ajouter une colonne par produit avec le manuel d'installation -->
+        <t t-set="folder_feuille_de_pose_fournisseur_col" t-value="doc.company_id.installation_sheet_supplier"/> <!-- Dans la feuille de pose, il permet d'ajouter une colonne par produit avec le nom du fournisseur et le numéro du contact technique -->
+        <t t-set="folder_feuille_de_pose_avis_google" t-value="doc.company_id.installation_sheet_google_review"/> <!-- Permet d'afficher le bloc avis google dans la feuille de pose -->
+        <t t-set="folder_feuille_de_pose_google_street" t-value="doc.company_id.installation_sheet_google_street"/> <!-- Permet d'afficher la page google street view -->
+        <t t-set="folder_pv" t-value="doc.company_id.verbal_report"/> <!-- Permet d'afficher le PV -->
+        <t t-set="folder_pv_installateur" t-value="doc.company_id.verbal_report_installer"/> <!-- Permet d'afficher le bloc poseur -->
+        <t t-set="folder_pv_avis_goole" t-value="doc.company_id.verbal_report_google_review"/> <!-- Permet d'afficher le pv avec les avis google en bas -->
+        <t t-set="folder_tva" t-value="doc.company_id.tva_pdf"/> <!-- Permet d'afficher le cerfa TVA -->
+        <t t-set="installation_images" t-value="doc.company_id.installation_images"/> <!-- Permet d'afficher les images d'installation -->
+        <t t-set="installation_images_before_install" t-value="doc.company_id.installation_images_before_install"/> <!-- Permet d'afficher les images avant installation -->
+        <t t-set="installation_images_with_3d" t-value="doc.company_id.installation_images_with_3d"/> <!-- Permet d'afficher les images après installation -->
+        <t t-set="installation_images_measurements" t-value="doc.company_id.installation_images_measurements"/> <!-- Permet d'afficher les images après installation -->
+        <t t-set="installation_images_other" t-value="doc.company_id.installation_images_other"/> <!-- Permet d'afficher les images après installation -->
+
+        <!-- DOSSIER - PAGE DE GARDE - START -->
+        <t t-if="folder_page_de_garde">
+            <!-- HEADER -->
+            <t t-call="mr_store_report_folder.report_folder_header"/>
+            <!-- BODY -->
+            <table width="100%" height="100%" class="table table-bordered" style="border-color:white;">
+                <tr>
+                    <td width="1%">
+                        <i class="fa fa-folder" style="color:#81b87c; padding-top:0.3em;  font-size: 2em;" aria-hidden="true"/>
+                    </td>
+                    <td width="99%">
+                        <p style="background: #81b87c; color:#eff1e8; padding:0.3em; margin: 0.2em;font-size: 1.5em;">
+                            DOSSIER<br/>
+                            <!--<t t-esc="doc.display_name"/>-->
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <t t-if="folder_page_de_garde_etapes">
+                <table width="100%" class="table table-bordered" style="color:#808080;">
+                    <tr>
+                        <td width="15%">
+                            Pose ☐ <br/>
+                            Livraison ☐ <br/>
+                            Enlèvement ☐
+                        </td>
+                        <td width="35%">
+                            Demande mairie : OUI ☐/ NON ☐<br/>
+                            Accord crédit :  OUI ☐/ NON  ☐<br/>
+                        </td>
+                        <td width="50%">
+                            Remarque :
+                        </td>
+                    </tr>
+                </table>
+            </t>
+            <table width="100%" class="table table-bordered">
+                <tr>
+                    <th align="center">
+
+                    </th>
+                    <th style="font-size:small;" align="center">
+                        Produits
+                    </th>
+                    <th style="font-size:small;" align="center">
+                        Qty
+                    </th>
+                    <th style="font-size:small;" align="center">
+                        PU
+                    </th>
+                    <th style="font-size:small;" align="center">
+                        TVA
+                    </th>
+                    <th style="font-size:small;" align="center">
+                        HT
+                    </th>
+                </tr>
+                <t t-set="current_subtotal" t-value="0"/>
+                <t t-foreach="doc.order_line" t-as="line">
+                    <tr>
+                        <td style="width:75px;">
+                            <t t-if="line.product_id.image_256">
+                                <img style="width: 75px;" t-att-src="image_data_uri(line.product_id.image_256)"/>
+                            </t>
+                        </td>
+                        <td valign="middle" style="max-width:500px;font-size:small;white-space:normal;">
+                            <div style="max-width:500px;">
+                                <t t-if="line.description_html" t-esc="line.description_html"/>
+                                <t t-elif="line.description_text" t-esc="line.description_text"/>
+                                <span t-elif="line.name" t-field="line.name"/>
+                            </div>
+                            <t t-if="folder_page_de_garde_fournisseur_col">
+                                <!--TODO : Mettre ici le nom du fournisseur, le téléphone et le mail -->
+                            </t>
+                        </td>
+                        <td align="center" valign="middle" style="font-size:small;">
+                            <t t-if="line.product_uom_qty" t-esc="line.product_uom_qty"/>
+                        </td>
+                        <td align="right" style="font-size:small;">
+                            <t t-if="line.price_unit" t-esc="line.price_unit"/>
+                        </td>
+                        <td align="right" style="font-size:small;">
+                            <t t-if="line.tax_id" t-foreach="line.tax_id" t-as="tax">
+                                <t t-esc="tax.amount"/>
+                            </t>
+                        </td>
+                        <td align="right" style="font-size:small;">
+                            <t t-if="line.price_subtotal" t-esc="line.price_subtotal"/>
+                        </td>
+                    </tr>
+                    <t t-set="current_subtotal" t-value="current_subtotal + line.price_subtotal"/>
+                </t>
+                <tr align="right">
+                    <td colspan="5" align="right">
+                        <strong>
+                            Total HT:
+                        </strong>
+                    </td>
+                    <td colspan="1" align="right">
+                        <strong>
+                            <t t-if="current_subtotal" t-esc="current_subtotal"/>
+                        </strong>
+                    </td>
+                </tr>
+                <t t-set="tax_totals" t-value="doc.tax_totals"/>
+                <t t-foreach="tax_totals['subtotals']" t-as="subtotal">
+                    <t t-set="subtotal_to_show" t-value="subtotal['name']"/>
+                    <t t-foreach="tax_totals['groups_by_subtotal'][subtotal_to_show]" t-as="amount_by_group">
+                        <tr align="right">
+                            <t t-if="tax_totals['display_tax_base']">
+                                <td colspan="5" align="right">
+                                    <strong>
+                                        Total <span t-esc="amount_by_group['tax_group_name']"/>
+                                    </strong>
+                                </td>
+                                <td colspan="1" align="right">
+                                    <span class="text-nowrap" t-esc="'%0.2f' % amount_by_group['tax_group_amount']"/>
+                                    <t t-if="doc and doc.pricelist_id and doc.pricelist_id.currency_id">
+                                        <span t-esc="doc.currency_id.symbol"/>
+                                    </t>
+                                </td>
+                            </t>
+                            <t t-else="">
+                                <td colspan="5" align="right">
+                                    <strong>
+                                        <span class="text-nowrap">
+                                            Total TVA
+                                        </span>
+                                    </strong>
+                                </td>
+                                <td colspan="1" align="right">
+                                    <span class="text-nowrap" t-esc="'%0.2f' % amount_by_group['tax_group_amount']"/>
+                                    <t t-if="doc and doc.pricelist_id and doc.pricelist_id.currency_id">
+                                        <span t-esc="doc.currency_id.symbol"/>
+                                    </t>
+                                </td>
+                            </t>
+                        </tr>
+                    </t>
+                </t>
+                <tr align="right">
+                    <td colspan="5" align="right">
+                        <strong>
+                            Total TTC:
+                        </strong>
+                    </td>
+                    <td colspan="1" align="right">
+                        <strong>
+                            <t t-if="doc.amount_total" t-esc="doc.amount_total"/>
+                        </strong>
+                    </td>
+                </tr>
+            </table>
+            <table class="table table-bordered" style="padding:5px;margin:5px; border-color:white;">
+                <tr>
+                    <td width="20%">
+                        <p style="font-family: Arial,Helvetica,sans-serif; font-size:11pt;color: #808080; font-color: #808080;">
+                            <b>
+                                Règlement:
+                            </b>
+                            <t t-esc="doc.payment_term_id.name"/>
+                        </p>
+                        <p style="font-family: Arial,Helvetica,sans-serif; font-size:11pt;color: #808080; font-color: #808080;">
+                            <b>
+                                Montant déjà facturé TTC:
+                            </b>
+                            <t t-set="total_paid" t-value="doc.amount_total - doc.amount_to_invoice"/>
+                            <t t-esc="total_paid"/> €
+                        </p>
+                        <p style="font-family: Arial,Helvetica,sans-serif; font-size:11pt;color: #808080; font-color: #808080;">
+                            <b>
+                                Délai des travaux:
+                            </b>
+                            <t t-esc="doc.work_deadline"/>
+                        </p>
+                    </td>
+                    <td width="80%">
+                        <div class="o_editor_banner o_not_editable lh-1 d-flex align-items-center alert alert-info pb-0 pt-3" role="status" data-oe-protected="true" contenteditable="false">
+                            <i class="fs-4 fa fa-info-circle mb-3" aria-label="Bannière Info"/>
+                            <div class="w-100 ms-3" data-oe-protected="false" contenteditable="true">
+                                <p>Commentaire commercial: <t t-esc="doc.commercial_note"/></p>
+                            </div>
+                            </div>
+
+                            <div class="o_editor_banner o_not_editable lh-1 d-flex align-items-center alert alert-warning pb-0 pt-3" role="status" data-oe-protected="true" contenteditable="false">
+                            <i class="fs-4 fa fa-info-circle mb-3" aria-label="Bannière Info"/>
+                            <div class="w-100 ms-3" data-oe-protected="false" contenteditable="true">
+                                <p>Commentaire installation: <t t-esc="doc.installation_note"/></p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <t t-if="folder_page_de_garde_tableau_achat">
+                <table class="table table-bordered" style="padding:5px;margin:5px; border-color:white;">
+                    <tr>
+                        <td>
+                            <h6>COMMANDE FOURNISSEURS</h6>
+                            <table width="100%" class="table table-bordered" style="color:#808080;">
+                                <tr>
+                                    <td width="250px">1</td><td>Date CDE : </td><td>ARC : </td><td>STOCKAGE : </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td><td>Date CDE : </td><td>ARC : </td><td>STOCKAGE : </td>
+                                    </tr>
+                                <tr>
+                                    <td>3</td><td>Date CDE : </td><td>ARC : </td><td>STOCKAGE : </td>
+                                    </tr>
+                                <tr>
+                                    <td>4</td><td>Date CDE : </td><td>ARC : </td><td>STOCKAGE : </td>
+                                    </tr>
+                                <tr>
+                                    <td>5</td><td>Date CDE : </td><td>ARC : </td><td>STOCKAGE : </td>
+                                </tr>
+                            </table>
+                            <br/>
+                            <h6>ATELIER</h6>
+                            <table width="100%" class="table table-bordered" style="color:#808080;">
+                                <tr>
+                                    <td width="250px">1</td><td>ARC : </td><td>STOCKAGE : </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td><td>ARC : </td><td>STOCKAGE : </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td><td>ARC : </td><td>STOCKAGE : </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td><td>ARC : </td><td>STOCKAGE : </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td><td>ARC : </td><td>STOCKAGE : </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </t>
+        </t>
+        <!-- DOSSIER - PAGE DE GARDE - END -->
+        <!-- DOSSIER - MARGE - START -->
+        <t t-if="folder_marge">
+            <!-- SAUT DE PAGE -->
+            <p style="page-break-before: always;"/>
+            <!-- HEADER -->
+            <t t-call="mr_store_report_folder.report_folder_header"/>
+            <table width="100%" height="100%" class="table table-bordered" style="border-color:white;">
+                    <tr>
+                        <td width="1%">
+                            <i class="fa fa-pie-chart" style="color:#81b87c; padding-top:0.3em;  font-size: 2em;" aria-hidden="true"/>
+                        </td>
+                        <td width="99%">
+                            <p style="background: #81b87c; color:#eff1e8; padding:0.3em; margin: 0.2em;font-size: 1.5em;">
+                                DETAIL DES MARGES
+                            </p>
+                        </td>
+                    </tr>
+            </table>
+            <div style="width: 100%; font-family: Arial, sans-serif; font-size: 14px; padding: 5px;">
+                <table style="width:100%;border-color:white;" class="table table-bordered">
+                    <tr>
+                        <td>
+                            <div>
+                                <p><strong>M. ET MME ALLARD Pascal et Annick</strong><br/>
+                                10 RUE TILLOT<br/>
+                                21000 DIJON</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="text-align: right;">
+                                <p>Devis N° : 24/1/1156029<br/>
+                                Date devis : 07/10/2024<br/>
+                                Réf. Client : VR / CJ</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                Commercial : <strong>JULIEN Cyril</strong>
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                </table>
+                <table style="width:100%;" class="table table-bordered">
+                    <tr>
+                        <th colspan="2">
+                            <div style="text-align: center;">
+                                Adresse de chantier
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td width="60%;">
+                            <div style=" padding: 10px;">
+                                Réf. Chantier : <strong>APPARTEMENT MICHELET</strong><br/>
+                                Adresse : 6 RUE MICHELET<br/>
+                                CP / Ville : 21000 DIJON
+                            </div>
+                        </td>
+                        <td width="40%;">
+                            <div style="text-align: left;">
+                                <p>Nom :</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table style="width:100%;" class="table table-bordered">
+                    <tr>
+                        <th colspan="2">
+                            <div style="text-align: center;">
+                                <strong>Montants du document</strong>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td width="60%;">
+                            <div style=" padding: 10px;">
+                                Montant HT : 872,69 €<br/>
+                                Montant TTC : 959,96 €
+                            </div>
+                        </td>
+                        <td width="40%;">
+                            <div style="text-align: left;">
+                                <p></p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table style="width:100%;" class="table table-bordered">
+                    <tr>
+                        <th>
+                            <div style="text-align: center;">
+                                <strong>FOURNITURES</strong>
+                            </div>
+                        </th>
+                        <th>
+                            <div style="text-align: center;">
+                                <strong>TRAVAUX</strong>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td width="50%;">
+                            <div style=" padding: 10px;">
+                                <p>Fournitures : 632,18 €<br/>
+                                Frais : 0,00 €<br/>
+                                Remises consenties : 94,83 €</p>
+                                <hr/>
+                                <p>Total Net Fournitures : 537,35 €<br/>
+                                <em>Achats estimés :</em> 263,41 €<br/>
+                                <em>Achats réels :</em> 263,41 €</p>
+                                <p>Petites fournitures : 0,00 €<br/>
+                                Frais généraux : 0,00 €</p>
+                                <p style="color: red;">Coût total Achats et Frais : 263,41 €</p>
+                                <p>Marge sur fournitures : 273,94 €<br/>
+                                Coef : 2,04<br/>
+                                % de marge : 50,98</p>
+                            </div>
+
+                        </td>
+                        <td width="50%;">
+                            <div style="  padding: 10px;">
+                                <p>Nombre d'heures : 5,00</p>
+                                <br/>
+                                <p><strong>MAIN D'OEUVRE</strong></p>
+                                <p>Main d'oeuvre - Vente : 335,00 €<br/>
+                                Remise sur M.O : 0,00 €<br/>
+                                <hr/>
+                                Main d'oeuvre remisée : 335,00 €</p>
+                                <p style="color: orange;">Main d'oeuvre - Achat : 0,00 €<br/>
+                                Marge sur Main d'oeuvre : 335,00 €<br/>
+                                Coef : 1,00<br/>
+                                % de marge : 100,00</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table style="width:100%;text-align:center;" class="table table-bordered ">
+                    <tr>
+                        <th colspan="3">
+                            <div style="text-align: center;">
+                                <strong>Marge du chantier</strong>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td width="34%">
+                                Marge globale : 608,94 €
+                        </td>
+
+                        <td width="33%">
+                            Coef : 3,31
+                        </td>
+                        <td width="33%">
+                            % : 69,75
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </t>
+        <!-- DOSSIER - MARGE - END -->
+        <!-- DOSSIER - FEUILLE DE POSE -->
+        <t t-if="folder_feuille_de_pose">
+            <!-- SAUT DE PAGE -->
+            <p style="page-break-before: always;"/>
+            <!-- HEADER -->
+            <t t-call="mr_store_report_folder.report_folder_header"/>
+            <table width="100%" height="100%" style="padding:5px;margin:5px;border-color:white;" class="table table-bordered">
+                <tr>
+                    <td width="1%">
+                        <i class="fa fa-truck" style="color:#FF8C00; padding-top:0.3em; font-size: 2em;" aria-hidden="true"/>
+                    </td>
+                    <td width="99%">
+                        <p style="background: #FF8C00; color:#eff1e8; padding:0.3em; margin: 0.2em;font-size: 1.5em;">
+                            FEUILLE DE POSE
+                            <!--<t t-esc="doc.display_name"/>-->
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <t t-if="folder_feuille_de_pose_stock_header">
+                <table width="100%" height="100%" style="padding:2px;margin:2px; margin-left:0px" class="table table-bordered">
+                    <tr>
+                        <td width="50%">
+                            Casier Armature :
+                            <t t-if="doc.locker_frame">
+                                <t t-esc="doc.locker_frame"/>
+                            </t>
+                            <t t-else="">
+                                <t t-esc="'                 '"/>
+                            </t>
+                        </td>
+                        <td width="50%">
+                            Casier Toile :
+                            <t t-if="doc.locker_canvas">
+                                <t t-esc="doc.locker_canvas"/>
+                            </t>
+                            <t t-else="">
+                                <t t-esc="'                 '"/>
+                            </t>
+                        </td>
+                    </tr>
+                </table>
+            </t>
+            <table style="color:#808080;padding:5px;margin:5px;width:100%; margin-left:0px" class="table table-bordered">
+                <tr>
+                    <td width="30%">
+                        <ul>
+                            <li> DEPOSE : <t t-if="doc.is_disassembly_required">
+                                    OUI
+                                </t>
+                                <t t-else="">
+                                    NON
+                                </t>
+                            </li>
+
+                            <li> HAUTEUR DE POSE : <t t-esc="doc.installation_height"/>
+                            </li>
+
+                            <li>
+                                TIRAGE DE LIGNE : <t t-if="doc.line_drawing_selection == 'no'">
+                                    NON
+                                </t>
+                                <t t-if="doc.line_drawing_selection == 'y_in'">
+                                    OUI A L'INTERIEUR
+                                </t>
+                                <t t-if="doc.line_drawing_selection == 'y_out'">
+                                    OUI A L'EXTERIEUR
+                                </t>
+                                <t t-if="doc.line_drawing_selection == 'y_exist'">
+                                    OUI EXISTANTE
+                                </t>
+                            </li>
+                            <li>
+                                <t t-if="doc.P">
+                                    P: <t t-esc="doc.P"/>
+                                </t>
+                                <t t-if="doc.H">
+                                    H: <t t-esc="doc.H"/>
+                                </t>
+                                <t t-if="doc.AP">
+                                    AP: <t t-esc="doc.AP"/>
+                                </t>
+                                <t t-if="doc.AH">
+                                    AH: <t t-esc="doc.AH"/>
+                                </t>
+                            </li>
+                        </ul>
+                        A prendre :
+                        <ul>
+                            <t t-foreach="doc.transaction_installation_ids" t-as="transaction">
+                                <t t-set="show" t-value="True"/>
+                                <t t-if="transaction.base_installation_line_ids">
+                                    <t t-foreach="transaction.base_installation_line_ids" t-as="line">
+                                        <t t-if="line.name == 'sans'">
+                                            <t t-set="show" t-value="False"/>
+                                        </t>
+                                    </t>
+                                    <t  t-if="show">
+                                        <li>
+                                            <strong>
+                                                <t t-esc="transaction.base_installation_id.name"/>
+                                            </strong><br/>
+                                            <t t-foreach="transaction.base_installation_line_ids" t-as="line">
+                                                ☐ <t t-esc="line.name"/><br/>
+                                            </t>
+                                        </li>
+                                        <br/>
+                                    </t>
+                                </t>
+                            </t>
+                        </ul>
+                    </td>
+                    <td width="70%">
+                        <div class="o_editor_banner o_not_editable lh-1 d-flex align-items-center alert alert-warning pb-0 pt-3" role="status" data-oe-protected="true" contenteditable="false">
+                            <i class="fs-4 fa fa-info-circle mb-3" aria-label="Bannière Info"/>
+                            <div class="w-100 ms-3" data-oe-protected="false" contenteditable="true">
+                                <p>Commentaire d'installation : <t t-esc="doc.installation_note"/></p>
+                            </div>
+                        </div>
+                        <table style="color:#808080;" class="table table-bordered">
+                            <tr>
+                                <th align="left">
+                                    Repère
+                                </th>
+                                <th align="left">
+                                    Produit
+                                </th>
+                                <t t-if="folder_feuille_de_pose_stock_col">
+                                    <th align="left">
+                                        Stockage
+                                    </th>
+                                </t>
+                            </tr>
+                            <t t-set="number_of_lines" t-value="0"/>
+                            <t t-foreach="doc.order_line" t-as="line">
+                                <t t-set="number_of_lines" t-value="number_of_lines+1"/>
+                            </t>
+                            <t t-set="actual_line" t-value="0"/>
+                            <t t-foreach="doc.order_line" t-as="line">
+                                <t t-set="actual_line" t-value="actual_line+1"/>
+                                <tr t-if="line.product_type == 'product'">
+                                    <td width="10%" align="left">
+                                        <t t-esc="line.product_id.default_code"/>
+                                        <img t-if="line.product_id.image_512" t-att-src="image_data_uri(line.product_id.image_512)" style="max-width:50px;"/>
+                                    </td>
+                                    <td width="80%" align="left">
+                                        <div t-if="line.description_html" style="font-size: 0.8em;margin-left:15px;">
+                                            <div style="max-width:450px;">
+                                                <span t-field="line.description_html"/>
+                                            </div>
+                                        </div>
+                                        <div t-elif="line.description_text" style="font-size: 0.8em;margin-left:15px;">
+                                            <span t-field="line.description_text"/>
+                                        </div>
+                                        <div t-elif="line.name" style="font-size: 0.8em;margin-left:15px;">
+                                            <span t-field="line.name"/>
+                                        </div>
+                                    </td>
+                                    <t t-if="folder_feuille_de_pose_stock_col">
+                                        <td width="10%">
+
+                                        </td>
+                                    </t>
+                                </tr>
+                            </t>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table width="100%" class="table table-bordered" style="color:#808080;">
+                <tr>
+                    <th align="left">
+                        <h6>Commentaires lors de l'installation:</h6>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                    </td>
+                </tr>
+            </table>
+            <table width="100%" class="table table-bordered" style="color:#808080;">
+                <tr>
+                    <td>
+                        <h6>POSE RDV</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td><td>Appel pour RDV : </td><td>Date confirmée: </td>
+                    </tr>
+                <tr>
+                    <td>2</td><td>Appel pour RDV : </td><td>Date confirmée: </td>
+                    </tr>
+                <tr>
+                    <td>3</td><td>Appel pour RDV : </td><td>Date confirmée: </td>
+                </tr>
+            </table>
+            <t t-if="folder_feuille_de_pose_avis_google">
+                <table width="100%" style="padding:5px;margin:5px;border-color:white;" class="table table-bordered">
+                    <tr>
+                        <td width="33%">
+                            <center>
+                                <t t-if="doc.company_id.qr_code_1">
+                                    <img t-att-src="image_data_uri(doc.company_id.qr_code_1)" style="width:100px;"/>
+                                    <br/>8eme
+                                </t>
+                            </center>
+                        </td>
+                        <td width="34%">
+                            <center>
+                                <t t-if="doc.company_id.qr_code_2">
+                                    <img t-att-src="image_data_uri(doc.company_id.qr_code_2)" style="width:100px;"/>
+                                    <br/>3eme
+                                </t>
+                            </center>
+                        </td>
+                        <td width="33%">
+                            <center>
+                                <t t-if="doc.company_id.qr_code_3">
+                                    <img t-att-src="image_data_uri(doc.company_id.qr_code_3)" style="width: 100px;"/>
+                                    <br/>Aix
+                                </t>
+                            </center>
+                        </td>
+                    </tr>
+                </table>
+            </t>
+        </t>
+        <!-- DOSSIER - FEUILLE DE POSE - END -->
+        <t t-if="folder_feuille_de_pose_google_street">
+            <!-- GOOGLE MAP - START -->
+            <p style="page-break-before: always;"/>
+            <t t-call="mr_store_report_folder.report_folder_header"/>
+            <table width="100%" style="padding:5px;margin:5px;border-color:white;" class="table table-bordered">
+                <tr>
+                    <td width="1%">
+                        <i class="fa fa-map" style="color:#FF8C00; padding-top:0.3em; font-size: 2em;" aria-hidden="true"/>
+                    </td>
+                    <td width="99%">
+                        <p style="background: #FF8C00; color:#eff1e8; padding:0.3em; margin: 0.2em;font-size: 1.5em;">
+                            ADRESSE
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <table width="100%" class="table table-bordered">
+                <tr>
+                    <td align="center">
+                        <img t-att-src="image_data_uri(doc.map_img_1)" style="min-width=300px;"/>
+                    </td>
+                    <td align="center">
+                        <img t-att-src="image_data_uri(doc.map_img_2)" style="min-width=300px;"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="99" align="center">
+                        <img t-att-src="image_data_uri(doc.map_img_3)" style="min-width=600px;"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="99" align="center">
+                        <img t-att-src="image_data_uri(doc.map_img_4)" style="min-width=600px;"/>
+                    </td>
+                </tr>
+            </table>
+            <!-- GOOGLE MAP - END -->
+        </t>
+        <!-- DOSSIER - PV de CHANTIER - START -->
+        <t t-if="folder_pv">
+                <!-- PV DE CHANTIER - START -->
+                <t t-foreach="[1,2]" t-as="i">
+                <p style="page-break-before: always;"/>
+                <div style="width:100%">
+                    <center>
+                    </center>
+                </div>
+                <table width="100%" style="padding:5px;margin:5px;border-color:white;" class="table table-bordered">
+                    <tr>
+                        <td width="1%">
+                            <i class="fa fa-check" style="color:#FF8C00; padding-top:0.3em; font-size: 2em;" aria-hidden="true"/>
+                        </td>
+                        <td width="99%">
+                            <p style="background: #FF8C00; color:#eff1e8; padding:0.3em; margin: 0.2em;font-size: 1.5em;">
+                                PROCES VERBAL DE RECEPTION DE TRAVAUX
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                                <img width="320" src="data:image/png;base64,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"/>
+                        </td>
+                    </tr>
+                </table>
+                <div class="d-flex flex-row justify-content-between w-100 mt-3 mb-3" style="display: flex; flex-direction: row; justify-content: space-between; width: 100%">
+                    <!--<t t-call="web.address_layout"/>-->
+                    <div class="address" style="width:45%;margin-right:10%;">
+                        <p style="background: #81b87c; color:#eff1e8; padding:0.3em; margin: 0;font-size: 0.8em;">De</p>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.company_id.name or ''"/>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.company_id.street or ''"/>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.company_id.street2 or ''"/>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;"> <span t-esc="doc.company_id.zip or ''"/>, <span t-esc="doc.company_id.city or ''"/> </p>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;">Fixe : <span t-if="doc.company_id.phone" t-esc="doc.company_id.phone"/></p>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;">Mail : <span t-if="doc.company_id.email" t-esc="doc.company_id.email"/></p>
+                    </div>
+                    <!--
+                    <div class="address" style="width:45%;">
+                        <p style="background: #81b87c; color:#eff1e8; padding:0.3em; margin: 0;font-size: 0.8em;">A</p>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.partner_id.name or ''"/>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.partner_id.street or ''"/>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.partner_id.street2 or ''"/>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;"> <span t-esc="doc.partner_id.zip or ''"/>, <span t-esc="doc.partner_id.city or ''"/> </p>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;">Fixe : <span t-if="doc.partner_id.phone" t-esc="doc.partner_id.phone"/></p>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;">Mobile : <span t-if="doc.partner_id.mobile" t-esc="doc.partner_id.mobile"/></p>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;">Mail : <span t-if="doc.partner_id.email" t-esc="doc.partner_id.email"/></p>
+                    </div>
+                    -->
+                    <div class="address" style="width:45%;">
+                        <p style="background: #81b87c; color:#eff1e8; padding:0.3em; margin: 0;font-size: 0.8em;">A</p>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.partner_shipping_id.name or ''"/>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.partner_shipping_id.street or ''"/>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;" t-esc="doc.partner_shipping_id.street2 or ''"/>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;"> <span t-esc="doc.partner_shipping_id.zip or ''"/>, <span t-esc="doc.partner_shipping_id.city or ''"/> </p>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;">Fixe : <span t-if="doc.partner_shipping_id.phone" t-esc="doc.partner_shipping_id.phone"/></p>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;">Mobile : <span t-if="doc.partner_shipping_id.mobile" t-esc="doc.partner_shipping_id.mobile"/></p>
+                        <p style="margin:0; color:#808080;font-size: 0.8em;">Mail : <span t-if="doc.partner_shipping_id.email" t-esc="doc.partner_shipping_id.email"/></p>
+                    </div>
+                </div>
+                <table width="100%" style="padding:5px;margin:5px;border-color:white;" class="table table-bordered">
+                    <tr>
+                        <td>
+                            <p style="background: #81b87c; color:#eff1e8; padding:0.3em; margin: 0;font-size: 0.8em;">Description des travaux</p>
+                            <ul>
+                            <t t-foreach="doc.order_line" t-as="line">
+                                <li t-if="line.product_type == 'product'"><span style="color:#808080;font-size: 0.8em;" t-field="line.product_id.name"/></li>
+                            </t>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" class="table table-bordered">
+                    <tr>
+                        <td style="color:#808080;">
+                            Je soussigné (nom et prénom du client).....................................................................................................................<br/>
+                            Procède à la réception de travaux en date du : …......................…… / …......................…… / ….....................……<br/>
+                            en présence de l'entreprise nommée ci-dessus.<br/>
+                            (cocher la mention utile)<br/>
+
+                                ☐ Cette réception est prononcée sans réserve<br/>
+                                ☐ Cette réception est prononcée avec les réserves suivantes (soyez précis : emplacement, objet, description…)
+                            <br/>
+                            <br/>
+                            <br/>
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" style="padding:5px;margin:5px;border-color:white;color:#808080;" class="table table-bordered">
+                    <tr>
+                        <td>
+                            <p>
+                                ☐ J’autorise Monsieur Store pour l’utilisation, à titre gracieux, des photos et / ou vidéos concernant mon installation,
+                                dans le cadre de la communication de Monsieur Store, qu’elle soit interne ou externe, imprimée ou numérique,
+                                sans limite géographique, d’une durée de 5 ans à compter de ce jour, et quel que soit le nombre d’utilisations.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fait en double exemplaire à : ...............................................................  Le : ...............................................</td>
+                    </tr>
+                </table>
+                <p style="background: #81b87c; color:#eff1e8; padding:0.3em; margin: 0;font-size: 0.8em;">Règlement</p>
+                <table width="100%" class="table table-bordered" style="color:#808080;">
+                    <tr>
+                        <td>Montant de la commande : ......................... €</td><td>Acompte :......................... €</td><td>Solde à régler : ......................... €</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Montant recu.: ...................€</td><td>Mode de règlement : ......................... </td>
+                    </tr>
+                </table>
+                <t t-if="folder_pv_installateur">
+                    <p style="background: #81b87c; color:#eff1e8; padding:0.3em; margin: 0;font-size: 0.8em;">Installateur</p>
+                    <table width="100%" class="table table-bordered" style="color:#808080;">
+                        <tr>
+                            <td width="30%">Nom : </td><td width="30%" style="font-size: small;">Matériel vérfié, en bon état de fonctionnement : Oui</td><td width="40%" rowspan="2">Remarque :</td>
+                        </tr>
+                        <tr>
+                            <td>Prénom : </td><td style="font-size: small;">Charte de pose respectée : Oui</td>
+                        </tr>
+                    </table>
+                </t>
+                <table width="100%" class="table table-bordered" style="color:#808080;">
+                    <tr>
+                        <td width="50%">
+                            <h6>SIGNATURE - Client</h6>
+                            <table>
+                                <tr>
+                                    <td><br/><br/><br/></td>
+                                </tr>
+
+                            </table>
+                        </td>
+                        <td width="50%">
+                            <h6>SIGNATURE du représentant de l'entreprise</h6>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <br/><br/><br/>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <t t-if="folder_pv_avis_goole">
+                    <table width="100%" style="padding:5px;margin:5px;border-color:white;" class="table table-bordered">
+                        <tr>
+                            <td width="33%">
+                                <center>
+                                    <t t-if="doc.company_id.qr_code_1">
+                                        <img t-att-src="image_data_uri(doc.company_id.qr_code_1)" style="width:100px;"/>
+                                        <br/>
+                                    </t>
+                                </center>
+                            </td>
+                            <td width="34%">
+                                <center>
+                                    <t t-if="doc.company_id.qr_code_2">
+                                        <img t-att-src="image_data_uri(doc.company_id.qr_code_2)" style="width:100px;"/>
+                                        <br/>
+                                    </t>
+                                </center>
+                            </td>
+                            <td width="33%">
+                                <center>
+                                    <t t-if="doc.company_id.qr_code_3">
+                                        <img t-att-src="image_data_uri(doc.company_id.qr_code_3)" style="width: 100px;"/>
+                                        <br/>
+                                    </t>
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+                </t>
+            </t>
+        </t>
+        <!-- DOSSIER - PV DE CHANTIER - END -->
+        <t t-if="installation_images">
+            <t t-foreach="doc.env['ir.attachment'].search([('res_model', '=', 'sale.order'),('res_id', '=', doc.id),('photo_use_type', '=', 'mesures')])" t-as="attachment">
+                <t t-if="attachment.mimetype in ('image/jpeg', 'image/png', 'image/gif')">
+                    <t t-set="is_mesures" t-value="True"/>
+                </t>
+            </t>
+            <t t-foreach="doc.env['ir.attachment'].search([('res_model', '=', 'sale.order'),('res_id', '=', doc.id),('photo_use_type', '=', 'before_installation')])" t-as="attachment">
+                <t t-if="attachment.mimetype in ('image/jpeg', 'image/png', 'image/gif')">
+                    <t t-set="is_before_installation" t-value="True"/>
+                </t>
+            </t>
+            <t t-foreach="doc.env['ir.attachment'].search([('res_model', '=', 'sale.order'),('res_id', '=', doc.id),('photo_use_type', '=', 'with_3d')])" t-as="attachment">
+                <t t-if="attachment.mimetype in ('image/jpeg', 'image/png', 'image/gif')">
+                    <t t-set="is_with_3d" t-value="True"/>
+                </t>
+            </t>
+            <t t-if="is_mesures or is_before_installation or is_with_3d or is_other">
+                <t t-if="installation_images_before_install">
+                    <t t-if="is_before_installation">
+                        <p style="page-break-before: always;"/>
+                        <t t-call="mr_store_report_folder.report_folder_header"/>
+                        <h4>
+                            Photos avant Installation
+                        </h4>
+                        <t t-foreach="doc.env['ir.attachment'].search([('res_model', '=', 'sale.order'),('res_id', '=', doc.id),('photo_use_type', '=', 'before_installation')])" t-as="attachment">
+                            <t t-if="attachment.mimetype in ('image/jpeg', 'image/png', 'image/gif')">
+                                <img t-att-src="image_data_uri(attachment.datas)" style="max-width:900px;" align="center"/>
+                            </t>
+                        </t>
+                    </t>
+                </t>
+                <t t-if="installation_images_with_3d">
+                    <t t-if="is_with_3d">
+                        <p style="page-break-before: always;"/>
+                        <t t-call="mr_store_report_folder.report_folder_header"/>
+                        <h4>
+                            Photos avec 3D
+                        </h4>
+                        <t t-foreach="doc.env['ir.attachment'].search([('res_model', '=', 'sale.order'),('res_id', '=', doc.id),('photo_use_type', '=', 'with_3d')])" t-as="attachment">
+                            <t t-if="attachment.mimetype in ('image/jpeg', 'image/png', 'image/gif')">
+                                <img t-att-src="image_data_uri(attachment.datas)" style="max-width:900px;" align="center"/>
+                            </t>
+                        </t>
+                    </t>
+                </t>
+                <t t-if="installation_images_measurements">
+                    <t t-if="is_mesures">
+                        <p style="page-break-before: always;"/>
+                        <t t-call="mr_store_report_folder.report_folder_header"/>
+                        <h4>
+                            Photos des Mesures
+                        </h4>
+                        <t t-foreach="doc.env['ir.attachment'].search([('res_model', '=', 'sale.order'),('res_id', '=', doc.id),('photo_use_type', '=', 'mesures')])" t-as="attachment">
+                            <t t-if="attachment.mimetype in ('image/jpeg', 'image/png', 'image/gif')">
+                                <img t-att-src="image_data_uri(attachment.datas)" style="max-width:900px;" align="center"/>
+                            </t>
+                        </t>
+                    </t>
+                </t>
+                <t t-if="installation_images_other">
+                    <t t-if="is_other">
+                        <p style="page-break-before: always;"/>
+                        <t t-call="mr_store_report_folder.report_folder_header"/>
+                        <t t-foreach="doc.env['ir.attachment'].search([('res_model', '=', 'sale.order'),('res_id', '=', doc.id),('photo_use_type', '=', 'other')])" t-as="attachment">
+                            <t t-if="attachment.mimetype in ('image/jpeg', 'image/png', 'image/gif')">
+                                <img t-att-src="image_data_uri(attachment.datas)" style="max-width:900px;" align="center"/>
+                            </t>
+                        </t>
+                    </t>
+                </t>
+            </t>
+        </t>
+        <t id="last_balise"/>
+    </template>
+
+    <template id="report_folder">
+        <t t-call="mr_store_report_folder.internal_layout_mr_store">
+            <div style="margin-left: 20px; margin-right: 20px;">
+                <t t-call="mr_store_report_folder.report_folder_document" />
+            </div>
+        </t>
+    </template>
+
+    <template id="report_folder_raw">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="mr_store_report_folder.report_folder" />
+            </t>
+        </t>
+    </template>
+</odoo>

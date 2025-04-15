@@ -1,0 +1,29 @@
+<odoo>
+    <record id="view_project_task_form" model="ir.ui.view">
+        <field name="name">project.task.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/field[@name='tag_ids']" position="after">
+                <field name="trello_idcardsource"/>
+                <field name="trello_url" options="{'sandboxedPreview':false,'codeview':false}"/>
+                <field name="trello_installers_number" readonly="True"/>
+                <field name="trello_duration" readonly="True"/>
+                <field name="trello_pax_number_for_forwarding" readonly="True"/>
+                <field name="trello_forwarding_duration" readonly="True"/>
+                <field name="trello_L" readonly="True"/>
+              </xpath>
+        </field>
+    </record>
+
+    <record id="view_project_task_gantt" model="ir.ui.view">
+        <field name="name">project.task.view.gantt</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project_enterprise.project_task_view_gantt"/>
+        <field name="arch" type="xml">
+            <xpath expr="//gantt[1]" position="attributes">
+                <attribute name="color">partner_id</attribute>
+              </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_hercule_product_form" model="ir.ui.view">
+        <field name="name">hercule.product.form</field>
+        <field name="model">hercule.product</field>
+        <field name="arch" type="xml">
+            <form string="Hercule Products">
+                <sheet>
+                    <group>
+                        <group string="Product">
+                            <field name="sequence"/>
+                            <field name="name" string="Product 'Id'"/>
+                            <field name="title_id" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="label_id" options="{'no_create': True, 'no_create_edit': True}"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hercule_product_tree" model="ir.ui.view">
+        <field name="name">hercule.product.tree</field>
+        <field name="model">hercule.product</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="title_id"/>
+                <field name="label_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hercule_product" model="ir.actions.act_window">
+        <field name="name">Hercule Products</field>
+        <field name="res_model">hercule.product</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_hercule_product_tree"/>
+    </record>
+</odoo>

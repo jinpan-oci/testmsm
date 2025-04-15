@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_sale" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.mr_store_sale.sale</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="5"/>
+        <field name="inherit_id" ref="sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/app[@name='sale_management']" position="inside">
+                <block title="Mr Store settings" id="mr_store_settings">
+                    <group string="Service Article to auto-insert on order confirm">
+                        <field name="service_product_to_preselect" placeholder="Service Article To Auto Insert"/>
+                    </group>
+                    <group string="Update Price Line Wizard">
+                        <field name="use_update_price_line_wizard" placeholder="Use Update Price Line Wizard"/>
+                        <field name="installation_price_rate" placeholder="Installation Price Rate"/>
+                    </group>
+                </block>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="res_config_settings_view_form_sign" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.mr_store_sale.sign</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="5"/>
+        <field name="inherit_id" ref="sign.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/app[@name='sign']" position="inside">
+                <block title="Mr Store settings" id="mr_store_settings">
+                    <group string="Default Template to send for Cerfa confirmation">
+                        <field name="cerfa_template_id"/>
+                    </group>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

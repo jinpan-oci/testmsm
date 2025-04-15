@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="external_layout_standard_inva_mail">
+
+        <div t-attf-class="header o_company_#{company.id}_layout" style="width: 98%;margin-left: 1%; margin-right: 1%;">
+            <img t-if="company.header" t-att-src="image_data_uri(company.header)" style="background-repeat: no-repeat; background-position: center; width:100%; margin-top:10px;" alt="Logo"/>
+        </div>
+
+        <div t-attf-class="article o_report_layout_standard o_company_#{company.id}_layout {{  'o_report_layout_background' if company.layout_background in ['Geometric', 'Custom']  else  '' }}" t-attf-style="background-image: url({{ 'data:image/png;base64,%s' % company.layout_background_image.decode('utf-8') if company.layout_background_image and company.layout_background == 'Custom' else '/base/static/img/bg_background_template.jpg' if company.layout_background == 'Geometric' else ''}});" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+            <div class="pt-5">
+                <!-- This div ensures that the address is not cropped by the header. -->
+            </div>
+            <t t-out="0"/>
+        </div>
+
+        <div style="margin-top: -60px" t-attf-class="footer o_standard_footer o_company_#{company.id}_layout">
+            <img t-if="company.footer" t-att-src="image_data_uri(company.footer)" style="background-repeat: no-repeat; background-size: contain; position: center; height: 100px; width:98%; margin-left: 1%; margin-right: 1%; margin-bottom: 0px" alt="Logo"/>
+            <div class="row">
+                <div class="col-1"/>
+                <div class="col-10" style="border-top: 1px solid black; text-align: center;">
+                    <span style="font-size: 12px;">
+                        <t t-esc="company.report_footer"/>
+                    </span>
+                    <div t-if="report_type == 'pdf' and display_name_in_footer" class="text-muted">
+                        <span t-out="o.name">(document name)</span>
+                    </div>
+                </div>
+                <div class="col-1" style="text-align: right">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><span class="page"/></li>
+                        <li class="list-inline-item">/</li>
+                        <li class="list-inline-item"><span class="topage"/></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </template>
+
+    <template id="external_layout_inva_mail">
+        <t t-if="not company">
+            <!-- Multicompany -->
+            <t t-if="company_id">
+                <t t-set="company" t-value="company_id"/>
+            </t>
+            <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                <t t-set="company" t-value="o.company_id.sudo()"/>
+            </t>
+            <t t-else="else">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+        </t>
+        <t t-call="mr_store_report.external_layout_standard_inva_mail">
+            <t t-out="0"/>
+        </t>
+    </template>
+</odoo>

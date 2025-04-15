@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_base_document_layout_mr_store" model="ir.ui.view">
+        <field name="name">Document Layout</field>
+        <field name="model">base.document.layout</field>
+        <field name="inherit_id" ref="web.view_base_document_layout"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='paperformat_id']" position="after">
+                <group string="Custom Mr Store Images">
+                    <field name="header" widget="image" required="0"/>
+                    <field name="footer" widget="image" required="0"/>
+                    <field name="image_total_saleorder" widget="image" required="0"/>
+                    <field name="image_google_mark" widget="image" required="0"/>
+                </group>
+            </xpath>
+
+            <xpath expr="//button" position="after">
+                <group string="Custom Mr Store Footer">
+                    <field name="footer_title" placeholder="Footer Title"/>
+                    <field name="column_1_title" placeholder="Column 1 Title" invisible="not footer_title"/>
+                    <field name="column_1_line_1" placeholder="Column 1 Line 1" invisible="not column_1_title"/>
+                    <field name="column_1_line_2" placeholder="Column 1 Line 2" invisible="not column_1_line_1"/>
+                    <field name="column_1_line_3" placeholder="Column 1 Line 3" invisible="not column_1_line_2"/>
+                    <field name="column_1_line_4" placeholder="Column 1 Line 4" invisible="not column_1_line_3"/>
+                    <field name="column_2_title" placeholder="Column 2 Title" invisible="not column_1_title"/>
+                    <field name="column_2_line_1" placeholder="Column 2 Line 1" invisible="not column_2_title"/>
+                    <field name="column_2_line_2" placeholder="Column 2 Line 2" invisible="not column_2_line_1"/>
+                    <field name="column_2_line_3" placeholder="Column 2 Line 3" invisible="not column_2_line_2"/>
+                    <field name="column_2_line_4" placeholder="Column 2 Line 4" invisible="not column_2_line_3"/>
+                    <field name="column_3_title" placeholder="Column 3 Title" invisible="not column_2_title"/>
+                    <field name="column_3_line_1" placeholder="Column 3 Line 1" invisible="not column_3_title"/>
+                    <field name="column_3_line_2" placeholder="Column 3 Line 2" invisible="not column_3_line_1"/>
+                    <field name="column_3_line_3" placeholder="Column 3 Line 3" invisible="not column_3_line_2"/>
+                    <field name="column_3_line_4" placeholder="Column 3 Line 4" invisible="not column_3_line_3"/>
+                    <field name="footer_line_1" placeholder="Footer Line 1" invisible="not footer_title"/>
+                    <field name="footer_line_2" placeholder="Footer Line 2" invisible="not footer_line_1"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
