@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sale.action_report_saleorder" model="ir.actions.report">
+        <field name="name">MrStore Generic Quote/Sale Order</field>
+        <field name="report_name">mr_store_report.ms_generic_report_saleorder</field>
+        <field name="report_file">mr_store_report.ms_generic_report_saleorder</field>
+        <field name="print_report_name">'Devis Monsieur Store - N°' + str(object.name)</field>
+        <field name="paperformat_id" ref="mr_store_report.paperformat_mr_store"/>
+    </record>
+</odoo>

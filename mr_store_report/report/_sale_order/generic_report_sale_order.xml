@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="ms_generic_report_saleorder">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-set="o" t-value="doc"/>
+                <t t-set="report_type" t-value="doc.order_report_type"/>
+                <t t-set="pu_type" t-value="doc.get_report_type_pu_position_selection()"/>
+                <t t-if="report_type in ['quote_sale_order_with_pu_top', 'quote_sale_order_with_pu_top', 'quote_sale_order_without_pu']">
+                    <t t-if="doc.simple_report == True">
+                        <t t-call="sale.report_saleorder_document" t-lang="doc.partner_id.lang"/>
+                    </t>
+                    <t t-else="">
+                        <div style="margin-left: 15px; margin-right: 15px;">
+                            <t t-call="mr_store_report.ms_report_saleorder_document"/>
+                        </div>
+                    </t>
+                </t>
+                <t t-elif="report_type in ['quote_sale_order_alt_with_pu_top', 'quote_sale_order_alt_with_pu_bot', 'quote_sale_order_alt_without_pu']">
+                    <t t-if="doc.simple_report == True">
+                        <t t-call="mr_store_report.ms_report_saleorder_document_alternative" t-lang="doc.partner_id.lang"/>
+                    </t>
+                    <t t-else="">
+                        <div style="margin-left: 15px; margin-right: 15px;">
+                            <t t-call="mr_store_report.ms_report_saleorder_document_alternative"/>
+                        </div>
+                    </t>
+                </t>
+                <t t-elif="report_type in ['quote_sale_order_light']">
+                   <t t-set="mrstore_type" t-value="'saleorder'" />
+                    <t t-call="mr_store_report.external_layout_sol">
+                        <div style="margin-left: 10px; margin-right: 10px;">
+                            <t t-call="mr_store_report.ms_report_saleorder_document_light"/>
+                        </div>
+                    </t>
+                </t>
+                <t t-else="">
+                    <t t-call="sale.report_saleorder"/>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>
