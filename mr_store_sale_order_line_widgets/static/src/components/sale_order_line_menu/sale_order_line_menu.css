@@ -1,0 +1,18 @@
+td.o_sale_order_line_menu_widget_cell {
+    overflow: unset !important;
+
+    .dropdown-menu {
+        min-width: unset !important;
+    }
+
+    .dropdown-toggle::after {
+        margin-left: 0.5em;
+        transform: rotate(0deg);
+        transition: transform 0.2s;
+    }
+    
+    .dropdown-toggle.show::after {
+        transform: rotate(180deg); /* Flip the caret */
+    }
+
+}

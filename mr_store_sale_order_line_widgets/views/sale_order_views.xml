@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sale_order_form_menu_widget" model="ir.ui.view">
+        <field name="name">sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="priority">99</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']//tree" position="inside">
+                <field name="order_id" column_invisible="1"/>
+                <field name="sale_order_line_menu" widget="sale_order_line_menu_widget"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']//tree/button[@name='action_edit_from_hp5']" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='order_line']//tree/button[@name='mr_store_sale.sale_order_line_service_update_action']" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='order_line']//tree/button[@name='mr_store_sale.sale_order_line_change_description_action']" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="sale_order_form_description_widget" model="ir.ui.view">
+        <field name="name">sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='name']" position="after">
+                <field name="sale_order_line_short_description" optional="hide"/>
+            </xpath>
+            <xpath expr="//tree/field[@name='name']" position="attributes">
+                <attribute name="widget">sale_order_line_description_widget</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

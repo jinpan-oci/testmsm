@@ -1,0 +1,14 @@
+<templates xml:space="preserve">
+    <t t-name="sale_order_line_description.SaleOrderLineDescriptionTemplate">
+        <div class="sale_order_line_description">
+            <t t-esc="displayedDescription"/>
+            <t t-if="props.record.data.name and !state.expanded">
+                <button class="btn btn-link btn-sm btn-show" t-on-click.prevent="toggleDescription">Show More</button>
+            </t>
+            <t t-if="state.expanded">
+                <button class="btn btn-link btn-sm btn-show show-less" t-on-click.prevent="toggleDescription">Show Less</button>
+            </t>
+
+        </div>
+    </t>
+</templates>

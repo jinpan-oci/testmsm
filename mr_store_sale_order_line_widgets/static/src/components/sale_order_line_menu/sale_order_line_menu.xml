@@ -1,0 +1,20 @@
+<templates xml:space="preserve">
+    <t t-name="sale_order_line_menu.SaleOrderLineMenuTemplate">
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+                <i class="fa fa-wrench"></i>
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#" class="dropdown-item btn btn-link fa fa-pencil-square-o" t-on-click.prevent="onClickDescription"> Description</a>
+                </li>
+                <li t-if="showClickCalculate">
+                    <a href="#" class="dropdown-item btn btn-link fa fa-calculator" t-on-click.prevent="onClickCalculate"> C.Prix</a>
+                </li>
+                <li t-if="showClickEStory">
+                    <a href="#" class="dropdown-item btn btn-link fa fa-arrow-right" t-on-click.prevent="onClickEStory"> E-Story</a>
+                </li>
+            </ul>
+        </div>
+    </t>
+</templates>
