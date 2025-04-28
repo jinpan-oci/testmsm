@@ -11,3 +11,7 @@ hercule_label_system,hercule_label_system,model_hercule_label,base.group_system,
 
 hercule_title_user,hercule_title_user,model_hercule_title,base.group_user,1,1,1,0
 hercule_title_system,hercule_title_system,model_hercule_title,base.group_system,1,1,1,1
+
+
+access_iframe_supplier_mapping_manager,iframe.supplier.mapping.manager,model_iframe_supplier_mapping,sales_team.group_sale_manager,1,1,1,1
+access_iframe_supplier_mapping_user,iframe.supplier.mapping.user,model_iframe_supplier_mapping,sales_team.group_sale_salesman,1,0,0,0

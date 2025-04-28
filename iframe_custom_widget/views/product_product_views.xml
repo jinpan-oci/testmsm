@@ -1,12 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="inherit_product_product_form_view" model='ir.ui.view'>
-        <field name='name'>inherit.product.product.form.view</field>
-        <field name='model'>product.product</field>
+    <record id="inherit_product_template_form_view" model='ir.ui.view'>
+        <field name='name'>inherit.product.template.form.view</field>
+        <field name='model'>product.template</field>
         <field name="inherit_id" ref="product.product_template_form_view"/>
         <field name='arch' type='xml'>
-            <xpath expr="//field[@name='barcode']" position="after">
-                <field name="product_source"/>
+            <xpath expr="//div[@name='options']" position="inside">
+                <div>
+                    <field name="product_source" attrs="{'invisible': [('product_source', '=', False)]}"/>
+                    <label for="product_source" attrs="{'invisible': [('product_source', '=', False)]}"/>
+                </div>
             </xpath>
         </field>
     </record>

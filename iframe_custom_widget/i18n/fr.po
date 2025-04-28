@@ -298,6 +298,51 @@ msgstr "Url Iframe/hercule"
 msgid "Product Source"
 msgstr "Source du produit"
 
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_iframe_supplier_mapping__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_iframe_supplier_mapping__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_product_product__product_source
+msgid "Product Source"
+msgstr "Source du produit"
+
+#. module: iframe_custom_widget
+#: model:ir.model,name:iframe_custom_widget.model_product_product
+msgid "Product Variant"
+msgstr "Variante de produit"
+
+#. module: iframe_custom_widget
+#: model:ir.model,name:iframe_custom_widget.model_iframe_supplier_mapping
+msgid "Hercule Pro Supplier Mapping"
+msgstr "Correspondance fournisseurs Hercule Pro"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_iframe_supplier_mapping__supplier_code
+msgid "Supplier Code (cat_homolog)"
+msgstr "Code fournisseur (cat_homolog)"
+
+#. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_iframe_supplier_mapping__partner_id
+msgid "Odoo Supplier Contact"
+msgstr "Contact fournisseur Odoo"
+
+#. module: iframe_custom_widget
+#: model:ir.actions.act_window,name:iframe_custom_widget.action_supplier_mapping
+#: model:ir.ui.menu,name:iframe_custom_widget.menu_supplier_mapping
+msgid "Supplier Mapping"
+msgstr "Correspondance fournisseurs"
+
+#. module: iframe_custom_widget
+#: model:ir.model.constraint,message:iframe_custom_widget.constraint_iframe_supplier_mapping_unique_supplier_code
+msgid "This supplier code already exists in the mapping table!"
+msgstr "Ce code fournisseur existe déjà dans la table de correspondance!"
 
 #. module: iframe_custom_widget
 #: model:ir.model.fields,field_description:iframe_custom_widget.field_res_config_settings__iframe_usr

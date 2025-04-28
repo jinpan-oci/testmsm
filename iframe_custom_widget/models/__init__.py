@@ -4,7 +4,9 @@ from . import hercule_product
 from . import hercule_title
 from . import hercule_category
 from . import product_product
+from . import product_template
 from . import res_company
 from . import res_config_settings
 from . import sale_order_line
 from . import sale_order
+from . import supplier_mapping
