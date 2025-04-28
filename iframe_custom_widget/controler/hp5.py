@@ -357,6 +357,7 @@ class HerculeController(http.Controller):
                         "list_price": data.get("total_unit_sale_price"),
                         "description_sale": html_desc,
                         "categ_id": int(categ_id) if categ_id else None,
+                        "product_source": "hercule pro",
                         # match default values :taxes ids ?
                     }
                 )

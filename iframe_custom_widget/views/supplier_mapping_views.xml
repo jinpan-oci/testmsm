@@ -35,7 +35,7 @@
 
     <menuitem id="menu_supplier_mapping"
               name="Supplier Mapping"
-              parent="menu_hercule_configuration"
-              action="action_supplier_mapping"
+              parent="menu_hp5_categ_matrix"
+              action="action_supplier_mapping" sequence="4"
               groups="sales_team.group_sale_manager"/>
 </odoo>
