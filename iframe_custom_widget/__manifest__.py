@@ -49,6 +49,7 @@
         "views/hercule_category_views.xml",
         "views/res_config_settings_view.xml",
         "views/sale_order_views.xml",
+        "views/product_product_views.xml",
         # menuitem
         "views/menuitem.xml",
     ],
