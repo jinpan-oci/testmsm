@@ -7,8 +7,7 @@ class SupplierMapping(models.Model):
 
     name = fields.Char(string='Name', compute='_compute_name', store=True)
     supplier_code = fields.Char(string='Supplier Code (cat_homolog)', required=True)
-    partner_id = fields.Many2one('res.partner', string='Odoo Supplier Contact', required=True,
-                                 domain=[('supplier_rank', '>', 0)])
+    partner_id = fields.Many2one('res.partner', string='Odoo Supplier Contact', required=True)
     active = fields.Boolean(default=True)
 
     @api.depends('supplier_code', 'partner_id')

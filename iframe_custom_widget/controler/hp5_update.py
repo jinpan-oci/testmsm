@@ -379,13 +379,11 @@ class HerculeControllerUpdate(http.Controller):
             )
 
         try:
-            supplier_info = data.get("supplier_infos", {})
-            if supplier_info:
-                # Récupérer le code fournisseur (cat_homolog)
-                supplier_code = supplier_info.get("cat_homolog", False)
-                supplier_name = supplier_info.get("raison_sociale", False)
+            supplier_code = data.get("supplier_infos", {}).get("cat_homolog", False)
+            supplier_name = data.get("supplier_infos", {}).get("raison_sociale", False)
 
-                # Rechercher dans la table de correspondance
+            if supplier_code and supplier_name:
+                # Recherche dans la table de correspondance
                 supplier_mapping = request.env["iframe.supplier.mapping"].sudo().search([
                     ('supplier_code', '=', supplier_code),
                     ('active', '=', True)
@@ -395,45 +393,48 @@ class HerculeControllerUpdate(http.Controller):
                     # Si une correspondance est trouvée, utiliser le partenaire associé
                     partner = supplier_mapping.partner_id
                 else:
-                    # Rechercher par nom si pas de correspondance
+                    # Si aucune correspondance, créer directement un nouveau fournisseur
                     partner = (
                         request.env["res.partner"]
                         .with_company(company_id)
                         .with_user(SUPERUSER_ID)
                         .sudo()
-                        .search([("name", "=", supplier_name)], limit=1)
+                        .create(
+                            {
+                                "name": supplier_name,
+                                "email": data.get("supplier_infos", {}).get("email"),
+                                "phone": data.get("supplier_infos", {}).get("tel"),
+                                "street": data.get("supplier_infos", {}).get("adr"),
+                                "city": data.get("supplier_infos", {}).get("city"),
+                                "zip": data.get("supplier_infos", {}).get("post_code"),
+                            }
+                        )
                     )
-                    if not partner:
-                        partner = (
-                            request.env["res.partner"]
-                            .with_company(company_id)
-                            .with_user(SUPERUSER_ID)
-                            .sudo()
-                            .search([("email", "=", supplier_info.get("email"))], limit=1)
+            else:
+                # Si pas de code ou de nom fournisseur, créer directement un fournisseur
+                supplier_info = data.get("supplier_infos", {})
+                if supplier_info:
+                    partner = (
+                        request.env["res.partner"]
+                        .with_company(company_id)
+                        .with_user(SUPERUSER_ID)
+                        .sudo()
+                        .create(
+                            {
+                                "name": supplier_info.get("raison_sociale", "Unknown Supplier"),
+                                "email": supplier_info.get("email"),
+                                "phone": supplier_info.get("tel"),
+                                "street": supplier_info.get("adr"),
+                                "city": supplier_info.get("city"),
+                                "zip": supplier_info.get("post_code"),
+                            }
                         )
-
-                    if not partner:
-                        partner = (
-                            request.env["res.partner"]
-                            .with_company(company_id)
-                            .with_user(SUPERUSER_ID)
-                            .sudo()
-                            .create(
-                                {
-                                    "name": supplier_name,
-                                    "email": supplier_info.get("email"),
-                                    "phone": supplier_info.get("tel"),
-                                    "street": supplier_info.get("adr"),
-                                    "city": supplier_info.get("city"),
-                                    "zip": supplier_info.get("post_code"),
-                                }
-                            )
-                        )
+                    )
 
         except Exception as e:
-            _logger.error(f"Error while processing supplier: {e}")
+            _logger.error(f"Error while creating partner: {e}")
             return Response(
-                response=f"Error while processing supplier: {e}",
+                response=f"Error while creating partner: {e}",
                 content_type="application/json;charset=utf-8",
                 status=500,
             )
@@ -443,7 +444,7 @@ class HerculeControllerUpdate(http.Controller):
                 {
                     "partner_id": partner.id,
                     "product_name": product.name,
-                    "product_code": data.get("ID", ""),
+                    "product_code": product.default_code,
                     "product_tmpl_id": product_template_id,
                     "product_id": product.id,
                     "price": data.get("total_unit_purchase_price"),
