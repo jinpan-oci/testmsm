@@ -294,6 +294,12 @@ msgid "Iframe URL"
 msgstr "Url Iframe/hercule"
 
 #. module: iframe_custom_widget
+#: model:ir.model.fields,field_description:iframe_custom_widget.field_product_product__product_source
+msgid "Product Source"
+msgstr "Source du produit"
+
+
+#. module: iframe_custom_widget
 #: model:ir.model.fields,field_description:iframe_custom_widget.field_res_config_settings__iframe_usr
 #: model_terms:ir.ui.view,arch_db:iframe_custom_widget.res_config_settings_view_form
 msgid "Iframe User"
