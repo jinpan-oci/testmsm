@@ -1,0 +1,4 @@
+[submodule "SACOOP-mstore/groupe"]
+	path = SACOOP-mstore/groupe
+	url = git@github.com:SACOOP-mstore/groupe.git
+	branch = staging_1
