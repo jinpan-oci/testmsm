@@ -337,7 +337,7 @@ msgstr "Contact fournisseur Odoo"
 #: model:ir.actions.act_window,name:iframe_custom_widget.action_supplier_mapping
 #: model:ir.ui.menu,name:iframe_custom_widget.menu_supplier_mapping
 msgid "Supplier Mapping"
-msgstr "Correspondance fournisseurs"
+msgstr "Matrice fournisseurs"
 
 #. module: iframe_custom_widget
 #: model:ir.model.constraint,message:iframe_custom_widget.constraint_iframe_supplier_mapping_unique_supplier_code
