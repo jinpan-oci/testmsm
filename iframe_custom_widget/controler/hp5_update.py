@@ -268,6 +268,42 @@ class HerculeControllerUpdate(http.Controller):
             _logger.error(f"Error while finding matching category: {e}")
             return False
 
+    def _find_matching_supplier(self, supplier_code, supplier_info, company_id):
+        """
+        Trouve ou crée un fournisseur correspondant au code fournisseur Hercule Pro
+
+        :param supplier_code: Le code fournisseur (cat_homolog) de Hercule Pro
+        :param supplier_info: Les informations du fournisseur depuis Hercule Pro
+        :param company_id: L'ID de la société
+        :return: Le partenaire fournisseur (res.partner)
+        """
+        try:
+            if not supplier_code or not supplier_info:
+                return False
+
+            # Recherche dans la table de correspondance
+            supplier_mapping = request.env["iframe.supplier.mapping"].sudo().search([
+                ('supplier_code', '=', supplier_code),
+                ('active', '=', True)
+            ], limit=1)
+
+
+            if supplier_mapping:
+                return supplier_mapping.partner_id
+
+            # Si pas de correspondance, créer un nouveau fournisseur
+            return request.env["res.partner"].with_company(company_id).with_user(SUPERUSER_ID).sudo().create({
+                "name": supplier_info.get("raison_sociale", "Unknown Supplier"),
+                "email": supplier_info.get("email"),
+                "phone": supplier_info.get("tel"),
+                "street": supplier_info.get("adr"),
+                "city": supplier_info.get("city"),
+                "zip": supplier_info.get("post_code"),
+            })
+        except Exception as e:
+            _logger.error(f"Error while finding matching supplier: {e}")
+            return False
+
     # ---------------------------------------------------------------------------
     # Public methods
     # ---------------------------------------------------------------------------
@@ -379,62 +415,24 @@ class HerculeControllerUpdate(http.Controller):
             )
 
         try:
-            supplier_code = data.get("supplier_infos", {}).get("cat_homolog", False)
-            supplier_name = data.get("supplier_infos", {}).get("raison_sociale", False)
+            supplier_info = data.get("supplier_infos", {})
+            supplier_code = supplier_info.get("cat_homolog")
 
-            if supplier_code and supplier_name:
-                # Recherche dans la table de correspondance
-                supplier_mapping = request.env["iframe.supplier.mapping"].sudo().search([
-                    ('supplier_code', '=', supplier_code),
-                    ('active', '=', True)
-                ], limit=1)
+            partner = self._find_matching_supplier(supplier_code, supplier_info, company_id)
 
-                if supplier_mapping:
-                    # Si une correspondance est trouvée, utiliser le partenaire associé
-                    partner = supplier_mapping.partner_id
-                else:
-                    # Si aucune correspondance, créer directement un nouveau fournisseur
-                    partner = (
-                        request.env["res.partner"]
-                        .with_company(company_id)
-                        .with_user(SUPERUSER_ID)
-                        .sudo()
-                        .create(
-                            {
-                                "name": supplier_name,
-                                "email": data.get("supplier_infos", {}).get("email"),
-                                "phone": data.get("supplier_infos", {}).get("tel"),
-                                "street": data.get("supplier_infos", {}).get("adr"),
-                                "city": data.get("supplier_infos", {}).get("city"),
-                                "zip": data.get("supplier_infos", {}).get("post_code"),
-                            }
-                        )
-                    )
-            else:
-                # Si pas de code ou de nom fournisseur, créer directement un fournisseur
-                supplier_info = data.get("supplier_infos", {})
-                if supplier_info:
-                    partner = (
-                        request.env["res.partner"]
-                        .with_company(company_id)
-                        .with_user(SUPERUSER_ID)
-                        .sudo()
-                        .create(
-                            {
-                                "name": supplier_info.get("raison_sociale", "Unknown Supplier"),
-                                "email": supplier_info.get("email"),
-                                "phone": supplier_info.get("tel"),
-                                "street": supplier_info.get("adr"),
-                                "city": supplier_info.get("city"),
-                                "zip": supplier_info.get("post_code"),
-                            }
-                        )
-                    )
+            if not partner:
+                return Response(
+                    response="Error while finding or creating supplier,\n"
+                             + "Please check supplier information in Hercule Pro or\n"
+                             + "configure supplier mappings in: Sale -> Configuration -> Hercule -> Supplier Mapping",
+                    content_type="application/json;charset=utf-8",
+                    status=500,
+                )
 
         except Exception as e:
-            _logger.error(f"Error while creating partner: {e}")
+            _logger.error(f"Error while processing supplier: {e}")
             return Response(
-                response=f"Error while creating partner: {e}",
+                response=f"Error while processing supplier: {e}",
                 content_type="application/json;charset=utf-8",
                 status=500,
             )
@@ -463,7 +461,6 @@ class HerculeControllerUpdate(http.Controller):
             )
 
         try:
-            # Création de la ligne de commande (sale order line)
             request.env["sale.order"].with_company(company_id).with_user(SUPERUSER_ID).sudo().browse(order_id).sudo().write(
                 {
                     "order_line": [
